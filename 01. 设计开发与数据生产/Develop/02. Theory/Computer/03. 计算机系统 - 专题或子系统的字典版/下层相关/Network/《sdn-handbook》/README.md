@@ -1,0 +1,120 @@
+# 《sdn-handbook》
+
+神博客：
+
+- [网络相关个人博客](https://tonydeng.github.io/sdn-handbook/basic/icmp.html) （即包括基础，又包括更深入的容器、SDN、NFV、DPDK、OVS、eBPF、XDP等）
+  - 多备份几个链接：
+  - [GitBook](https://tonydeng.gitbooks.io/sdn/)
+  - [Github](https://github.com/tonydeng/sdn-handbook)
+  - [ePub](https://www.gitbook.com/download/epub/book/tonydeng/sdn)
+  - [PDF](https://www.gitbook.com/download/pdf/book/tonydeng/sdn)
+  - [项目源码](https://github.com/tonydeng/sdn-handbook)
+
+
+
+## 目录
+
+- 前言
+- 网络基础
+  - 网络基础理论
+    - TCP/IP 网络模型
+    - ARP
+    - ICMP
+    - 路由
+    - 交换机
+    - UDP
+    - DHCP/DNS
+    - TCP
+    - VLAN
+    - Overlay
+    - SNMP
+    - LLDP
+  - Linux网络
+    - Linux网络配置
+      - 虚拟网络设备
+    - iptables/netfilter
+    - 负载均衡
+    - 流量控制
+    - SR-IOV
+    - 内核VRF
+    - eBPF
+      - bcc
+      - 故障排查
+    - XDP
+      - XDP架构
+      - 使用场景
+    - 常用工具
+      - 网络抓包tcpdump
+      - scapy
+    - 内核网络参数
+  - Open vSwitch
+    - OVS介绍
+    - OVS编译
+    - OVS原理
+    - Open Virtual Network
+      - OVN在Ubuntu编译
+      - OVN实践
+      - OVN高可用
+      - OVN Kubernetes插件
+      - OVN Docker插件
+      - OVN OpenStack
+  - DPDK
+    - DPDK简介
+    - DPDK安装
+    - 报文转发模型
+    - NUMA
+    - Ring和共享内存
+    - PCIe
+    - 网卡性能优化
+    - 多队列
+    - 硬件offload
+    - 虚拟化
+    - OVS DPDK
+    - SPDK
+    - OpenFastPath
+  - 安全设备
+    - VPN
+    - IPSec VPN
+    - SSL VPN
+    - ICG
+    - Firewall
+      - 工作原理
+      - 常见分类
+      - 演进过程
+- SDN & NFV
+  - SDN
+    - YANG Language
+    - SDN 控制器
+      - OpenDaylight
+        - OpenDaylight Projects
+        - DataStore
+      - ONOS
+      - Floodlight
+      - Ryu
+      - NOX/POX
+    - 南向接口
+      - OpenFlow
+      - OF-COnfig
+      - INETCONF
+        - NETCONF Call Home
+        - YANG Module for NETCONF Monitoring
+        - NETCONF请求和响应中的标签
+      - P4
+      - AAA
+        - Radius
+  - 数据平面
+  - NFV
+  - SDWAN
+- SDN实践
+  - Mininet
+  - Neutron
+  - SDN实践案例
+    - Google数据中心网络
+- SDN业务类型示例
+  - 业务类型
+  - SDN控制器应用场景
+  - 业务控制平台-SCP
+- 参考文档
+  - FAQ
+  - 参考文档
+

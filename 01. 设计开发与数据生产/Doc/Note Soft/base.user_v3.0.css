@@ -1,0 +1,481 @@
+/* 正文标题区: #write */
+/* [TOC]目录树区: .md-toc-content */
+/* 侧边栏的目录大纲区: .sidebar-content */
+
+/** 
+ * 说明：
+ *     Typora的标题共有6级，从h1到h6。
+ *     我个人觉得h1级的标题太大，所以我的标题都是从h2级开始。
+ *     个人习惯每篇文章都有一个总标题，有一个目录，所以h2级的标题前两个都不会计数。
+ *     一般情况下，我虽然不使用h1级的标题，但是为了以防万一，h1级的标题前两个也都不会计数。
+ *     若想启用h1级标题，就取消包含“content: counter(h1) "."”项的注释，然后将包含“content: counter(h2) "."”的项注释掉即可。
+ */ 
+
+
+
+
+
+/** initialize css counter */
+#write, .sidebar-content,.md-toc-content{
+	/* 设置全局计数器的基准 */
+	/* 因为我喜欢从h2级标题用起，所以这里设置为h2 */
+    counter-reset: h1
+}
+
+#write h1, .outline-h1, .md-toc-item.md-toc-h1 {
+    counter-reset: h2
+}
+
+#write h2, .outline-h2, .md-toc-item.md-toc-h2 {
+    counter-reset: h3
+}
+
+#write h3, .outline-h3, .md-toc-item.md-toc-h3 {
+    counter-reset: h4
+}
+
+#write h4, .outline-h4, .md-toc-item.md-toc-h4 {
+    counter-reset: h5
+}
+
+#write h5, .outline-h5, .md-toc-item.md-toc-h5 {
+    counter-reset: h6
+}
+
+
+
+
+
+/** put counter result into headings */
+#write h1:before,
+.outline-h1>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h1>.md-toc-inner:before {
+    counter-increment: h1;
+    content: counter(h1) ". "
+}
+
+/* 使用h1标题时，去掉前两个h1标题的序号，包括正文标题、目录树和大纲 */
+/* nth-of-type中的数字表示获取第几个h1元素，请根据情况自行修改。 */
+#write h1:nth-of-type(1):before, /*正文标题*/
+.outline-h1:nth-of-type(1)>.outline-item>.outline-label:before, /*大纲目录*/
+.md-toc-item.md-toc-h1:nth-of-type(1)>.md-toc-inner:before /*正文TOC目录*/
+,#write h1:nth-of-type(2):before,
+.outline-h1:nth-of-type(2)>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h1:nth-of-type(2)>.md-toc-inner:before
+{
+	counter-reset: h1;
+	content: ""
+}
+
+#write h2:before,
+.outline-h2>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h2>.md-toc-inner:before {
+    counter-increment: h2;
+    content: counter(h2) ". "
+}
+
+/* 使用h2标题时，去掉前两个h2标题的序号，包括正文标题、目录树和大纲 */
+/* nth-of-type中的数字表示获取第几个h2元素，请根据情况自行修改。 */
+/* #write h2:nth-of-type(1):before,
+.outline-h2:nth-of-type(1)>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h2:nth-of-type(2)>.md-toc-inner:before */   /*toc，改，我也不知道为什么是第二个？*/
+/* ,#write h2:nth-of-type(2):before,
+.outline-h2:nth-of-type(2)>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h2:nth-of-type(2)>.md-toc-inner:before */
+/* {
+	counter-reset: h2;
+	content: ""
+} */
+
+
+
+
+
+#write h3:before,
+h3.md-focus.md-heading:before, /** override the default style for focused headings */
+.outline-h3>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h3>.md-toc-inner:before {
+	text-decoration: none;
+    counter-increment: h3;
+    /* content: counter(h1) "." counter(h2) "." counter(h3) ". " */
+    content: counter(h2) "." counter(h3) ". "
+}
+
+#write h4:before,
+h4.md-focus.md-heading:before,
+.outline-h4>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h4>.md-toc-inner:before {
+	text-decoration: none;
+    counter-increment: h4;
+    /* content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". " */
+    content: counter(h2) "." counter(h3) "." counter(h4) ". "
+}
+
+#write h5:before,
+h5.md-focus.md-heading:before,
+.outline-h5>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h5>.md-toc-inner:before {
+	text-decoration: none;
+    counter-increment: h5;
+    /* content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". " */
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "
+}
+
+#write h6:before,
+h6.md-focus.md-heading:before,
+.outline-h6>.outline-item>.outline-label:before,
+.md-toc-item.md-toc-h6>.md-toc-inner:before {
+	text-decoration: none;
+    counter-increment: h6;
+    /* content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". " */
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "
+}
+
+
+
+/** override the default style for focused headings */
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+    color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    position: inherit;
+    left:initial;
+    float: none;
+    top:initial;
+    font-size: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    vertical-align: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+/**
+ * < Linc的CSS小样式 >
+ * 文件浏览器部分
+ * 去除结尾为.assets的文件夹
+ */
+#file-library-tree .file-library-node.file-tree-node[data-path$=".assets"]{
+	display: none;
+}
+
+/**
+ * < Linc的CSS小样式 >
+ * 文件浏览器样式
+ * md文件的图标与后缀省略
+ */
+#file-library-tree .file-library-node.file-tree-node.file-library-file-node[data-path$=".md"]
+>.file-node-content>.file-node-title>.file-node-title-ext-part,
+#file-library-tree .file-library-node.file-tree-node.file-library-file-node[data-path$=".md"]
+>.file-node-content>i
+{
+	display: none;
+}
+
+/**
+ * < Linc的CSS小样式 >
+ * 文件浏览器样式
+ * 选中项去掉左边框
+ */
+#file-library-tree .file-tree-node.active>.file-node-background{
+	border-left: none;
+}
+
+/**
+ * < Linc的CSS小样式 >
+ * 文件浏览器样式
+ * 多层级着色
+ * 文件不着色，文件夹着色
+ * 首文件夹也不着色
+ */
+#file-library-tree .file-node-children
+>div[data-is-directory="true"]>.file-node-background{
+	background-color: rgba(71, 168, 245,0.8);
+}
+#file-library-tree .file-node-children
+>div>.file-node-children
+>div[data-is-directory="true"]>.file-node-background{
+	background-color: rgba(228, 130, 163,0.65);
+}
+#file-library-tree .file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div[data-is-directory="true"]>.file-node-background{
+	background-color: rgba(30, 215, 109,0.5);
+}
+#file-library-tree .file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div[data-is-directory="true"]>.file-node-background{
+	background-color: rgba(233, 172, 80,0.35);
+}
+
+#file-library-tree .file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div[data-is-directory="true"]>.file-node-background{
+	background-color: rgba(233, 172, 80,0.2);
+}
+
+/**
+ * < Linc的CSS小样式 >
+ * 文件浏览器样式
+ * 边距调整 + 缩进色块着色
+ */
+#file-library-tree .file-node-children
+>div>.file-node-background::before{
+	content: "";
+	width: 12px;
+	height: 29px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 12px solid rgb(107, 184, 246);
+}
+#file-library-tree .file-node-children
+>div>.file-node-children
+>div>.file-node-background::before{
+	content: "";
+	width: 24px;
+	height: 29px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 12px solid rgb(107, 184, 246);
+	background-color: rgb(235, 172, 193);
+}
+#file-library-tree .file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div>.file-node-background::before{
+	content: "";
+	width: 36px;
+	height: 29px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 12px solid rgb(107, 184, 246);
+	background-color: rgb(235, 172, 193);
+	border-right: 12px solid rgb(140, 233, 180);
+}
+#file-library-tree .file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div>.file-node-background::before{
+	content: "";
+	width: 36px;
+	height: 29px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 12px solid rgb(107, 184, 246);
+	background-color: rgb(235, 172, 193);
+	border-right: 12px solid rgb(140, 233, 180);
+}
+#file-library-tree .file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div>.file-node-children
+>div>.file-node-background::before{
+	content: "";
+	width: 36px;
+	height: 29px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 12px solid rgb(107, 184, 246);
+	background-color: rgb(235, 172, 193);
+	border-right: 12px solid rgb(140, 233, 180);
+}
+
+/**
+ * < Linc的CSS小样式 >
+ * 大纲目录样式
+ * 多层级着色
+ */
+#outline-content .outline-h1>.outline-item {
+	background-color: rgba(71, 168, 245,0.8);
+}
+#outline-content .outline-h1:nth-of-type(1)>.outline-item,
+#outline-content .outline-h1:nth-of-type(2)>.outline-item {
+	background-color: transparent; /*清除1、2个的背景*/
+}
+#outline-content .outline-h2>.outline-item {
+	background-color: rgba(228, 130, 163,0.65);
+}
+#outline-content .outline-h3>.outline-item {
+	background-color: rgba(30, 215, 109,0.5);
+}
+#outline-content .outline-h4>.outline-item {
+	background-color: rgba(233, 172, 80,0.35);
+}
+#outline-content .outline-h5>.outline-item {
+	background-color: rgba(233, 172, 80,0.2);
+}
+#outline-content .outline-h6>.outline-item {
+	background-color: rgba(233, 172, 80,0.1);
+}
+
+/**
+ * < Linc的CSS小样式 >
+ * 大纲目录样式
+ * 边距调整 + 缩进色块着色
+ */
+#outline-content {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+/* #outline-content .outline-item {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+} */
+#outline-content .outline-h1>.outline-item {
+	padding-left: 14px;
+}
+#outline-content .outline-h2>.outline-item {
+	padding-left: 28px;
+}
+#outline-content .outline-h3>.outline-item {
+	padding-left: 42px;
+}
+#outline-content .outline-h4>.outline-item {
+	padding-left: 56px;
+}
+#outline-content .outline-h5>.outline-item {
+	padding-left: 70px;
+}
+#outline-content .outline-h6>.outline-item {
+	padding-left: 84px;
+}
+#outline-content .outline-h1,
+#outline-content .outline-h2,
+#outline-content .outline-h3,
+#outline-content .outline-h4,
+#outline-content .outline-h5,
+#outline-content .outline-h6, {
+	clear: both;
+}
+#outline-content .outline-h1::before {
+	content: "";
+	width: 14px;
+	height: 25px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 14px solid rgb(107, 184, 246);
+}
+#outline-content .outline-h1:nth-of-type(1)::before,
+#outline-content .outline-h1:nth-of-type(2)::before {
+	content: none;
+}
+#outline-content .outline-h2::before {
+	content: "";
+	width: 28px;
+	height: 25px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 14px solid rgb(107, 184, 246);
+	background-color: rgb(235, 172, 193);
+}
+#outline-content .outline-h3::before {
+	content: "";
+	width: 42px;
+	height: 25px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 14px solid rgb(107, 184, 246);
+	background-color: rgb(235, 172, 193);
+	border-right: 14px solid rgb(140, 233, 180);
+}
+#outline-content .outline-h4::before {
+	content: "";
+	width: 42px;
+	height: 25px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 14px solid rgb(107, 184, 246);
+	background-color: rgb(235, 172, 193);
+	border-right: 14px solid rgb(140, 233, 180);
+}
+#outline-content .outline-h5::before {
+	content: "";
+	width: 42px;
+	height: 25px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 14px solid rgb(107, 184, 246);
+	background-color: rgb(235, 172, 193);
+	border-right: 14px solid rgb(140, 233, 180);
+}
+#outline-content .outline-h6::before {
+	content: "";
+	width: 42px;
+	height: 25px;
+	box-sizing: border-box;
+	float: left;
+	border-left: 14px solid rgb(107, 184, 246);
+	background-color: rgb(235, 172, 193);
+	border-right: 14px solid rgb(140, 233, 180);
+}
+
+/**
+ * < Linc的CSS小样式 >
+ * 大纲目录样式
+ * 溢出不换行
+ */
+#outline-content .outline-item>.outline-label {
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+/**
+ * < Linc的CSS小样式 >
+ * 我的其他自定义
+*/
+/*图像*/
+img {
+	margin-left:0 !important;
+}
+/*引用框*/
+blockquote {
+	border-left-color: rgb(71, 168, 245) !important;
+	color: #444444 !important;
+	background-color: #f8f8f8 !important;
+}
+/*代码框*/
+pre.md-fences.md-end-block {
+	border-left: 4px solid rgb(30, 215, 109) !important;
+}
+/*加粗*/
+strong span.md-plain[md-inline="plain"] {
+	color: #f56c6c !important;
+	/* color: #409eff; */
+}
+/*小引用块*/
+span.md-pair-s[md-inline="code"] {
+	margin: 0 4px !important;
+	padding: 0 2px !important;
+	box-sizing: border-box !important;
+	font-weight: 800 !important;
+	color: #96376a !important; /*#f56c6c*/
+	background-color: #e496ad !important;
+	/* border: solid 1px #aaa !important; */ /*会增加厚度，舍弃*/
+	border-radius: 3px !important;
+	/* box-shadow: 0 0 1px #aaa !important; */
+}
+span.md-pair-s[md-inline="code"] > code {
+	background-color: #e496ad !important;
+	border: none !important;
+}
+.outline-item code { /*大纲中的code，防止高度变高导致色块断开*/
+	margin-top: -5px;
+	line-height: 0.75rem;
+	border: none
+}
