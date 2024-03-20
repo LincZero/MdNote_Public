@@ -23,7 +23,7 @@ Diffusion模型能做什么？
 - 图象生成比较多
   - [DALL·E 2 的官网展示页](https://openai.com/dall-e-2/?labs#demos)
   - 人脸合成
-  - <img src="Diffusion模型.assets/image-20221020101106300.png" alt="image-20221020101106300" style="zoom:50%;" />
+  - <img src="./Diffusion模型.assets/image-20221020101106300.png" alt="image-20221020101106300" style="zoom:50%;" />
 
 
 
@@ -57,7 +57,7 @@ DALL·E介绍
 - 每一个时刻都要添加高斯噪声，后一时刻都是由前一刻增加噪声得到
 - 其实这个过程可以看成我们不断构建标签（噪声）的过程，后续会用到
 
-<img src="Diffusion模型.assets/image-20221020102724598.png" alt="image-20221020102724598" style="zoom:50%;" />
+<img src="./Diffusion模型.assets/image-20221020102724598.png" alt="image-20221020102724598" style="zoom:50%;" />
 
 
 
@@ -98,7 +98,7 @@ $$
 
 ### 去噪过程
 
-<img src="Diffusion模型.assets/image-20221020121321481.png" alt="image-20221020121321481" style="zoom:50%;" />
+<img src="./Diffusion模型.assets/image-20221020121321481.png" alt="image-20221020121321481" style="zoom:50%;" />
 
 
 

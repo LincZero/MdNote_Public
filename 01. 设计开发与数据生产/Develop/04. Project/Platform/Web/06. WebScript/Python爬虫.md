@@ -92,7 +92,7 @@ r = requests.post(  # get 请求可改为 post 请求
 
 ### 主要请求头（Firefox & Chrome）
 
-<img src="Python爬虫.assets/clipboard.png" alt="img" style="zoom: 80%;" /><img src="Python爬虫.assets/clipboard-1609456222741.png" alt="img" style="zoom: 80%;" />
+<img src="./Python爬虫.assets/clipboard.png" alt="img" style="zoom: 80%;" /><img src="./Python爬虫.assets/clipboard-1609456222741.png" alt="img" style="zoom: 80%;" />
 
 ## 动态网页抓取（浏览器审查元素方案）
 

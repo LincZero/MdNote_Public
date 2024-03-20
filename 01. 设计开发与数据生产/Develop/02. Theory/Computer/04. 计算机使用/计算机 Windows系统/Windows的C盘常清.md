@@ -20,7 +20,7 @@
 
 软件截图与语言选择：
 
-<img src="Windows的C盘常清.assets/image-20201130124820351.png" alt="image-20201130124820351" style="zoom: 80%;" /><img src="Windows的C盘常清.assets/image-20201130124853520.png" alt="image-20201130124853520" style="zoom:80%;" />
+<img src="./Windows的C盘常清.assets/image-20201130124820351.png" alt="image-20201130124820351" style="zoom: 80%;" /><img src="./Windows的C盘常清.assets/image-20201130124853520.png" alt="image-20201130124853520" style="zoom:80%;" />
 
 ## 软件的分析 - 2
 

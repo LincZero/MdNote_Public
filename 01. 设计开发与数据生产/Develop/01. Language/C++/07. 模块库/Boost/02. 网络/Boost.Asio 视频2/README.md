@@ -59,12 +59,11 @@
 - 阻塞io：去菜鸟驿站等货物到
 - reactor io：注册一次，有货物来了就告诉我（不会送过来），货物到了后自己去取
   - epoll 检测，非阻塞io操作io，事件循环处理
-
 - asio io、异步io：把篮子带过去，如果货物来了就驿站就将货物放篮子里并送货到家。然后需要将篮子再带过去等待下次货物
 
-<img src="C:\Users\76269\AppData\Roaming\Typora\typora-user-images\image-20231231161140014.png" alt="image-20231231161140014" style="zoom:50%;" />
+![image-20240320233534755](README.assets/image-20240320233534755.png)
 
-<img src="C:\Users\76269\AppData\Roaming\Typora\typora-user-images\image-20231231161454128.png" alt="image-20231231161454128" style="zoom:50%;" />
+![image-20240320233601799](README.assets/image-20240320233601799.png)
 
 > ##### tips
 

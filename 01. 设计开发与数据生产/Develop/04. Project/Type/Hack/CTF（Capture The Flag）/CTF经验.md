@@ -10,9 +10,9 @@
 
 # 首届bilibili安全挑战赛
 
-<img src="L:\MdNote\01. 设计开发\Develop\Dev_Hack\CTF经验.assets\image-20201025033756049.png" alt="image-20201025033756049" style="zoom:50%;" />
+<img src="./CTF经验.assets/image-20201025033756049.png" alt="image-20201025033756049" style="zoom:50%;" />
 
-<img src="L:\MdNote\01. 设计开发\Develop\Dev_Hack\CTF经验.assets\image-20201025033919390.png" alt="image-20201025033919390"  />
+<img src="./CTF经验.assets/image-20201025033919390.png" alt="image-20201025033919390"  />
 
 2020-bilibili-sec1024
 
@@ -22,7 +22,7 @@
 - 注意：如果你没有达到70分请不要往下查看
 - 活动地址：[sec1024](https://security.bilibili.com/sec1024/)
 
-![image-20201025034750293](L:\MdNote\01. 设计开发\Develop\Dev_Hack\CTF经验.assets\image-20201025034750293.png)
+![image-20201025034750293](./CTF经验.assets/image-20201025034750293.png)
 
 ## 第一题 - 页面的背后是什么？
 

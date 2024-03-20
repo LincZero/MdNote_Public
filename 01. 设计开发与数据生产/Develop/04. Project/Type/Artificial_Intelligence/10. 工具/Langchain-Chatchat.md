@@ -511,7 +511,7 @@ $ streamlit run webui.py --server.port 666
 
 ## 项目交流群
 
-<img src="Langchain-Chatchat.assets/image-20230906101805804.png" alt="image-20230906101805804" style="zoom:25%;" />
+<img src="./Langchain-Chatchat.assets/image-20230906101805804.png" alt="image-20230906101805804" style="zoom:25%;" />
 
 # 个人环境备注
 

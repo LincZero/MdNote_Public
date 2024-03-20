@@ -1014,7 +1014,7 @@ def logout(request):
 
 ## 14.图片验证码
 
-<img src="assets/image-20211127152344329.png" alt="image-20211127152344329" style="zoom: 50%;" />
+<img src="./assets/image-20211127152344329.png" alt="image-20211127152344329" style="zoom: 50%;" />
 
 ### 14.1 生成图片
 

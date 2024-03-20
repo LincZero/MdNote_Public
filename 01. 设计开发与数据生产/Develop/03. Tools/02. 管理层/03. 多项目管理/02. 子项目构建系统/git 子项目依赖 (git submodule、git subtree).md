@@ -211,6 +211,16 @@ Submodule path 'assets': checked out 'e33f854d3f51f5ebd771a68da05ad0371a3c0570'
 git clone https://github.com/maonx/vimwiki-assets.git assets --recursive 
 ```
 
+### 通用方法
+
+这里是一个让子模块类似普通模块一样的使用方式：
+
+`git submodule foreach` + 普通命令。例如：
+
+```bash
+git submodule foreach git pull origin main
+```
+
 ### 修改推拉
 
 #### 更新子模块
