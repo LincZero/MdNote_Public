@@ -1,3 +1,5 @@
+# WSL
+
 参考
 
 -   https://learn.microsoft.com/zh-cn/windows/wsl/install（官网文档，建议看这篇）
@@ -102,7 +104,7 @@ PS C:\Users\user-name> wsl --set-version Ubuntu-20.04 2
     wsl --set-version <distribution name> <versionNumber>
     ```
 
-​		请确保将 <distribution name> 替换为你的分发版的实际名称，并将 <versionNumber> 替换为数字“1”或“2”。
+​		请确保将 `<distribution name>` 替换为你的分发版的实际名称，并将 `<versionNumber>` 替换为数字“1”或“2”。
 ​        可以随时更改回 WSL 1，方法是运行与上面相同的命令，但将“2”替换为“1”。
 
 -   如果要使 WSL 2 成为你的默认体系结构，可以通过此命令执行该操作：

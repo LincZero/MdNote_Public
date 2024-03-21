@@ -496,55 +496,47 @@ int main(int argc, char* argv[]) {
 
 在C++中，我们可以使用Boost.Asio库来使用步同步I/O模拟Proactor模型。以下是使用Boost.Asio实现Proactor模型的步骤：
 
-    安装Boost库：首先，确保已经安装了Boost库，并将其包含在项目中。Boost.Asio是Boost库的一部分。
-    包含所需的头文件：
+安装Boost库：首先，确保已经安装了Boost库，并将其包含在项目中。Boost.Asio是Boost库的一部分。
+包含所需的头文件：
     
-    #include <boost/asio.hpp>
-    #include <boost/bind.hpp>
-    #include <iostream>
-    #include <vector>
-        1
-        2
-        3
-        4
-    
-    创建异步回调函数：为了模拟Proactor模型，我们需要创建异步回调函数，该函数在异步操作完成时被调用。
-    
-    void handle_read(const boost::system::error_code& error, std::size_t bytes_transferred) {
+```cpp
+#include <boost/asio.hpp>
+#include <boost/bind.hpp>
+#include <iostream>
+#include <vector>
+```
+
+创建异步回调函数：为了模拟Proactor模型，我们需要创建异步回调函数，该函数在异步操作完成时被调用。
+
+```cpp
+void handle_read(const boost::system::error_code& error, std::size_t bytes_transferred) {
         if (!error) {
             std::cout << "Read: " << bytes_transferred << " bytes" << std::endl;
         } else {
             std::cerr << "Error: " << error.message() << std::endl;
         }
     }
-        1
-        2
-        3
-        4
-        5
-        6
-        7
+```
     
-    使用Boost.Asio创建异步操作：使用Boost.Asio创建一个异步读取操作，并将其与异步回调函数关联。
+使用Boost.Asio创建异步操作：使用Boost.Asio创建一个异步读取操作，并将其与异步回调函数关联。
     
+```cpp
     boost::asio::io_context io_context;
     boost::asio::ip::tcp::socket socket(io_context);
     boost::asio::ip::tcp::endpoint endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 8080);
     
     socket.async_connect(endpoint, boost::bind(&handle_read, boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
-        1
-        2
-        3
-        4
-        5
+```
+
+运行I/O上下文：运行I/O上下文以处理异步操作。
     
-    运行I/O上下文：运行I/O上下文以处理异步操作。
-    
-    io_context.run();
-        1
+```cpp
+io_context.run();
+```
 
 完整的代码如下：
 
+```cpp
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 #include <iostream>
@@ -573,11 +565,11 @@ int main() {
     
     return 0;
 }
-
-
+```
 
 测试使用的TCP服务器来接受上面客户端的连接：
 
+```cpp
 #include <boost/asio.hpp>
 #include <iostream>
 #include <array>
@@ -636,16 +628,7 @@ int main() {
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
+```
 
 ## 区别
 

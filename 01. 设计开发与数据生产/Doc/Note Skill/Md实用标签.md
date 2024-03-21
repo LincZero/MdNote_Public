@@ -1,6 +1,7 @@
 ---
 author: LincZero
 url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
+
 ---
 
 # Md实用标签
@@ -31,9 +32,12 @@ url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
 
   1. 想要丰富的格式，但某些平台只能使用Markdwon写作时
   2. 产品级文档（不是指技术文档，那种也没必要，除非你有专门的部门去干。主要是单页的主文档）
+
     - 比如某个项目的介绍文档，比如简历等（但这些一般都用富文本格式吧）
     - 这时可以**减少对效率的极致需求**，花多一些精力去对文档进行润色，是合适的
+
   3. 某些专题的笔记
+
     - 比如在写注音笔记、或翻译来的文档时，ruby + rt 标签会很有用，可以保留原单词的同时又可以不让这些单词影响阅读体验
     - 比如在软件介绍时，使用 kbd 标签（最好加个样式），看起来更直观
 
@@ -55,7 +59,7 @@ url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
 
 | Sytle内容                  | 作用                                                         | 使用建议                                                     |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 图片高宽控制<br />或者缩放 | <img src="https://img0.baidu.com/it/u=3452693033,2914629743&fm=253" style="height:100px"><img src="https://img1.baidu.com/it/u=692181697,2515657060&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1665680400&t=73a9efc9b1274679e2ee4c6a155a98ea" style="height:100px"> | 我主要是在表格内使用。让他们的高或宽相同（固定px）<br /><br />完美解决对齐问题（图片本来一大一小）<br />图片缩放也行，比如50%，但一般我会给固定大小而非百分比 |
+| 图片高宽控制<br />或者缩放 | <img src="https://img0.baidu.com/it/u=3452693033,2914629743&fm=253" style="height:100px"><img src="Md实用标签.assets/u=692181697,2515657060&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto.jpeg" style="height:100px"> | 我主要是在表格内使用。让他们的高或宽相同（固定px）<br /><br />完美解决对齐问题（图片本来一大一小）<br />图片缩放也行，比如50%，但一般我会给固定大小而非百分比 |
 | 右浮动<br />float或align   | <p style="float:right">右</p><br /><p align="right">右</p>   | 用得不多                                                     |
 
 
@@ -115,6 +119,7 @@ url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
   <p>我是一段被隐藏的内容</p>
 </details>
 
+
 不兼容的情况（如CSDN）表现为默认展开，不需要担心隐藏内容消失
 
 
@@ -152,7 +157,7 @@ url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
 
 | 标签      | 作用                                                         | 使用建议                                                     |
 | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ruby + rt | 国家Nation<ruby>国家<rt>Nation</ruby> 或 国家Nation<ruby>国家<rt>Nation</rt></ruby> | 技术翻译文档里比较常见的（Typora复制有bug）<br />（这个最好字体在18px以上效果较好） |
+| ruby + rt | 国家Nation国家Nation<ruby>国家<rt>Nation</rt></ruby> 或 国家Nation国家Nation<ruby>国家<rt>Nation</rt></ruby> | 技术翻译文档里比较常见的（Typora复制有bug）<br />（这个最好字体在18px以上效果较好） |
 | kbd       | <kbd>Ctrl</kbd> + <kbd>C</kbd><br /><kbd>Ctrl Shift</kbd> + <kbd>V</kbd> | KBD即键盘（**K**ey**b**oar**d**）的缩写，主要是快捷键用<br />觉得原生的样式有点一般的，也可以调整一下css |
 | u         | <u>下滑线</u>                                                |                                                              |
 | center    | <center>居中</center><br />（正文生效）                      | 非必要，勿使用                                               |
@@ -206,9 +211,9 @@ url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
 
 可以把源码包含````dataviewjs`之类的直接包含在里面显示出来, 方便复制……但是，不如原生的
 
-`<pre><code>内容</pre></code>`
+`<pre><code>内容</code</pre>>`
 
-<pre><code>内容</pre></code>
+<pre><code>内容</code></pre>
 
 兼容性
 
@@ -247,6 +252,7 @@ url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
 </figure>
 
 
+
 > #### area
 
 为图片提供点击热区，可以自己规定一张图的哪些区域可点击；一般配合map使用。效果：
@@ -258,9 +264,3 @@ url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
         <area shape="rect" coords="0,50,100,100" alt="sougou" href="https://www.sogou.com/">   
     </map>
 </div>
-
-
-
-
-
-

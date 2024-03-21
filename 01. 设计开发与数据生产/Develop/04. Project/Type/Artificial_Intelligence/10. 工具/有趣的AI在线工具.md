@@ -80,13 +80,26 @@ Crypko，还能生成下半身
 
 # 使用
 
+```
 {} 会使 { prompt } 影响因子x1.05
 [] 会使 [ prompt ] 影响因子x1.05
+```
+
 ———人物数量———
+
+```
 , one boy , one girl , two boy ,two girl one_boy_one_girl(这是错误的)
+```
+
 ———人物画风———
+
+```
 原神 , Genshin Impact
+```
+
 ———人物样貌———
+
+```
 头发 , hair
 长发 , longhair
 短发 , shorthair
@@ -132,7 +145,11 @@ Crypko，还能生成下半身
 流泪 , tears
 淫纹 , pubic tattoo
 跳蛋 , {vibrator}
+```
+
 ———环境样式———
+
+```
 在床上 , on bed
 色情内容 , sex , nsfw , cum
 光线反射 , reflection light
@@ -141,11 +158,19 @@ Crypko，还能生成下半身
 在瑜伽垫上(它分不清什么是瑜伽垫，只知道色块比较大，所以要配合one girl用) , on_yoga_mats
 触手 , tentacles
 很多触手 , lot of tentacles
+```
+
 ———人物视角———
+
+```
 正面视角 , pov
 从上到下视角 , from_below
 全身 , full body
+```
+
 ———人物状态———
+
+```
 狗狗式趴 , doggystyle
 后入 , sex_from_behind , ass_focus , on_backend_cum
 叉开腿 , spread leg
@@ -163,22 +188,23 @@ Crypko，还能生成下半身
 吐舌头 , tongue out
 抬起腿 , legs up
 手放背后 , hidden hands , arms behind back
+```
+
+
 
 ## 抄点关键词
 
+1
 
-
+```
 {{{{{{ookami mio}}}}}}, NSFW, {{masterpiece}}, {shiny skin}, Steam, {leg hold by tentacles}, {{{sweat}}}, {{breast press}},contour deepening, horny, {rape}, {corruption} , wide spread legs,{{{{Successive Orgasms}}}},{{{{Trembling}}}}, {{{lots of juices}}},see-through micro bikini,garter straps,elbow gloves,wet taut shirt, {leg hold by tentacles},spread anus,closed one eye,tongue out,cum in mouth,sweatdrop,leash,3girls,torn clothes,skin fang,{{{{mating press}}}}, pubic tattoo on belly,{{{sunburn}}},multiple tentacles insertion,{black hair}, crotch rope,dark skin,
+```
 
+2
 
-
-
-
-
-
-
-
+```
 olo, {{masterpiece}}, 1girl, {{{loli}}}, small breasts, flat chest, blonde hair, denim micro shorts, mesugaki, hand to own mouth, sneakers, squatting, :D, skin fang, {{smirk}}, spread legs, shiny skin, blurry background,blush,{{hip focus}}, jacket, crop top,from side,twintails,bright,upper teeth
+```
 
 
 
@@ -186,8 +212,9 @@ olo, {{masterpiece}}, 1girl, {{{loli}}}, small breasts, flat chest, blonde hair,
 
 
 
+## 术式
 
-
+```
 【必须术式】nsfw，1girl，
 
 【基础术式】nfsw、masterpiece、highly detailed、，
@@ -340,22 +367,31 @@ tentacles_under_clothes 衣服下的触手
 , vibrator under clothes , 衣服下的振动器 
 , bound together  , 捆绑在一起 
 , fanny packing 肉铠甲
+```
+
+
 
 ## 系列关键词
 
+```
 lgirl， milf， motherly，sketch art，sketch paper， front back side，pencils
 女孩，母性，母亲，白色长袍，黑色褶边，女王，设计文件，人物概念，素描艺术，素描纸，正面背面，铅笔
+```
 
 
 
+```
 {{masterpiece}}，{mesugaki}，extremely detailed，4k CG, highly detailed，a girl,sketch art, sketch paper, front back side, pencils,petite,mature female,black_hair,red_eyes,Roman Sandals，fingerless gloves,small_breasts,coat,hair stick,，elf，mage，Broad forehead，staff，wavy_hair,earrings     精灵法师 缇娜
+```
 
 
 
+```
 tags:({masterpiece}}, loli girl, white hair,Medium ponytail hair,Full body
 ………………,hair,ldol trainees Black top
 {杰作}，萝莉女孩，白发，中等马尾辫头发，全身，吊带,篮球，唱歌，跳跃，中央头发,偶像学员,黑色上衣
 IKUN (by: Alice)
+```
 
 
 
@@ -395,7 +431,7 @@ schematic
 
 ## 技巧
 
-【【AI绘画】AI不认识人物怎么办！强大的Textual Inversion【NovelAI】】 ![img](file:///C:\Users\A\AppData\Roaming\Tencent\QQTempSys\[5UQ[BL(6~BS2JV6W}N6[%S.png)https://www.bilibili.com/video/BV1ae4y1S7v9?share_source=copy_web&vd_source=66b973de72068849b22595697284a09d
+[【AI绘画】AI不认识人物怎么办！强大的Textual Inversion【NovelAI】](https://www.bilibili.com/video/BV1ae4y1S7v9?share_source=copy_web&vd_source=66b973de72068849b22595697284a09d)
 
 
 

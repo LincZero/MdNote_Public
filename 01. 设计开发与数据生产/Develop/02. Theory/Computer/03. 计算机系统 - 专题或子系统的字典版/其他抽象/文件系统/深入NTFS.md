@@ -17,7 +17,7 @@
 >
 > **NTFS（<ruby>新技术文件系统<rt>New Technology File System</rt></ruby>）**，是Microsoft公司开发的专用文件系统，从Windows NT 3.1开始成为Windows NT家族的默认文件系统。（Mac也是用的）
 >
-> NTFS 取代 **FAT（<ruby>文件分配表<rt>File Allocation Table</rt></ruby>）**和 **HPFS（<ruby>高性能文件系统<rt>High Performance File System</rt></ruby>）**并进行一系列改进成为更加完善的安全系统，例如增强对元数据的支持，使用更高级的数据结构以提升性能、可靠性和磁盘空间利用率，并附带一系列增强功能，如访问 **ACL（<ruby>控制列表<rt>Access Control List</ruby>）**和文件系统日志。
+> NTFS 取代 **FAT（<ruby>文件分配表<rt>File Allocation Table</rt></ruby>）**和 **HPFS（<ruby>高性能文件系统<rt>High Performance File System</rt></ruby>）**并进行一系列改进成为更加完善的安全系统，例如增强对元数据的支持，使用更高级的数据结构以提升性能、可靠性和磁盘空间利用率，并附带一系列增强功能，如访问 **ACL（<ruby>控制列表<rt>Access Control List</rt></ruby>）**和文件系统日志。
 >
 > 其他台式机和服务器操作系统也支持NTFS。Linux和windows提供代码的软件NTFS-system，可用于读写NTFS文件。Mac OS X内核不能对NTFS进行读操作。 
 
@@ -65,7 +65,7 @@
 >
 > 为了防止这种情况，日志文件系统分配了一个特殊的区域——**日志**——它在其中记录了它将提前进行的更改。
 > 崩溃后，恢复只涉及从文件系统读取日志并重放该日志的更改，直到文件系统再次一致。 
-> 因此，这些更改被称为 **<ruby>原子<rt>不可分割</ruby>** 的，因为它们要么成功（最初成功或在恢复期间完全重放），要么根本不重放（被跳过，因为它们在发生崩溃）。 
+> 因此，这些更改被称为 **<ruby>原子<rt>不可分割</rt></ruby>** 的，因为它们要么成功（最初成功或在恢复期间完全重放），要么根本不重放（被跳过，因为它们在发生崩溃）。 
 
 
 
@@ -134,7 +134,7 @@
 > （复杂数据结构：如比较重要的如卷分配图、磁盘碎片整理API产生的数据转移操作、MFT（主文件表）记录的更改情况（包括移动MFT记录中存储的变长属性和属性表等））
 > （索引：在目录和安全描述符中使用）
 >
-> **[USN日志](https://zh.wikipedia.org/wiki/USN日志)（<ruby>更新序列号码日志<rt>Update Sequence Number Journal</ruby>，或称 <ruby>更改日志<rt>Change Journal</ruby>）**是一项系统管理功能（注意不要与NTFS文件系统的日志设计混淆）。
+> **[USN日志](https://zh.wikipedia.org/wiki/USN日志)（<ruby>更新序列号码日志<rt>Update Sequence Number Journal</rt></ruby>，或称 <ruby>更改日志<rt>Change Journal</rt></ruby>）**是一项系统管理功能（注意不要与NTFS文件系统的日志设计混淆）。
 > 作用为记录卷中所有文件、数据流、目录的内容、属性以及各项安全设置的更改情况。应用程序可以利用日志追踪卷的更改。对于非系统卷，可以选择打开或关闭日志。当添加一个新卷后，默认情况下日志功能处于打开状态。 
 
 
@@ -236,12 +236,12 @@ NTFS文件系统的核心
 
 > [!wiki] NTFS/主文件表（MFT）
 >
-> 在NTFS中，所有文件数据——文件名、创建日期、访问权限，以及内容 —— 都作为 [**<ruby>元数据<rt>Metadata</ruby>**](https://zh.wikipedi>a.org/wiki/元数据) 储存在 **MFT（<ruby>主文件表<rt>Master File Table</ruby>）**中。
+> 在NTFS中，所有文件数据——文件名、创建日期、访问权限，以及内容 —— 都作为 [**<ruby>元数据<rt>Metadata</rt></ruby>**](https://zh.wikipedi>a.org/wiki/元数据) 储存在 **MFT（<ruby>主文件表<rt>Master File Table</rt></ruby>）**中。
 > 其中访问权限使用 **ACL（<ruby>访问控制列表<rt>Access Control List</rt></ruby>）**实现
 >
-> 这种抽象的实现方式能够大大简化为文件系统添加功能的成本。例如，**<ruby>活动目录<rt>Active Directory</ruby>** 服务可以很容易在文件系统中为文件添加索引字段。这种设计方式也使得 **[Everything](https://zh.wikipedia.org/wiki/Everything_(软件)) 或者 Ultrasearch** 一类的软件可以不依赖于Windows Search实现对文件和文件夹名称的实时搜索。
+> 这种抽象的实现方式能够大大简化为文件系统添加功能的成本。例如，**<ruby>活动目录<rt>Active Directory</rt></ruby>** 服务可以很容易在文件系统中为文件添加索引字段。这种设计方式也使得 **[Everything](https://zh.wikipedia.org/wiki/Everything_(软件)) 或者 Ultrasearch** 一类的软件可以不依赖于Windows Search实现对文件和文件夹名称的实时搜索。
 >
-> **MFT（<ruby>主文件表<rt>Master File Table</ruby>）结构** 支持最小化磁盘碎片的算法。一个目录项同时包含“文件名”和“文件ID”，后者是用于在主文件表中标识文件的记录编号。文件ID也包含“重用次数”信息，可用于检测对文件的过期引用。这点设计非常类似于Files-11文件系统的W_FID，和NTFS的其他部分迥然不同。 
+> **MFT（<ruby>主文件表<rt>Master File Table</rt></ruby>）结构** 支持最小化磁盘碎片的算法。一个目录项同时包含“文件名”和“文件ID”，后者是用于在主文件表中标识文件的记录编号。文件ID也包含“重用次数”信息，可用于检测对文件的过期引用。这点设计非常类似于Files-11文件系统的W_FID，和NTFS的其他部分迥然不同。 
 
 
 
@@ -251,7 +251,7 @@ NTFS文件系统的核心
 
 ### ==元文件==
 
-再次补充：[**<ruby>元数据<rt>Metadata</ruby>**](https://zh.wikipedi>a.org/wiki/元数据) 储存在 **MFT（<ruby>主文件表<rt>Master File Table</ruby>）**中
+再次补充：[**<ruby>元数据<rt>Metadata</rt></ruby>**](https://zh.wikipedi>a.org/wiki/元数据) 储存在 **MFT（<ruby>主文件表<rt>Master File Table</rt></ruby>）**中
 
 
 

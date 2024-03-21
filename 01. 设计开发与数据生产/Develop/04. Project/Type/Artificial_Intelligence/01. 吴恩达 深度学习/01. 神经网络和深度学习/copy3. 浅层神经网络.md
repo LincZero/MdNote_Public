@@ -671,7 +671,7 @@ $ dW^{[2]} = {\frac{1}{m}}dz^{[2]}A^{[1]T} $
 公式3.34：
 $ {\rm d}b^{[2]} = {\frac{1}{m}}np.sum({d}z^{[2]},axis=1,keepdims=True)$
 公式3.35：
-$ dz^{[1]} = \underbrace{W^{[2]T}{\rm d}z^{[2]}}_{(n^{[1]},m)}\quad*\underbrace{{g^{[1]}}^{'}}_{activation \; function \; of \; hidden \; layer}*\quad\underbrace{(z^{[1]})}_{(n^{[1]},m)} $
+$ dz^{[1]} = \underbrace{W^{[2]T}{\rm d}z^{[2]}}_{(n^{[1]},m)}\quad*\underbrace{g^{[1]'}}_{activation \; function \; of \; hidden \; layer}*\quad\underbrace{(z^{[1]})}_{(n^{[1]},m)} $
 公式3.36：
 $dW^{[1]} = {\frac{1}{m}}dz^{[1]}x^{T}$
 公式3.37：

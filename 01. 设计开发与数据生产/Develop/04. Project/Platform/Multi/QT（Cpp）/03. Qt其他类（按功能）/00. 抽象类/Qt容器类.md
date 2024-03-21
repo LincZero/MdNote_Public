@@ -90,18 +90,18 @@ Qt容器类的遍历有两种方法
     - 不同于STL风格的迭代器，Java风格迭代器的`迭代点`（*Java-style iterators point*）位于列表项的**中间**，而不是直接指向某个列表项
 - 只读迭代器例程
     - ```c++
-    #include <QCoreApplication>
-    #include <QDebug>					// 包括了QList头文件，不需要 #include <QList>
-    int main(int argc, char *argv[])
-    {
-        QCoreApplication a(argc, argv);
-        QList<int> list;					// 声明容器类对象
-        list<<1<<2<<3<<4<<5;
-        QListIterator<int> i(list);			// 以list为参数初始化一个QListIterator只读迭代器对象i
-        for(;i.hasNext();)
-            qDebug()<<i.next();
-        return a.exec();
-    }
+      #include <QCoreApplication>
+      #include <QDebug>					// 包括了QList头文件，不需要 `#include <QList>`
+      int main(int argc, char *argv[])
+      {
+          QCoreApplication a(argc, argv);
+          QList<int> list;					// 声明容器类对象
+          list<<1<<2<<3<<4<<5;
+          QListIterator<int> i(list);			// 以list为参数初始化一个QListIterator只读迭代器对象i
+          for(;i.hasNext();)
+              qDebug()<<i.next();
+          return a.exec();
+      }
       ```
 - 只读迭代器函数
     - `QListIterator<T>::toBack()`，将迭代点移动到最后一个列表项后面
@@ -207,16 +207,3 @@ Qt容器类的遍历有两种方法
 ### Java风格迭代器遍历容器
 
 ### STL风格迭代器遍历容器
-
-
-
-
-
-
-
-
-
-
-
-
-

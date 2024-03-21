@@ -252,7 +252,7 @@ install默认点击debug/run的时候并不会触发，需要一点手动操作�
 
 #### install中的configure_file
 
-该命令将 <input> 指定的文件拷贝为 <output>指定的文件，并将 <input> 文件中 @VAR@ 或 ${VAR} 的位置替换为使用 configure_file() 命令的当前 CMakeLists.txt 中变量 VAR 的值。该命令用于外部文件获取 CMakeLists.txt 文件中变量的值。
+该命令将 `<input>` 指定的文件拷贝为` <output>` 指定的文件，并将 `<input>` 文件中 @VAR@ 或 ${VAR} 的位置替换为使用 configure_file() 命令的当前 CMakeLists.txt 中变量 VAR 的值。该命令用于外部文件获取 CMakeLists.txt 文件中变量的值。
 
     configure_file(<input> <output) 中的 <output> 指定的文件名必须是 xxxConfig.cmake 或 xxx-config.cmake（xxx必须为小写）。
 #### cmake install文件demo
@@ -458,9 +458,9 @@ PROJECT (HELLO C CXX)      指定了工程的名字，并且支持语言是C和C
 
 该指定隐式定义了两个CMAKE的变量
 
-<projectname>_BINARY_DIR，本例中是 HELLO_BINARY_DIR
+`<projectname>_BINARY_DIR`，本例中是 HELLO_BINARY_DIR
 
-<projectname>_SOURCE_DIR，本例中是 HELLO_SOURCE_DIR
+`<projectname>_SOURCE_DIR`，本例中是 HELLO_SOURCE_DIR
 
 MESSAGE关键字就可以直接使用者两个变量，当前都指向当前的工作目录，后面会讲外部编译
 

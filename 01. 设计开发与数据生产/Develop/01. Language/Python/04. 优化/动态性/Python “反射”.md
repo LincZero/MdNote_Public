@@ -82,7 +82,7 @@ if __name__ == "__main__":
 
 参考：原文链接：https://blog.csdn.net/xiemanR/article/details/77922917
 
-绝大多数是获取<class>对象的方法，与在 Java 中通过反射获取class类的逻辑相同
+绝大多数是获取 `<class>` 对象的方法，与在 Java 中通过反射获取class类的逻辑相同
 
 ```python
 point1 = Point(1, 2)										# 普通方法
