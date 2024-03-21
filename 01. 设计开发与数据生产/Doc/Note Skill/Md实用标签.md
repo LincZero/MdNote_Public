@@ -59,7 +59,7 @@ url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
 
 | Sytle内容                  | 作用                                                         | 使用建议                                                     |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 图片高宽控制<br />或者缩放 | <img src="https://img0.baidu.com/it/u=3452693033,2914629743&fm=253" style="height:100px"><img src="Md实用标签.assets/u=692181697,2515657060&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto.jpeg" style="height:100px"> | 我主要是在表格内使用。让他们的高或宽相同（固定px）<br /><br />完美解决对齐问题（图片本来一大一小）<br />图片缩放也行，比如50%，但一般我会给固定大小而非百分比 |
+| 图片高宽控制<br />或者缩放 | <img src="https://img0.baidu.com/it/u=3452693033,2914629743&fm=253" style="height:100px"><img src="https://img1.baidu.com/it/u=692181697,2515657060&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1665680400&t=73a9efc9b1274679e2ee4c6a155a98ea" style="height:100px"> | 我主要是在表格内使用。让他们的高或宽相同（固定px）<br /><br />完美解决对齐问题（图片本来一大一小）<br />图片缩放也行，比如50%，但一般我会给固定大小而非百分比 |
 | 右浮动<br />float或align   | <p style="float:right">右</p><br /><p align="right">右</p>   | 用得不多                                                     |
 
 
@@ -264,3 +264,10 @@ url: 这篇文章我开源过出去，https://forum-zh.obsidian.md/t/topic/12670
         <area shape="rect" coords="0,50,100,100" alt="sougou" href="https://www.sogou.com/">   
     </map>
 </div>
+
+
+
+
+
+
+

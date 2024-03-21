@@ -1,5 +1,6 @@
 ---
 createTime: 20230502 16:44
+
 ---
 
 # 构建管理
@@ -38,7 +39,7 @@ CMakeLists.txt和Makefile都是用来管理和自动化编译、构建C/C++项�
 ### 单个源文件
 
 - Demo1/
-	- main.cc
+  - main.cc
 
 ```cmake
 # CMake 最低版本号要求
@@ -54,9 +55,9 @@ add_executable(Demo main.cc)
 ### 同一目录，多个源文件
 
 - Demo2/
-	- main.cc
-	- MathFunctions.cc
-	- MathFunctions.h
+  - main.cc
+  - MathFunctions.cc
+  - MathFunctions.h
 
 ```cmake
 # CMake 最低版本号要求
@@ -89,11 +90,11 @@ add_executable(Demo ${DIR_SRCS})
 ### 多个目录，多个源文件
 
 - Demo3/
-	- main.cc
-	- math/
-		- MathFunctions.cc
-		- MathFunctions.h
-		- **(NEW)** CMakeLists.txt
+  - main.cc
+  - math/
+    - MathFunctions.cc
+    - MathFunctions.h
+    - **(NEW)** CMakeLists.txt
 
 ```cmake
 # CMake 最低版本号要求
@@ -178,6 +179,7 @@ target_link_libraries (Demo ${EXTRA_LIBS})
 ---
 
 - 在cmakelist中，copy和INSTALL files的功能很相似，它们都可以将文件从源目录复制到目标目录。主要区别在于他们的使用场景和时机：
+
   - copy命令：会在构建（build）阶段，复制文件或目录到某个具体的位置（但我实测好像在cmake的时候就会复制）
   - INSTALL：则是在安装（install）阶段执行的，可以将文件复制到安装目录下，或者制定具体的位置。它通常会结合CPACK相关命令一起使用，用于生成发布包。 
 
@@ -185,9 +187,9 @@ target_link_libraries (Demo ${EXTRA_LIBS})
 
 - 如果想要生成一个只包含了头文件的include文件夹，通常建议是使用INSTALL命令。
 
-    因为只有头文件的库通常是被设计为可以被其他应用或库引用的，所以往往需要安装到一个公共的或者标准的位置，而INSTALL命令在制作软件发布包或者进行软件安装时更为适用。
+  因为只有头文件的库通常是被设计为可以被其他应用或库引用的，所以往往需要安装到一个公共的或者标准的位置，而INSTALL命令在制作软件发布包或者进行软件安装时更为适用。
 
-    但是，如果你只是在开发阶段需要复制头文件，那么使用copy命令也是可行的。 
+  但是，如果你只是在开发阶段需要复制头文件，那么使用copy命令也是可行的。 
 
 ### CMake构建系统阶段
 
@@ -255,6 +257,7 @@ install默认点击debug/run的时候并不会触发，需要一点手动操作�
 该命令将 `<input>` 指定的文件拷贝为` <output>` 指定的文件，并将 `<input>` 文件中 @VAR@ 或 ${VAR} 的位置替换为使用 configure_file() 命令的当前 CMakeLists.txt 中变量 VAR 的值。该命令用于外部文件获取 CMakeLists.txt 文件中变量的值。
 
     configure_file(<input> <output) 中的 <output> 指定的文件名必须是 xxxConfig.cmake 或 xxx-config.cmake（xxx必须为小写）。
+
 #### cmake install文件demo
 
 完整项目地址：[my_oatpp](https://gitee.com/tang_world/my_oatpp)
@@ -707,10 +710,11 @@ cmake -DCMAKE_BUILD_TYPE=debug
 ### 语法的基本原则
 
 - 变量使用 `${}` 方式取值，但是在 IF 控制语句中是直接使用变量名
+
 - `指令(参数 1 参数 2...)` 参数使用括弧括起，参数之间使用**空格或分号**分开。 以上面的 ADD_EXECUTABLE 指令为例，如果存在另外一个 func.cpp 源文件
-  
-    就要写成：`ADD_EXECUTABLE(hello main.cpp func.cpp)` 或者 `ADD_EXECUTABLE(hello main.cpp;func.cpp)`
-    
+
+  就要写成：`ADD_EXECUTABLE(hello main.cpp func.cpp)` 或者 `ADD_EXECUTABLE(hello main.cpp;func.cpp)`
+
 - 指令是**大小写无关**的，参数和变量是大小写相关的。但，推荐你全部使用大写指令（LincZero：我喜欢用小写）
 
 语法注意事项
@@ -791,13 +795,14 @@ add_executable(hello main.cpp)
 ADD_SUBDIRECTORY(source_dir [binary_dir] [EXCLUDE_FROM_ALL])
 
 - 这个指令用于向当前工程添加存放源文件的子目录，并可以指定中间二进制和目标二进制存放的位置
+
 - EXCLUDE_FROM_ALL函数是将写的目录从编译中排除，如程序中的example
+
 - ADD_SUBDIRECTORY(src bin)
-  
-    将 src 子目录加入工程并指定编译输出(包含编译中间结果)路径为bin 目录
-    
-    如果不进行 bin 目录的指定，那么编译结果(包括中间结果)都将存放在build/src 目录
-    
+
+  将 src 子目录加入工程并指定编译输出(包含编译中间结果)路径为bin 目录
+
+  如果不进行 bin 目录的指定，那么编译结果(包括中间结果)都将存放在build/src 目录
 
 ### 用 SET 更改二进制的保存路径
 
@@ -816,8 +821,8 @@ SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 
 - 一种是从代码编译后直接 make install 安装
 - 一种是打包时的指定 目录安装。
-    - 简单的可以这样指定目录：make install DESTDIR=/tmp/test
-    - 稍微复杂一点可以这样指定目录：./configure –prefix=/usr
+  - 简单的可以这样指定目录：make install DESTDIR=/tmp/test
+  - 稍微复杂一点可以这样指定目录：./configure –prefix=/usr
 
 ### 如何安装HelloWord
 
@@ -878,9 +883,10 @@ INSTALL(PROGRAMS runhello.sh DESTINATION bin)
 ### (3) 安装 doc 中的 hello.txt
 
 - 一、是通过在 doc 目录建立CMakeLists.txt ，通过install下的file
+
 - 二、是直接在工程目录通过
-  
-     INSTALL(DIRECTORY doc/ DESTINATION share/doc/cmake)
+
+  INSTALL(DIRECTORY doc/ DESTINATION share/doc/cmake)
 
 
 DIRECTORY 后面连接的是所在 Source 目录的相对路径
@@ -1166,7 +1172,6 @@ include_directories(/usr/include/hello)
 > 我们还可以使用另外一种方式，使用环境变量 export CMAKE_INCLUDE_PATH=/usr/include/hello
 
 > #### 解决：找到引用的函数问题
->
 
 报错信息：undefined reference to `HelloFunc()'
 

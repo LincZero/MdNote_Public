@@ -98,22 +98,22 @@ PS C:\Users\user-name> wsl --set-version Ubuntu-20.04 2
 
 **说明：**
 
--   若要将分发版设置为受某一 WSL 版本支持，请运行：
+- 若要将分发版设置为受某一 WSL 版本支持，请运行：
 
-    ```shell
-    wsl --set-version <distribution name> <versionNumber>
-    ```
+  ```shell
+  wsl --set-version <distribution name> <versionNumber>
+  ```
 
 ​		请确保将 `<distribution name>` 替换为你的分发版的实际名称，并将 `<versionNumber>` 替换为数字“1”或“2”。
 ​        可以随时更改回 WSL 1，方法是运行与上面相同的命令，但将“2”替换为“1”。
 
--   如果要使 WSL 2 成为你的默认体系结构，可以通过此命令执行该操作：
+- 如果要使 WSL 2 成为你的默认体系结构，可以通过此命令执行该操作：
 
-    ```c++
-    wsl --set-default-version 2
-    ```
+  ```c++
+  wsl --set-default-version 2
+  ```
 
-    从 WSL 1 更新到 WSL 2 可能需要几分钟才能完成，具体取决于目标分发版的大小。如果--set-default-version 未列出，则表示你的 OS 不支持它，你需要更新到版本 1903（内部版本 18362）或更高版本。
+  从 WSL 1 更新到 WSL 2 可能需要几分钟才能完成，具体取决于目标分发版的大小。如果--set-default-version 未列出，则表示你的 OS 不支持它，你需要更新到版本 1903（内部版本 18362）或更高版本。
 
 ## 使用 WSL
 
