@@ -1,8 +1,4 @@
-# Diffusion实战
-
-# 目录
-
-# Diffusion实战
+# StableDiffusion实战
 
 B站的AI教父：[秋葉aaaki](https://space.bilibili.com/12566101)
 

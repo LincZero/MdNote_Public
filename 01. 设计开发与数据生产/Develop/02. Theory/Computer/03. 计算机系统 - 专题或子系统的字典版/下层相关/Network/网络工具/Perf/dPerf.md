@@ -1400,7 +1400,7 @@ ierrors 0                  oerrors  0                  imissed  0
 
 #### 图
 
-![testResult](YizDsT6c2a.jpg)
+
 #### 收发形式 (抓包)
 
 
