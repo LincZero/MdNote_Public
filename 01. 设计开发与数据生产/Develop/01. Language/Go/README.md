@@ -16,7 +16,8 @@ start_time: 2024-04-03
   - 离线源码：Golang_Manual_By_AstaXie_20120522.chm，在里面搜索
 - 学习视频
   - [花了2万多买的Go语言（golang）教程全套，现在分享给大家，golang零基础入门到精通(Java程序员转行golang开发必看)](https://www.bilibili.com/video/BV1bN4y1Z7BT/)
-    - 8.6w/4798，231009，23:59:32。录制时间是20年12月底（当前选择，有点啰嗦）。进度：68end/156
+    - 8.6w/4798，231009，23:59:32。录制时间是20年12月底（当前选择，有点啰嗦，太零基础了）
+    - 进度：156p全部，skip：80、81 不重要。2024-04-20结束
   - [Go语言语法精练 2023最新Go语言教程，没有废话，纯干货！](https://www.bilibili.com/video/BV1Ca411L72p)
     - 8.2w/7251，220606，05:11:10。又是那个全是广告的up，特点是时间很短
   - [golang入门到项目实战 2022最新Go语言教程，没有废话，纯干货！](https://www.bilibili.com/video/BV1zR4y1t7Wj)

@@ -2,7 +2,7 @@
 
 推荐神博客：
 
-- [网络相关个人博客](https://tonydeng.github.io/sdn-handbook/basic/icmp.html) （即包括基础，又包括更深入的容器、SDN、NFV、DPDK、OVS、eBPF、XDP等）
+- [网络相关个人博客](https://tonydeng.github.io/sdn-handbook/basic/icmp.html) （**强烈推荐**，即包括基础，又包括更深入的容器、SDN、NFV、DPDK、OVS、eBPF、XDP等）
   - 多备份几个链接：
   - [GitBook](https://tonydeng.gitbooks.io/sdn/)
   - [Github](https://github.com/tonydeng/sdn-handbook)

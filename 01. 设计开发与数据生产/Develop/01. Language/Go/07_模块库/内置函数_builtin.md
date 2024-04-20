@@ -18,10 +18,15 @@
 func len(v Type) int
 count := len(str)
 
-func new(Type) *Type	// 分配内存，第一个参数是类型而非值，返回指针
+// 分配内存，第一个参数是类型而非值，返回指针
+func new(Type) *Type
 num := new(int)			//     返回int*
 
-make					// 分配内存，主要用来分配引用类型 (指针、slice切片、map、管道chan、interface 等)
+// 分配内存，主要用来分配引用类型 (指针、slice切片、map、管道chan、interface 等)
+// - 切片：size长度，切片容量等于长度。make([]int, 0, 10) 会分配一个长度0容量10的切片
+// - 映射：初始大小取决于size，若长度为0可省略size
+// - 通道
+func make(Type, size IntegerType) Type
 ```
 
 

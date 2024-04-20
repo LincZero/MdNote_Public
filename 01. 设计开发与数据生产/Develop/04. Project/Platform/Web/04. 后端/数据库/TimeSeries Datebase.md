@@ -1,9 +1,5 @@
 # TimeSeries Datebase
 
-# 目录
-
-# TimeSeries Datebase
-
 参考：
 
 - 官网：https://www.influxdata.com/
@@ -121,9 +117,9 @@
 
 
 
-# TDengine
+## TDengine
 
-## 资料
+### 资料
 
 - 性能测试报告：https://www.taosdata.com/downloads/TDengine_Testing_Report_cn.pdf
 
@@ -198,7 +194,7 @@
     - [毫秒级返回数据，TDengine 在大疆车载智能驾驶云端平台上的应用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/542109306)
     - [TDengine极简实战：从采集到入库，从前端到后端，体验物联网设备数据流转 - 掘金 (juejin.cn)](https://juejin.cn/post/7104263110323617800)
 
-## 选型总结
+### 选型总结
 
 官方文档真的非常详尽
 
