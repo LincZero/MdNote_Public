@@ -1,0 +1,140 @@
+# 公有笔记导引
+
+（本篇笔记多用html片段）
+
+## 编程笔记 - 按语言划分
+
+- 按语言
+  - [C++](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/C__/)
+  - [C](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/C/)
+  - [Java](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/Java/)
+  - [Python](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/Python/)
+  - [JavaScript](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/JavaScript/)
+  - [TypeScript](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/TypeScript/)
+  - [Rust](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/Rust/)
+  - [Go](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/Go/)
+  - [E语言](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/EProgram/)
+  - [C#](../../MdNote_Public/01. 设计开发与数据生产/Develop/01. Language/C_/)
+- 常用（未）
+  - [Qt/PyQt](../../MdNote_Public/01. 设计开发与数据生产/Develop/04. Project/Platform/Multi/QT（Cpp）/)
+  - [Electron](../../MdNote_Public/01. 设计开发与数据生产/Develop/04. Project/Platform/Multi/Electron（Web）/)
+  - [Vue](../../MdNote_Public/01. 设计开发与数据生产/Develop/04. Project/Platform/Web/02. 前端框架/Vue/)
+  - [Android](../../MdNote_Public/01. 设计开发与数据生产/Develop/04. Project/Platform/Android/)
+  - [数据库](../../MdNote_Public/01. 设计开发与数据生产/Develop/04. Project/Platform/Web/04. 后端/数据库)
+  - [前端](../../MdNote_Public/01. 设计开发与数据生产/Develop/04. Project/Platform/Web/)
+  - [机器/深度学习](../../MdNote_Public/01. 设计开发与数据生产/Develop/04. Project/Type/Artificial_Intelligence/)
+  - [文档处理1](../../MdNote_Public/01. 设计开发与数据生产/Develop/02. Theory/Type/Doc/)
+  - [文档处理2](../../MdNote_Public/01. 设计开发与数据生产/Develop/04. Project/Type/Doc/)
+  - [游戏](../../MdNote_Public/01. 设计开发与数据生产/Develop/04. Project/Platform/SoftCode/Game/)
+- 计算机
+  - [SCAPP](../../MdNote_Public/01. 设计开发与数据生产/Develop/02. Theory/Computer/)
+  - [网络](../../MdNote_Public/01. 设计开发与数据生产/Develop/02. Theory/Computer/03. 计算机系统 - 专题或子系统的字典版/下层相关/Network/)
+
+## 学习笔记 - 按学习来源（未完，待整理）
+
+==（声明：不代表个人推荐，仅代表个人看过/买过的书，不排除学的时候有烂书。如需书本/视频推荐，问我或我有空出一期）==
+
+### 读书笔记 - 电子版
+
+- [深入理解计算机系统（原书第3版）](./01. 设计开发与数据生产/Develop/02. Theory/Computer/03. 计算机系统 - 线性学习版/《深入理解计算机系统》/)
+  - 纸质书学习笔记
+  - ![深入理解计算机系统（原书第3版）](README.assets/s29195878.jpg)
+- [数据结构与算法分析 C语言描述（原书第2版）典藏版](./01. 设计开发与数据生产/Develop/02. Theory/Program_Algorithm/《数据结构与算法分析》C语言描述/)
+  - 纸质书学习笔记
+  - ![数据结构与算法分析 C语言描述（原书第2版）典藏版](README.assets/s32320568.jpg)
+- [计算机网络（原书第7版）](./01. 设计开发与数据生产/Develop/02. Theory/Computer/03. 计算机系统 - 专题或子系统的字典版/下层相关/Network/《计算机网络——自顶向下方法》/)
+  - 纸质书学习笔记
+  - ![计算机网络（原书第7版）](README.assets/s29825217.jpg)
+- [小林 x 图解计算机基础](./01. 设计开发与数据生产/Develop/02. Theory/Computer/03. 计算机系统 - 线性学习版/《小林coding_图解系列》)（操作系统 + 网络 + 数据库）
+  - 博客笔记
+  - [![img](README.assets/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f6c696e636f6465722f496d616765486f737434406d61696e2f2545372542442539312545372541422539392545352542302538312545392539442541322e706e67.png)](https://camo.githubusercontent.com/7e89b5a513a4c3ee18a190033a53fcb1632df591a3ae5f0d0a66abc7a0f9dcf0/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f6c696e636f6465722f496d616765486f737434406d61696e2f2545372542442539312545372541422539392545352542302538312545392539442541322e706e67)
+- [C++ Primer Plus 第6版中文版](./01. 设计开发与数据生产/Develop/01. Language/C__/)
+  - 纸质书学习笔记
+  - ![C++ Primer Plus 第6版中文版（2020年）](README.assets/s34641192.jpg)
+- [Effective C++](./01. 设计开发与数据生产/Develop/03. Tools/02. 管理层/01. 多类管理/设计模式/《Effective C__》/)
+  - 纸质书学习笔记
+  - ![Effective C++](README.assets/s4647091.jpg)
+- [Qt 5开发及实例（第4版）](./01. 设计开发与数据生产/Develop/04. Project/Platform/Multi/QT（Cpp）/01. 简概/01. 简概/01. 简概.html)
+  - 纸质书学习笔记
+  - ![Qt 5开发及实例（第4版）（含典型案例视频分析）](README.assets/s32298927.jpg)
+- [C++ GUI Qt 4编程(第二版)](./01. 设计开发与数据生产/Develop/04. Project/Platform/Multi/QT（Cpp）/01. 简概/01. 简概/01. 简概.html)
+  - 纸质书学习笔记
+  - ![C++ GUI Qt 4编程(第二版)](README.assets/s29896826.jpg)
+- [Java核心技术](./01. 设计开发与数据生产/Develop/01. Language/Java/)
+  - 电子书学习笔记
+  - ![Java核心技术·卷 I（原书第11版）](README.assets/s33556751.jpg) 
+- [Python编程（第3版)](./01. 设计开发与数据生产/Develop/01. Language/Python/01. 编程语言/01. 编程语言.html)
+  - 纸质书学习笔记
+  - ![Python编程（第3版）](README.assets/s34505252.jpg)
+- [Python编程入门（第3版）](./01. 设计开发与数据生产/Develop/01. Language/Python/01. 编程语言/01. 编程语言.html)
+  - 纸质书学习笔记
+  - ![Python编程入门（第3版）](README.assets/s27142477.jpg)
+- [python绝技：运用python成为顶级黑客](./01. 设计开发与数据生产/Develop/04. Project/Type/Hack/《Python绝技 运用Python成为顶级黑客》/)
+  - 纸质书学习笔记
+  - ![python绝技：运用python成为顶级黑客](README.assets/s28385338.jpg)
+- [Unity Shader入门精要](./01. 设计开发与数据生产/3D/Render/《UnityShadow》/)
+  - 纸质书学习笔记
+  - ![Unity Shader入门精要](README.assets/s29095397.jpg)
+- [高等数学](./MdNote_Public/02. 十二门类与纯粹知识/07. 理学/01. 数学/03. 高等数学/《高等数学》/)
+  - 纸质书学习笔记
+  - ![高等数学·上册](README.assets/s28340131.jpg)
+- [工程数学.线性代数](./MdNote_Public/02. 十二门类与纯粹知识/07. 理学/01. 数学/03. 高等数学/《线性代数》/)
+  - 纸质书学习笔记
+  - ![工程数学.线性代数（第六版）](README.assets/s28321401.jpg)
+
+### 读书笔记 - 无电子笔记版
+
+Q：为什么有的书看了但没写笔记？
+
+- 早期没有做电子笔记的环境与习惯
+
+  （上高中时不让带电脑，而上大学时，由于我大学比较特殊很难用到电脑，都是手写笔记）
+
+  （*大部分没做笔记的读书都属于此类*）
+
+- 有一些书大部分内容都比较熟悉，只是选读一些关键章节，也没有专程写笔记
+
+- 再着，就是一些书比较难做笔记的（做起来很费时间），或者干脆比较忙没写笔记的
+
+这一类我仅记录一下书本身
+
+---
+
+- Unity 5.X从入门到精通
+  - 纸质书
+  - ![Unity 5.X从入门到精通](README.assets/s28366732.jpg)
+- 3ds Max 2014入门与实战经典
+  - 纸质书
+  - ![3ds Max 2014入门与实战经典](README.assets/s27667758.jpg)
+- C程序设计
+  - 纸质书
+  - ![C程序设计](README.assets/s29930610.jpg)
+- Android应用开发入门经典
+  - 纸质书
+  -  ![Android应用开发入门经典](README.assets/s8941266.jpg)
+- Java编程技术基础
+- 大学计算机基础 第3版 清华大学出版社
+- 飞行特色大学物理 第3版
+- Camera Raw 杨比比
+
+### 视频笔记 - 电子版
+
+==（这个会比读书笔记多上很多，但要等我有空再整理）==
+
+==（不过最好是等我有时间重构一下编译程序，将其自动化，手动管理这个引导页还是很不方便）==
+
+## 链接404的处理方式
+
+由于本页导航不是自动生成的，而是手动进行管理，所以在目录维护过程中，可能会出现链接对不上的问题。如遇到此类问题：
+
+1. 通过网页右上的GitHub链接进行反馈
+2. 尝试搜索原链接最后的路径段的方式，使用文档搜索工具进行寻找
+
+
+
+
+
+
+
+
+
