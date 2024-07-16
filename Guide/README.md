@@ -1,6 +1,8 @@
 # 公有笔记导引
 
-（本篇笔记多用html片段）
+（此页为施工中）
+
+（本篇 todo：多用html片段）
 
 ## 编程笔记 - 按语言划分
 
@@ -15,7 +17,7 @@
   - [Go](../../MdNote_Public/01.%20设计开发与数据生产/Develop/01.%20Language/Go/)
   - [E语言](../../MdNote_Public/01.%20设计开发与数据生产/Develop/01.%20Language/EProgram/)
   - [C#](../../MdNote_Public/01.%20设计开发与数据生产/Develop/01.%20Language/C_/)
-- 常用（未）
+- 常用
   - [Qt/PyQt](../../MdNote_Public/01.%20设计开发与数据生产/Develop/04.%20Project/Platform/Multi/QT（Cpp）/)
   - [Electron](../../MdNote_Public/01.%20设计开发与数据生产/Develop/04.%20Project/Platform/Multi/Electron（Web）/)
   - [Vue](../../MdNote_Public/01.%20设计开发与数据生产/Develop/04.%20Project/Platform/Web/02.%20前端框架/Vue/)
@@ -28,7 +30,7 @@
   - [游戏](../../MdNote_Public/01.%20设计开发与数据生产/Develop/04.%20Project/Platform/SoftCode/Game/)
 - 计算机
   - [SCAPP](../../MdNote_Public/01.%20设计开发与数据生产/Develop/02.%20Theory/Computer/)
-  - [网络](../../MdNote_Public/01.%20设计开发与数据生产/Develop/02.%20Theory/Computer/03.%20计算机系统 - 专题或子系统的字典版/下层相关/Network/)
+  - [网络](../../MdNote_Public/01.%20设计开发与数据生产/Develop/02.%20Theory/Computer/03.%20计算机系统%20-%20专题或子系统的字典版/下层相关/Network/)
 
 ## 学习笔记 - 按学习来源（未完，待整理）
 
@@ -36,22 +38,25 @@
 
 ### 读书笔记 - 电子版
 
+（注意：一些在线网站理应算电子书。但通常需要满足：*有丰富的分章分节，线性阅读且前后有关联，字数多 甚至比有些书还要多*）
+
 - [深入理解计算机系统（原书第3版）](../01.%20设计开发与数据生产/Develop/02.%20Theory/Computer/03.%20计算机系统 - 线性学习版/《深入理解计算机系统》/)
   - 纸质书学习笔记
   - ![深入理解计算机系统（原书第3版）](README.assets/s29195878.jpg)
 - [数据结构与算法分析 C语言描述（原书第2版）典藏版](../01.%20设计开发与数据生产/Develop/02.%20Theory/Program_Algorithm/《数据结构与算法分析》C语言描述/)
   - 纸质书学习笔记
   - ![数据结构与算法分析 C语言描述（原书第2版）典藏版](README.assets/s32320568.jpg)
-- [计算机网络（原书第7版）](../01.%20设计开发与数据生产/Develop/02.%20Theory/Computer/03.%20计算机系统 - 专题或子系统的字典版/下层相关/Network/《计算机网络——自顶向下方法》/)
+- [计算机网络（原书第7版）](../01.%20设计开发与数据生产/Develop/02.%20Theory/Computer/03.%20计算机系统%20-%20专题或子系统的字典版/下层相关/Network/《计算机网络——自顶向下方法》/)
   - 纸质书学习笔记
   - ![计算机网络（原书第7版）](README.assets/s29825217.jpg)
-- [小林 x 图解计算机基础](../01.%20设计开发与数据生产/Develop/02.%20Theory/Computer/03.%20计算机系统 - 线性学习版/《小林coding_图解系列》)（操作系统 + 网络 + 数据库）
+- [小林 x 图解计算机基础](../01.%20设计开发与数据生产/Develop/02.%20Theory/Computer/03.%20计算机系统%20-%20线性学习版/《小林coding_图解系列》)（操作系统 + 网络 + 数据库）
   - 博客笔记
   - [![img](README.assets/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f6c696e636f6465722f496d616765486f737434406d61696e2f2545372542442539312545372541422539392545352542302538312545392539442541322e706e67.png)](https://camo.githubusercontent.com/7e89b5a513a4c3ee18a190033a53fcb1632df591a3ae5f0d0a66abc7a0f9dcf0/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f6c696e636f6465722f496d616765486f737434406d61696e2f2545372542442539312545372541422539392545352542302538312545392539442541322e706e67)
+- 《SDN-HandBook》
 - [C++ Primer Plus 第6版中文版](../01.%20设计开发与数据生产/Develop/01.%20Language/C__/)
   - 纸质书学习笔记
   - ![C++ Primer Plus 第6版中文版（2020年）](README.assets/s34641192.jpg)
-- [Effective C++](../01.%20设计开发与数据生产/Develop/03.%20Tools/02.%20管理层/01.%20多类管理/设计模式/《Effective C__》/)
+- [Effective C++](../01.%20设计开发与数据生产/Develop/03.%20Tools/02.%20管理层/01.%20多类管理/设计模式/《Effective%20C__》/)
   - 纸质书学习笔记
   - ![Effective C++](README.assets/s4647091.jpg)
 - [Qt 5开发及实例（第4版）](../01.%20设计开发与数据生产/Develop/04.%20Project/Platform/Multi/QT（Cpp）/01.%20简概/01.%20简概/01.%20简概.html)
@@ -61,7 +66,7 @@
   - 纸质书学习笔记
   - ![C++ GUI Qt 4编程(第二版)](README.assets/s29896826.jpg)
 - [Java核心技术](../01.%20设计开发与数据生产/Develop/01.%20Language/Java/)
-  - 电子书学习笔记
+  - 电子书学习笔记，不过我怎么记得字体应该是黄色的而非蓝色的
   - ![Java核心技术·卷 I（原书第11版）](README.assets/s33556751.jpg) 
 - [Python编程（第3版)](../01.%20设计开发与数据生产/Develop/01.%20Language/Python/01.%20编程语言/01.%20编程语言.html)
   - 纸质书学习笔记
@@ -69,7 +74,7 @@
 - [Python编程入门（第3版）](../01.%20设计开发与数据生产/Develop/01.%20Language/Python/01.%20编程语言/01.%20编程语言.html)
   - 纸质书学习笔记
   - ![Python编程入门（第3版）](README.assets/s27142477.jpg)
-- [python绝技：运用python成为顶级黑客](../01.%20设计开发与数据生产/Develop/04.%20Project/Type/Hack/《Python绝技 运用Python成为顶级黑客》/)
+- [python绝技：运用python成为顶级黑客](../01.%20设计开发与数据生产/Develop/04.%20Project/Type/Hack/《Python绝技%20运用Python成为顶级黑客》/)
   - 纸质书学习笔记
   - ![python绝技：运用python成为顶级黑客](README.assets/s28385338.jpg)
 - [Unity Shader入门精要](../01.%20设计开发与数据生产/3D/Render/《UnityShadow》/)
@@ -99,6 +104,12 @@ Q：为什么有的书看了但没写笔记？
 这一类我仅记录一下书本身
 
 ---
+
+- UNIX网络编程
+- 深入浅出DPDK
+- Python网络爬虫从入门到实践（好像后来出新版了）
+  - 纸质书
+  - ![Python网络爬虫从入门到实践](README.assets/s29542423.jpg)
 
 - Unity 5.X从入门到精通
   - 纸质书

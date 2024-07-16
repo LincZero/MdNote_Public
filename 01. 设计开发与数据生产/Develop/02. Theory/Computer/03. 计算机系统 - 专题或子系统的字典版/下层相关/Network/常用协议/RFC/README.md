@@ -2,10 +2,28 @@
 
 ## 相关链接
 
-- 官网：不好看
-- [wiki](https://zh.wikipedia.org/wiki/RFC)
-- [百科](https://baike.baidu.com/item/RFC/2798645?fromModule=lemma_sense-layer#viewPageContent)
-- 目录：https://rfc2cn.com/
+- 官网 (不好看)
+  - rfc-editor
+    - http://www.rfc-editor.org/ 
+    - RFC文档列表：http://www.rfc-editor.org/rfc/
+  - ietf
+    - http://www.ietf.org/rfc.html
+    - 可用于搜索：https://datatracker.ietf.org/doc/
+  - 例如：
+    - UDP：https://www.ietf.org/rfc/rfc768.txt
+    - TCP：https://datatracker.ietf.org/doc/html/rfc9293 或 https://www.ietf.org/rfc/rfc793.txt
+    - QUIC v1：https://datatracker.ietf.org/doc/rfc9000/
+- 中文RFC文档
+  - http://oss.org.cn/man/develop/rfc/default.htm，好像炸了？
+  - https://rfc2cn.com/，他这是是自动翻译的，并且 “*关于翻译，由于 RFC 版权限制，仅发布 RFC 2220 或更高版本*”，所以很多协议这里没有，非常可惜
+
+- 百科类
+  - [wiki](https://zh.wikipedia.org/wiki/RFC)
+  - [百科](https://baike.baidu.com/item/RFC/2798645?fromModule=lemma_sense-layer#viewPageContent)
+
+- 与DNS相关的RFC文档
+  - DNF RFC：http://technet.microsoft.com/zh-cn/library/cc778837(WS.10).aspx
+  - RFC的种类及与DNS相关的RFC：http://blog.sina.com.cn/s/blog_502c8cc401012v6e.html
 
 ## 常用协议目录
 
@@ -14,6 +32,7 @@
 - 768，UDP
 - 791，IP
 - 792，ICMP
+- 793 9293，TCP，9293是新的，793是1981年的原始规范
 - 826，ARP
 - 854，Telnet
 - 959，FTP
@@ -26,7 +45,9 @@
 - 2544
 - 2616，HTTP/1.1
 - 4250 4251 4252 4253 4254 4255 4256，SSH
+- 4861，NDP，这个专门用于IPV6的，IPV4则用ARP
 - 8575 8173，PTP/1 PTP/2？
+- 9000 9369，QUIC，分别是 v1 和 v2
 
 | RFC                                                          | 标题                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |

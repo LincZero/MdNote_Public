@@ -10,6 +10,11 @@
   - [PDF](https://www.gitbook.com/download/pdf/book/tonydeng/sdn)
   - [项目源码](https://github.com/tonydeng/sdn-handbook)
 - [小林 x 图解计算机基础](https://github.com/xiaolincoder/CS-Base)，2024 Github 12k Star
+- 华为文档
+  - [技术支持](https://support.huawei.com/)
+  - [华为的IP知识百科](https://info.support.huawei.com/info-finder/encyclopedia/zh/index.html)。有点类似于wiki的性质，齐全度和检索性像wiki，但文章内容本身更像是博客文档。
+  - 优点：检索、排版、图文很舒服
+
 
 
 
