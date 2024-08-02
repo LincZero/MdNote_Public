@@ -1,6 +1,6 @@
 # 如何在VuePress中使用mdit插件
 
-VuePress 可以选用 md-it 引擎进行渲染
+VuePress 可以选用 md-it 引擎进行渲染，注意 markdown-it 插件大多 -D 依赖就行了
 
 ## VuePress中 - 使用vuepress插件
 
@@ -59,7 +59,7 @@ export default {
 依赖
 
 ```bash
-$ npm install markdown-it-xxx
+$ npm install -D markdown-it-xxx
 ```
 
 配置 (.vuepress/config.js)
@@ -73,7 +73,7 @@ module.exports = {
     toc: { includeLevel: [1, 2] },
     extendMarkdown: md => {
       // 使用更多的 markdown-it 插件!
-      md.use(require('markdown-it-xxx'))
+      md.use(require('markdown-it-xxx'))	// 注意这里的md类型为 markdownit
     }
   }
 }
@@ -88,7 +88,7 @@ module.exports = {
 依赖
 
 ```bash
-pnpm install markdown-it-multimd-table
+pnpm install -D markdown-it-multimd-table
 ```
 
 配置 (.vuepress/config.ts)
@@ -101,45 +101,101 @@ export default defineUserConfig({
   // 站点配置
   // ...
 
-  extendsMarkdown: (md) => {
+  extendsMarkdown: (md) => {	// 注意这里的md类型为 markdownit ()
     md.use(MarkdownIt);
   },
 });
 ```
 
-### 插件源码版 (非npm方式)
+### 简单 markdown-it demo
 
-以 **markdown-it-emoji-3.0.0** 插件为例，npm 方式是 `$ npm install i markdown-it-emoji`，其他和上面的基本一致。接下来看源码方式
+> 刚开始我不知道为什么，很多项目都不能 `npm i` 成功。后来发现是我傻了 ——
+>
+> markdown-it 并不像 obsidian 插件那样需要编译一遍再放入ob的沙盒环境里使用，mdit插件很简单，甚至优势几行代码就可以是一个插件了（见下面的示例）
 
-安装依赖并编译
-
-```bash
-$ npm i
-$ npm run build
-
-# 构建产物：
-
-
-
-
-
-```
-
-加载
+#### use用法
 
 ```typescript
+interface Options {
+  multiline: boolean;
+  rowspan: boolean;
+  headerless: boolean;
+  multibody: boolean;
+  autolabel: boolean;
+}
 
+function demo2(md: MarkdownIt, options?: Partial<Options>): void {
+  //md.inline.ruler.before('emphasis', 'demo', demo1)
+
+  const fence = md.renderer.rules.fence
+  md.renderer.rules.fence = (...args) => {
+    const [tokens, idx] = args
+    const token = tokens[idx]
+    const rawCode = fence(...args)		// rawCode是原内容，下面在原内容的外面包一一个div
+    return `<!--beforebegin--><div class="mdit-test language-${token.info.trim()} extra-class">` +
+    `<!--afterbegin-->${rawCode}<!--beforeend--></div><!--afterend-->`
+  }
+}
+...
+extendsMarkdown: (md: markdownit) => {
+	md.use(demo2)
+},
 ```
 
-测试
+#### 非use用法
 
+参考：https://github.com/element-plus/element-plus/blob/7a1d0c305121a189442feb8b8e47ec1b3cb59d02/docs/.vitepress/plugins/tag.ts#L4（这个是直接在github中搜索代码：`md.inline.ruler.before(` 这样搜出来的）
+
+```typescript
+function demo1(state, silent){
+  console.log(state);
+  console.log(silent);
+  return true
+}
+...
+extendsMarkdown: (md: markdownit) => {
+	//md.use(mdit_plugin_multimd_table_plugin);
+	md.inline.ruler.before('emphasis', 'demo', demo1);
+},
 ```
-Hello from mars :satellite:
+
+这种方式似乎写得有问题，出现报错了，自己调一下吧，反正应该也是可以的，大概就这么个原理
+
+```bash
+✖ Initializing and preparing data - failed in 91ms
+Error: inline rule didn't increment state.pos
+……
+```
+
+## 注意项：mdit 和 mdit-container 的导入问题
+
+原 API 详见 “《markdwon-it 中文文档》/仅使用” 一章
+
+一共有四种方式：
+
+1. node.js环境，用 requires 函数
+2. 非AMD环境方式
+3. Vue环境，用 npm install + import from
+4. VuePress环境，用 extendsMarkdown 重定义回调函数
+
+
+
+注意项1：require方式，在VuePress中会报错
+
+```typescript
+// 不能在vuepress中用这种
+var md = require('markdown-it')()
+            .use(require('markdown-it-container'), name [, options]);
+// 报错：
+Error: Dynamic require of "markdown-it" is not supported
+Error: Dynamic require of "markdown-it-container" is not supported
 ```
 
 
 
+注意项2：使用 extendsMarkdown 重定义的化，里面的类型 markdownit 和你用 npm install + import from 导入的 MarkdownIt 有一些细微区别，例如可能版本不匹配，导致一些属性找不到，可能需要加 `@ts-ignore`。另一种方式是用 npm install + import from 代替 extendsMarkdown 里的类型定义
 
 
 
+注意项3：extendsMarkdown 只提供了 mdit 变量，像我们前面例子中需要用到 markdown-it-container，这也还是需要结合 npm install + import from 来导入。混合使用
 

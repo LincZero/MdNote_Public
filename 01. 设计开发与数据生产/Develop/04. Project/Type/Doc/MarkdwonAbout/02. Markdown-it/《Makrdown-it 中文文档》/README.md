@@ -8,8 +8,6 @@
     -   中文文档
         - 主页文档：https://markdown-it.docschina.org/
         - 在主页上方还有其他页：[构造](https://markdown-it.docschina.org/architecture.html)、[开发者建议](https://markdown-it.docschina.org/development.html)、[安全](https://markdown-it.docschina.org/security.html)、[DocsChina主页](https://docschina.org/)、[【Github】markdown-it](https://github.com/markdown-it/markdown-it)
--   使用资料
-    -   中文文档：https://markdown-it.docschina.org/
 -   插件开发者资料：
     -   中文文档：https://markdown-it.docschina.org/
     -   [Github文档](https://github.com/markdown-it/markdown-it/tree/master/docs)，Github里有针对插件开发的文档，该链接包含对插件开发人员有用的信息。如果您仅在应用中使用 `markdown-it` ，请参阅 README 和 API 文档。
