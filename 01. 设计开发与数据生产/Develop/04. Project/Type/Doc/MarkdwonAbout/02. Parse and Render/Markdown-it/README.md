@@ -55,6 +55,12 @@
 
 这里主要列举开源的，以便可以去参考源码和学习
 
+### 一个推荐页
+
+https://mdit-plugins.github.io/zh/
+
+![image-20240805125638171](README.assets/image-20240805125638171.png)
+
 ### Github高Star
 
 - Github比较高Star的几个：（有专门的主题，可以在 https://github.com/topics/markdown-it-plugin 里看）
