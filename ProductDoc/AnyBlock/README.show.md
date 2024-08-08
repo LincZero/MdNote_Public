@@ -16,6 +16,8 @@ Related links：(tutorial、use skill、contribution、secondary development)
 
 ## Effects warrior (效果展示)
 
+（推荐使用暗黑模式进行查看）
+
 下面在展示中，会使用标签页将几个版本进行对照。以便来回查看以体会用法和语法：
 
 （DEV TODO: 存在跨行单元格时，CSS无法精确选择“第一列”，需要使用js给第一列进行“标注”。这导致了：第二列可能圆点样式和允许换行都出现异常）
@@ -26,14 +28,14 @@ Related links：(tutorial、use skill、contribution、secondary development)
 
 [list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
 
-- Plugin effect (插件效果)
+- Plugin effect<br>(插件效果)
   - 使用该插件的正常渲染效果
-- No plugin effect (无插件效果)
+- No plugin effect<br>(无插件效果)
   - 用md软件在无该插件的环境下的渲染效果 <br>
-  - 展示了近乎无入侵式的插件语法<br>
-    在无插件环境下，你的md文档依旧可读优雅，而不是一坨代码！<br>
+  - 展示了近乎无入侵式的插件语法，这是此插件的==核心==<br>
+    **在无插件环境下，你的md文档依旧可读优雅，而非黑不溜秋的代码框**<br>
     这一点和callout的设计理念的相似的
-- md source code (md源码)
+- md source code<br>(md源码)
   - 用记事本打开源笔记后的效果
   - 方便你查看效果是怎么写出来的<br>
     也同样告诉你：该插件并不会导致源码变得丑陋和不可读
@@ -328,6 +330,8 @@ When used to represent a file directory, it is also called a `CatalogTable` (当
 
 md-demo This is the hierarchy of a certain company (这是某个公司的层次结构)
 
+（DEV TODO：fix bug：多行时，折叠功能似乎存在问题）
+
 ::: tabs
 
 @tab Plugin effect (插件效果)
@@ -390,7 +394,201 @@ md-demo This is the hierarchy of a certain company (这是某个公司的层次�
 
 > #### Allow presentation a file directory (允许表示为文件目录)
 
-developing... (开发中……)
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list2dt]
+
+- vue-demo/
+  - build/， 项目构建(webpack)相关代码
+  - config/， 配置目录，包括端口号等。我们初学可以使用默认的
+  - node_modules/， npm 加载的项目依赖模块
+  - src/， 这里是我们要开发的目录
+    - assets/， 放置一些图片，如logo等
+    - components， 目录里面放了一个组件文件，可以不用
+    - App.vue， 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录
+    - main.js， 项目的核心文件。
+  - static/， 静态资源目录，如图片、字体等
+  - test/， 初始测试目录，可删除
+  - .eslintignore
+  - .gitignore， git配置
+  - .index.html， 首页入口文件，你可以添加一些 meta 信息或统计代码啥的
+  - package.json， 项目配置文件
+  - READED.md， 项目的说明文档，markdown 格式<br>手动换行测试<br>自动换行测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试k
+  - ...
+
+@tab No plugin effect (无插件效果)
+
+\[list2dt]
+
+- vue-demo/
+  - build/， 项目构建(webpack)相关代码
+  - config/， 配置目录，包括端口号等。我们初学可以使用默认的
+  - node_modules/， npm 加载的项目依赖模块
+  - src/， 这里是我们要开发的目录
+    - assets/， 放置一些图片，如logo等
+    - components， 目录里面放了一个组件文件，可以不用
+    - App.vue， 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录
+    - main.js， 项目的核心文件。
+  - static/， 静态资源目录，如图片、字体等
+  - test/， 初始测试目录，可删除
+  - .eslintignore
+  - .gitignore， git配置
+  - .index.html， 首页入口文件，你可以添加一些 meta 信息或统计代码啥的
+  - package.json， 项目配置文件
+  - READED.md， 项目的说明文档，markdown 格式<br>手动换行测试<br>自动换行测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试k
+  - ...
+
+@tab md source code (md源码)
+
+~~~md
+[list2dt]
+
+- vue-demo/
+  - build/， 项目构建(webpack)相关代码
+  - config/， 配置目录，包括端口号等。我们初学可以使用默认的
+  - node_modules/， npm 加载的项目依赖模块
+  - src/， 这里是我们要开发的目录
+    - assets/， 放置一些图片，如logo等
+    - components， 目录里面放了一个组件文件，可以不用
+    - App.vue， 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录
+    - main.js， 项目的核心文件。
+  - static/， 静态资源目录，如图片、字体等
+  - test/， 初始测试目录，可删除
+  - .eslintignore
+  - .gitignore， git配置
+  - .index.html， 首页入口文件，你可以添加一些 meta 信息或统计代码啥的
+  - package.json， 项目配置文件
+  - READED.md， 项目的说明文档，markdown 格式<br>手动换行测试<br>自动换行测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试k
+  - ...
+~~~
+:::
+
+Ascii Tree
+
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list2astreeH|code()]
+
+- vue-demo/
+	- build/
+	- config/
+	- src/
+		- assets/
+			- a/
+				- b
+		- components
+	- .babelrc
+	- .editorconfig
+	- ...
+
+@tab No plugin effect (无插件效果)
+
+\[list2astreeH|code()]
+
+- vue-demo/
+	- build/
+	- config/
+	- src/
+		- assets/
+			- a/
+				- b
+		- components
+	- .babelrc
+	- .editorconfig
+	- ...
+
+@tab md source code (md源码)
+
+~~~md
+[list2astreeH|code()]
+
+- vue-demo/
+	- build/
+	- config/
+	- src/
+		- assets/
+			- a/
+				- b
+		- components
+	- .babelrc
+	- .editorconfig
+	- ...
+~~~
+:::
+
+WBS (Work Breakdown Structure, 工作分解结构)
+
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list2pumlWBS]
+
+- vue-demo/
+	- build/
+	- config/
+	- node_modules/
+	- src/
+		- assets/
+			- < a
+				- b
+				- < c
+			- d
+			- e
+		- components
+		- App.vue
+		- main.js
+	- static/
+	- test/
+
+@tab No plugin effect (无插件效果)
+
+\[list2pumlWBS]
+
+- vue-demo/
+  - build/
+  - config/
+  - node_modules/
+  - src/
+    - assets/
+      - < a
+        - b
+        - < c
+      - d
+      - e
+    - components
+    - App.vue
+    - main.js
+  - static/
+  - test/
+
+@tab md source code (md源码)
+
+~~~md
+[list2pumlWBS]
+
+- vue-demo/
+  - build/
+  - config/
+  - node_modules/
+  - src/
+    - assets/
+      - < a
+        - b
+        - < c
+      - d
+      - e
+    - components
+    - App.vue
+    - main.js
+  - static/
+  - test/
+~~~
+:::
 
 ### list2ut (列表转数据表格)
 
@@ -735,7 +933,7 @@ How to install python on each platform (python在各平台上的安装方法)
 
 ### list2pic 转图像
 
-#### 转流程图
+#### to flow (转mermaid流程图)
 
 （补充：其本质是转化为 `graph TB` [语法](https://mermaid.js.org/syntax/flowchart.html).所以除了常规操作，你还可以进行一些其他操作：
 **例如指定别名、进行树结构以外的连接**）
@@ -796,10 +994,175 @@ demo：描述一下树设计的脑图
 
 :::
 
+#### to pumlMindmap (转plantuml思维导图)
+
+推荐轻量级使用 (不内嵌md)
+
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list2pumlMindmap]
+
+- vue-demo/
+	- build/
+	- config/
+	- node_modules/
+	- src/
+		- assets/
+			- a/
+				- b
+		- components
+		- App.vue
+		- main.js
+	- static/
+	- test/
+
+@tab No plugin effect (无插件效果)
+
+\[list2pumlMindmap]
+
+- vue-demo/
+	- build/
+	- config/
+	- node_modules/
+	- src/
+		- assets/
+			- a/
+				- b
+		- components
+		- App.vue
+		- main.js
+	- static/
+	- test/
+
+@tab md source code (md源码)
+
+~~~md
+[list2pumlMindmap]
+
+- vue-demo/
+	- build/
+	- config/
+	- node_modules/
+	- src/
+		- assets/
+			- a/
+				- b
+		- components
+		- App.vue
+		- main.js
+	- static/
+	- test/
+~~~
+:::
+
+#### to markmap (转markmap思维导图)
+
+推荐需要内嵌md时使用
+
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list2markmap]
+
+- Links
+  - [Website](https://markmap.js.org/)
+  - [GitHub](https://github.com/gera2ld/markmap)
+- Related Projects
+  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+- Features
+  - Lists
+    - **strong** ~~del~~ *italic* ==highlight==
+    - `inline code`
+    - [x] checkbox
+    - Katex: \$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ <\!-- markmap: fold -->
+    - \[More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - Now we can wrap very very very very long text based on `maxWidth` option
+  - Blocks
+  - 
+    ```javascript
+    console.log("hello, JavaScript")
+    ```
+  - | Products | Price |
+    |-|-|
+    | Apple | 4 |
+    | Banana | 2 |
+  - ![](https://markmap.js.org/favicon.png)
+
+@tab No plugin effect (无插件效果)
+
+\[list2markmap]
+
+- Links
+  - [Website](https://markmap.js.org/)
+  - [GitHub](https://github.com/gera2ld/markmap)
+- Related Projects
+  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+- Features
+  - Lists
+    - **strong** ~~del~~ *italic* ==highlight==
+    - `inline code`
+    - [x] checkbox
+    - Katex: \$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ <\!-- markmap: fold -->
+    - \[More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - Now we can wrap very very very very long text based on `maxWidth` option
+  - Blocks
+  - 
+    ```javascript
+    console.log("hello, JavaScript")
+    ```
+  - | Products | Price |
+    |-|-|
+    | Apple | 4 |
+    | Banana | 2 |
+  - ![](https://markmap.js.org/favicon.png)
+
+@tab md source code (md源码)
+
+~~~md
+[list2markmap]
+
+- Links
+  - [Website](https://markmap.js.org/)
+  - [GitHub](https://github.com/gera2ld/markmap)
+- Related Projects
+  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+- Features
+  - Lists
+    - **strong** ~~del~~ *italic* ==highlight==
+    - `inline code`
+    - [x] checkbox
+    - Katex: \$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ <\!-- markmap: fold -->
+    - \[More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - Now we can wrap very very very very long text based on `maxWidth` option
+  - Blocks
+  - 
+    ```javascript
+    console.log("hello, JavaScript")
+    ```
+  - | Products | Price |
+    |-|-|
+    | Apple | 4 |
+    | Banana | 2 |
+  - ![](https://markmap.js.org/favicon.png)
+~~~
+
+:::
+
 #### to mermaid mindmap (转mermaid思维导图)
 
 （由于ob的mermaid版本较低，没有mindmap，所以这里插件内置了一个新的mermaid）
 （当然缺点是：插件大小从200KB变为了9MB多，等到ob更新mermaid版本我会将插件内置的那份给去除掉的）
+
+很多符号限制，而且样式我觉得一般。这是旧版anyblock中所使用到的思维导图，最新版本个人不再推荐使用
 
 这里我就直接使用mermaid官方给的例子了:
 
@@ -865,104 +1228,6 @@ demo：描述一下树设计的脑图
 - Tools
   - Pen and paper
   - Mermaid
-~~~
-
-:::
-
-#### to markmap (转markmap思维导图)
-
-::: tabs
-
-@tab Plugin effect (插件效果)
-
-[list2markmap]
-
-- Links
-  - [Website](https://markmap.js.org/)
-  - [GitHub](https://github.com/gera2ld/markmap)
-- Related Projects
-  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
-  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
-  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
-- Features
-  - Lists
-    - **strong** ~~del~~ *italic* ==highlight==
-    - `inline code`
-    - [x] checkbox
-    - Katex: \$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ <\!-- markmap: fold -->
-      - \[More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
-    - Now we can wrap very very very very long text based on `maxWidth` option
-  - Blocks
-  - 
-    ```javascript
-    console.log("hello, JavaScript")
-    ```
-  - | Products | Price |
-    |-|-|
-    | Apple | 4 |
-    | Banana | 2 |
-  - ![](https://markmap.js.org/favicon.png)
-
-@tab No plugin effect (无插件效果)
-
-\[list2markmap]
-
-- Links
-  - [Website](https://markmap.js.org/)
-  - [GitHub](https://github.com/gera2ld/markmap)
-- Related Projects
-  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
-  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
-  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
-- Features
-  - Lists
-    - **strong** ~~del~~ *italic* ==highlight==
-    - `inline code`
-    - [x] checkbox
-    - Katex: \$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ <\!-- markmap: fold -->
-      - \[More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
-    - Now we can wrap very very very very long text based on `maxWidth` option
-  - Blocks
-  - 
-    ```javascript
-    console.log("hello, JavaScript")
-    ```
-  - | Products | Price |
-    |-|-|
-    | Apple | 4 |
-    | Banana | 2 |
-  - ![](https://markmap.js.org/favicon.png)
-
-@tab md source code (md源码)
-
-~~~md
-[list2markmap]
-
-- Links
-  - [Website](https://markmap.js.org/)
-  - [GitHub](https://github.com/gera2ld/markmap)
-- Related Projects
-  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
-  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
-  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
-- Features
-  - Lists
-    - **strong** ~~del~~ *italic* ==highlight==
-    - `inline code`
-    - [x] checkbox
-    - Katex: \$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ <\!-- markmap: fold -->
-      - \[More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
-    - Now we can wrap very very very very long text based on `maxWidth` option
-  - Blocks
-  - 
-    ```javascript
-    console.log("hello, JavaScript")
-    ```
-  - | Products | Price |
-    |-|-|
-    | Apple | 4 |
-    | Banana | 2 |
-  - ![](https://markmap.js.org/favicon.png)
 ~~~
 
 :::
