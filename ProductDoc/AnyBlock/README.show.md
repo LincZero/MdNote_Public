@@ -1232,6 +1232,21 @@ demo：描述一下树设计的脑图
 
 :::
 
+### More (更多)
+
+- en
+	- There are dozens of different processors, not given here, that can be self-explored:
+	- Older documentation for V2 contains more information about the processor: http://localhost:8080/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
+	- You can install 'Any Block' in Ob and open the plug-in's Settings panel to see all supported processors
+	  (Except for the new processor and mdit instructions that are not added in the new version, the instructions in the old version are actually more complete)
+	- After installation in Obsidian, you can also view all supported processors through the '[info]' processor
+- zh
+	- 有几十个不同的处理器，这里没有给出，可以自探索：
+	- V2的旧文档包含更多处理器的介绍： http://localhost:8080/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
+	- 可以在Ob中安装 `Any Block` 并打开该插件的设置面板，以查看所有支持的处理器
+	  （除了没有新版本增加的新处理器和mdit说明外，旧版文档的说明其实会更全）
+	- 在Obsidian中安装以后，也可以通过 `[info]` 处理器，以查看所有支持的处理器
+
 ## 选择器
 
 ### 分类
