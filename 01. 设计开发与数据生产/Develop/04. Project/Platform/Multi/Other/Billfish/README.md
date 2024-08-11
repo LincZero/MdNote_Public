@@ -53,25 +53,11 @@ Vid=
 FolderType=Generic
 ```
 
-# Eagle的做法
+## Eagle的做法
 
-![](assets/${fileBaseName}/Pasted%20image%2020240809000723.png)
+Eagle 备受 Billfish 用户吐槽的一点就是他的库：
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](_.assets/Pasted%20image%2020240809000723.png)
 
 
 

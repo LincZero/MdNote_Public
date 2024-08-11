@@ -45,7 +45,7 @@ Related links：(tutorial、use skill、contribution、secondary development)
 *注意：这里的头部可以用%%注释不显示，也可以用别名机制使其简短，这里只是为了展示可以串联多个ab转换器进行修改。
 正常来说没有这么长的*
 
-\[list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
+(noPlugin)[list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
 
 - 插件效果
   - 使用该插件的正常渲染效果
@@ -107,7 +107,7 @@ md-demo Describe common angiosperms and gymnosperms (描述一下常见被子植
 
 @tab No plugin effect (无插件效果)
 
-\[list2table]
+(noPlugin)[list2table]
 
 - Gymnosperm<br> 裸子植物
   - Cypress<br> 松树
@@ -164,7 +164,7 @@ This is a comparison table between Chinese and English (这是一个中英对照
 
 @tab No plugin effect (无插件效果)
 
-\[list2tableT]
+(noPlugin)[list2tableT]
 
 - Cypress | 松树
 - Ginkgo  | 柏树
@@ -198,7 +198,8 @@ Describe print statements for various common programming languages (描述一下
 [list2mdtable]
 
 - < Language<br>语言
-  - Print statement<br>打印语句 | characteristic<br>特点
+  - Print statement<br>打印语句
+    - characteristic<br>特点
 - Java
   - ```java
     System.out.
@@ -235,10 +236,11 @@ Describe print statements for various common programming languages (描述一下
 
 @tab No plugin effect (无插件效果)
 
-\[list2mdtable]
+(noPlugin)[list2mdtable]
 
 - < Language<br>语言
-  - Print statement<br>打印语句 | characteristic<br>特点
+  - Print statement<br>打印语句
+	  - characteristic<br>特点
 - Java
   - ```java
     System.out.
@@ -280,7 +282,8 @@ Describe print statements for various common programming languages (描述一下
 [list2mdtable]
 
 - < Language<br>语言
-  - Print statement<br>打印语句 | characteristic<br>特点
+  - Print statement<br>打印语句
+    - characteristic<br>特点
 - Java
   - ```java
     System.out.
@@ -354,7 +357,7 @@ md-demo This is the hierarchy of a certain company (这是某个公司的层次�
 
 @tab No plugin effect (无插件效果)
 
-\[list2lt]
+(noPlugin)[list2lt]
 
 - < Company name<br>公司名| Superior section<br>上级部门| Principal<br>负责人| Phone<br>电话
 - ==ABC head office==| | | 
@@ -420,7 +423,7 @@ md-demo This is the hierarchy of a certain company (这是某个公司的层次�
 
 @tab No plugin effect (无插件效果)
 
-\[list2dt]
+(noPlugin)[list2dt]
 
 - vue-demo/
   - build/， 项目构建(webpack)相关代码
@@ -487,7 +490,7 @@ Ascii Tree
 
 @tab No plugin effect (无插件效果)
 
-\[list2astreeH|code()]
+(noPlugin)[list2astreeH|code()]
 
 - vue-demo/
 	- build/
@@ -547,7 +550,7 @@ WBS (Work Breakdown Structure, 工作分解结构)
 
 @tab No plugin effect (无插件效果)
 
-\[list2pumlWBS]
+(noPlugin)[list2pumlWBS]
 
 - vue-demo/
   - build/
@@ -621,7 +624,7 @@ The feature is that cells are not allowed to cross rows or columns (特点是单
 
 @tab No plugin effect (无插件效果)
 
-\[list2ut]
+(noPlugin)[list2ut]
 
 - < 水果
   - 颜色
@@ -681,7 +684,7 @@ demo 另一种写法
 
 @tab No plugin effect (无插件效果)
 
-\[list2ut]
+(noPlugin)[list2ut]
 
 - 苹果
   - 颜色: 红色
@@ -731,7 +734,9 @@ This table, I call a `Two-column table` (这种表格我命名为 `两列表格`
 
 The feature is that the table does not allow cross-row and cross-column, and only two columns (特点是表格不允许跨行和跨列，且只有两列)
 
-> #### Can be used as a timeline, but developing (可以当时间线使用, 但开发中)
+#### timeline (时间线)
+
+Can be used as a timeline, but developing (可以当时间线使用, 但开发中)
 
 @todo 这里样式可以再优化一下，目前看起来是和2ut的效果一样的
 
@@ -774,7 +779,7 @@ The feature is that the table does not allow cross-row and cross-column, and onl
 
 @tab No plugin effect (无插件效果)
 
-\[list2mdtimeline]
+(noPlugin)[list2mdtimeline]
 
 - 1840年6月
 
@@ -841,13 +846,13 @@ The feature is that the table does not allow cross-row and cross-column, and onl
 ~~~
 
 :::
+#### Tabs (标签页)
 
-> #### Can be used as a TAB page, but developing (可以当作标签栏，但开发中)
+Can be used as a TAB page, but developing 
 
-可以点击标签栏切换 @todo：样式优化
+可以点击标签栏切换
 
-How to install python on each platform (python在各平台上的安装方法)
-
+How to install python on each platform (python在各平台上的安装方法)：
 
 ::: tabs
 
@@ -871,7 +876,7 @@ How to install python on each platform (python在各平台上的安装方法)
 
 @tab No plugin effect (无插件效果)
 
-\[list2mdtab]
+(noPlugin)[list2mdtab]
 
 - linux
   - 可以通过执行以下命令在终端中使用 apt 包安装程序：
@@ -890,7 +895,7 @@ How to install python on each platform (python在各平台上的安装方法)
 @tab md source code (md源码)
 
 ~~~md
-[list2mdtab]
+\[list2mdtab]
 
 - linux
   - 可以通过执行以下命令在终端中使用 apt 包安装程序：
@@ -908,28 +913,58 @@ How to install python on each platform (python在各平台上的安装方法)
 ~~~
 
 :::
+#### Card (卡片)
 
+::: tabs
 
+@tab Plugin effect (插件效果)
 
+[list2card]
 
-### Other (其他)
+- card1
+  - card1_item<br>$1+1=2$
+- card2
+  - card2_item
+    ```js
+    var a = 1
+    ```
+- card3
+  - card3_item
+      **Bold** *italics* ==highlight== ~~delete~~
 
-> #### 加列表根
+@tab No plugin effect (无插件效果)
 
-如果列表有root，我们可以写列表时将root省略掉，在头部信息中加上。
-在转流程图和思维导图时该技巧很好用
+(noplugin)[list2card]
 
-例如：
+- card1
+  - card1_item<br>$1+1=2$
+- card2
+  - card2_item
+    ```js
+    var a = 1
+    ```
+- card3
+  - card3_item
+      **Bold** *italics* ==highlight== ~~delete~~
 
-[listroot(树结构)]
+@tab md source code (md源码)
 
-- 基本术语
-  - A
-  - B
-  - C
-- 性质
-- 基本运算
-- 二叉树
+````
+\[list2card]
+
+- card1
+  - card1_item<br>$1+1=2$
+- card2
+  - card2_item
+    ```js
+    var a = 1
+    ```
+- card3
+  - card3_item
+      **Bold** *italics* ==highlight== ~~delete~~
+````
+
+:::
 
 ### list2pic 转图像
 
@@ -960,7 +995,7 @@ demo：描述一下树设计的脑图
 
 @tab No plugin effect (无插件效果)
 
-\[list2mermaid]
+(noPlugin)[list2mermaid]
 
 - 树结构
   - 基本术语
@@ -1020,7 +1055,7 @@ demo：描述一下树设计的脑图
 
 @tab No plugin effect (无插件效果)
 
-\[list2pumlMindmap]
+(noPlugin)[list2pumlMindmap]
 
 - vue-demo/
 	- build/
@@ -1079,23 +1114,23 @@ demo：描述一下树设计的脑图
     - **strong** ~~del~~ *italic* ==highlight==
     - `inline code`
     - [x] checkbox
-    - Katex: \$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ <\!-- markmap: fold -->
-    - \[More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - Katex: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ <\!-- markmap: fold -->
+    - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
     - Now we can wrap very very very very long text based on `maxWidth` option
   - Blocks
   - 
     ```javascript
     console.log("hello, JavaScript")
     ```
-  - | Products | Price |
+  - |Products|Price|
     |-|-|
-    | Apple | 4 |
-    | Banana | 2 |
+    |Apple|4|
+    |Banana|2|
   - ![](https://markmap.js.org/favicon.png)
 
 @tab No plugin effect (无插件效果)
 
-\[list2markmap]
+(noPlugin)[list2markmap]
 
 - Links
   - [Website](https://markmap.js.org/)
@@ -1190,7 +1225,7 @@ demo：描述一下树设计的脑图
 
 @tab No plugin effect (无插件效果)
 
-\[listroot(root((mindmap)))|list2mindmap]
+(noPlugin)[listroot(root((mindmap)))|list2mindmap]
 
 - Origins
   - Long history
@@ -1232,101 +1267,45 @@ demo：描述一下树设计的脑图
 
 :::
 
+### Other (其他)
+
+> #### 加列表根
+
+如果列表有root，我们可以写列表时将root省略掉，在头部信息中加上。
+在转流程图和思维导图时该技巧很好用
+
+例如：
+
+[listroot(树结构)]
+
+- 基本术语
+  - A
+  - B
+  - C
+- 性质
+- 基本运算
+- 二叉树
 ### More (更多)
 
 - en
 	- There are dozens of different processors, not given here, that can be self-explored:
-	- Older documentation for V2 contains more information about the processor: http://localhost:8080/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
+	- Older documentation for V2 contains more information about the processor: https://linczero.github.io/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
 	- You can install 'Any Block' in Ob and open the plug-in's Settings panel to see all supported processors
 	  (Except for the new processor and mdit instructions that are not added in the new version, the instructions in the old version are actually more complete)
 	- After installation in Obsidian, you can also view all supported processors through the '[info]' processor
 - zh
 	- 有几十个不同的处理器，这里没有给出，可以自探索：
-	- V2的旧文档包含更多处理器的介绍： http://localhost:8080/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
+	- V2的旧文档包含更多处理器的介绍： https://linczero.github.io/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
 	- 可以在Ob中安装 `Any Block` 并打开该插件的设置面板，以查看所有支持的处理器
 	  （除了没有新版本增加的新处理器和mdit说明外，旧版文档的说明其实会更全）
 	- 在Obsidian中安装以后，也可以通过 `[info]` 处理器，以查看所有支持的处理器
 
-## 选择器
-
-### 分类
-
-- `[]` 选择器
-  - 列表选择器
-  - 表格选择器
-  - 引用块选择器
-  - 代码块选择器
-- 非AB选择器
-  - 代码块 (缺点是在非插件模式下，较为丑陋)
-  - markdown-it-container (非插件模式下，显示更优。在进行复杂范围选择时更优，但简单选择不如方括号选择器便捷)
-
-### 代码块
+## Selector (选择器)
 
 
-::: tabs
-
-@tab Plugin effect (插件效果)
-
-```anyblock
-[quote]
-
-- test fence
-```
-
-@tab No plugin effect (无插件效果)
-
-```\anyblock
-[quote]
-
-- test fence
-```
-
-@tab md source code (md源码)
-
-~~~md
-```anyblock
-[quote]
-
-- test fence
-```
-~~~
-
-:::
-
-
-### mdit容器
-
-developing (开发中，主要是OB比较难支持，要写很多东西)
-
-:::: tabs
-
-@tab Plugin effect (插件效果)
-
-::: anyblock
-[quote]
-
-- test mdit container
-
-:::
-
-@tab No plugin effect (无插件效果)
-
-\::: anyblock
-[quote]
-
-- test mdit container
-
-:::
-
-@tab md source code (md源码)
-
-~~~md
-::: anyblock
-[quote]
-
-- test mdit container
-
-:::
-~~~
-
-::::
+- en
+  - This part is very important! Recommended to finish!
+  - url: ./docs/en/01. Selector
+- zh
+  - 这部分内容非常重要！推荐看完！
+  - url: ./docs/zh/01. Selector
