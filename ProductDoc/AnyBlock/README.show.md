@@ -395,7 +395,87 @@ md-demo This is the hierarchy of a certain company (这是某个公司的层次�
 
 :::
 
+> #### It makes it look like a list instead of a table (可以让他看起来像列表而不是表格)
+
+This is also called "optimizing list" (这也叫优化列表)
+
+The essence is "listtable" based on the addition of a mock list style (本质是 "列表格" 的基础上增加仿列表样式)
+
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list]
+
+- vue-demo/
+  - build/， 项目构建(webpack)相关代码
+  - config/， 配置目录，包括端口号等。我们初学可以使用默认的
+  - node_modules/， npm 加载的项目依赖模块
+  - src/， 这里是我们要开发的目录
+    - assets/， 放置一些图片，如logo等
+    - components， 目录里面放了一个组件文件，可以不用
+    - App.vue， 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录
+    - main.js， 项目的核心文件。
+  - static/， 静态资源目录，如图片、字体等
+  - test/， 初始测试目录，可删除
+  - .eslintignore
+  - .gitignore， git配置
+  - .index.html， 首页入口文件，你可以添加一些 meta 信息或统计代码啥的
+  - package.json， 项目配置文件
+  - READED.md， 项目的说明文档，markdown 格式<br>手动换行测试<br>自动换行测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试k
+  - ...
+
+@tab No plugin effect (无插件效果)
+
+(noPlugin)[list]
+
+- vue-demo/
+  - build/， 项目构建(webpack)相关代码
+  - config/， 配置目录，包括端口号等。我们初学可以使用默认的
+  - node_modules/， npm 加载的项目依赖模块
+  - src/， 这里是我们要开发的目录
+    - assets/， 放置一些图片，如logo等
+    - components， 目录里面放了一个组件文件，可以不用
+    - App.vue， 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录
+    - main.js， 项目的核心文件。
+  - static/， 静态资源目录，如图片、字体等
+  - test/， 初始测试目录，可删除
+  - .eslintignore
+  - .gitignore， git配置
+  - .index.html， 首页入口文件，你可以添加一些 meta 信息或统计代码啥的
+  - package.json， 项目配置文件
+  - READED.md， 项目的说明文档，markdown 格式<br>手动换行测试<br>自动换行测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试k
+  - ...
+
+@tab md source code (md源码)
+
+~~~md
+[list]
+
+- vue-demo/
+  - build/， 项目构建(webpack)相关代码
+  - config/， 配置目录，包括端口号等。我们初学可以使用默认的
+  - node_modules/， npm 加载的项目依赖模块
+  - src/， 这里是我们要开发的目录
+    - assets/， 放置一些图片，如logo等
+    - components， 目录里面放了一个组件文件，可以不用
+    - App.vue， 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录
+    - main.js， 项目的核心文件。
+  - static/， 静态资源目录，如图片、字体等
+  - test/， 初始测试目录，可删除
+  - .eslintignore
+  - .gitignore， git配置
+  - .index.html， 首页入口文件，你可以添加一些 meta 信息或统计代码啥的
+  - package.json， 项目配置文件
+  - READED.md， 项目的说明文档，markdown 格式<br>手动换行测试<br>自动换行测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试k
+  - ...
+~~~
+:::
+
+
 > #### Allow presentation a file directory (允许表示为文件目录)
+
+The essence is "listtable" based on the addition of imitation directory style (本质是"列表格"的基础上增加仿目录样式)
 
 ::: tabs
 
@@ -1308,8 +1388,8 @@ demo：描述一下树设计的脑图
 
 - en
   - **This part is very important! Recommended to finish!**
-  - url: [Selector](./docs/zh/01.%20Selector)
+  - url: [Selector](docs/en/03.%20Selector.md)
 - zh
   - **这部分内容非常重要！推荐看完！**
-  - url: [Selector](./docs/zh/01.%20Selector)
+  - url: [Selector](docs/zh/03.%20选择器.md)
 

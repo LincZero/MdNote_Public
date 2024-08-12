@@ -53,7 +53,7 @@
 
 #### 包含头文件
 
-#include "Python.h"
+`#include "Python.h"`
 
 注：因为python可能定义一些影响某些系统标准头的预处理器定义，所以必需在包含标准头文件（<stdio.h>,  <string.h>, <errno.h>, <limits.h>, <assert.h>  and <stdlib.h>）之前包含Python.h。
 

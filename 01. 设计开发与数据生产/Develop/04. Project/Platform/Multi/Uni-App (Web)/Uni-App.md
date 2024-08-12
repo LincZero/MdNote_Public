@@ -72,15 +72,15 @@
 
 `pages.json`中的`globalStyle`
 
-| 属性                         | 类型     | 默认值  | 描述                                                         |
-| ---------------------------- | -------- | ------- | ------------------------------------------------------------ |
-| navigationBarBackgroundColor | HexColor | #F7F7F7 | 导航栏背景色                                                 |
-| navigationBarTextStyle       | String   | white   | 导航栏标题色，仅支持black/white                              |
-| navigationBarTitleText       | String   |         | 导航栏标题内容                                               |
-| backgroundColor              | HexColor | #ffffff | 窗口背景色（下拉露出）                                       |
-| backgroundTextStyle          | String   | dark    | 下拉loading样式，仅支持dark/light                            |
-| enablePullDownRefresh        | Boolean  | false   | 是否开启下拉刷新，详见页面生命周期                           |
-| onReachBottomDistance        | Number   | 50      | 页面上拉触底时间时距底部距离<br />仅支持px，详见页面生命周期 |
+| 属性                           | 类型       | 默认值       | 描述                                 |
+| ---------------------------- | -------- | --------- | ---------------------------------- |
+| navigationBarBackgroundColor | HexColor | `#F7F7F7` | 导航栏背景色                             |
+| navigationBarTextStyle       | String   | white     | 导航栏标题色，仅支持black/white              |
+| navigationBarTitleText       | String   |           | 导航栏标题内容                            |
+| backgroundColor              | HexColor | `#ffffff` | 窗口背景色（下拉露出）                        |
+| backgroundTextStyle          | String   | dark      | 下拉loading样式，仅支持dark/light          |
+| enablePullDownRefresh        | Boolean  | false     | 是否开启下拉刷新，详见页面生命周期                  |
+| onReachBottomDistance        | Number   | 50        | 页面上拉触底时间时距底部距离<br />仅支持px，详见页面生命周期 |
 
 ### 页面配置
 

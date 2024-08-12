@@ -35,29 +35,22 @@ github下面有安装和运行的方法（如果用秋叶大佬的整合包的�
 
 
 
-[#Automatic Installation on Windows]
+[title(Automatic Installation on Windows)]
 
 1.  Install [Python 3.10.6](https://www.python.org/downloads/windows/), checking "Add Python to PATH"
-
 2.  Install [git](https://git-scm.com/download/win).
-
 3.  Download the stable-diffusion-webui repository, for example by running `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`.
-
 4.  Place stable diffusion checkpoint (`model.ckpt`) in the `models/Stable-diffusion` directory (see [dependencies](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies) for where to get it).
-
     翻译：将稳定的扩散检查点 ( `model.ckpt`)放在`models/Stable-diffusion`目录中（请参阅[依赖项](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies)了解从哪里获取它）。
-
 5.  Run `webui-user.bat` from Windows Explorer as normal, non-administrator, user.
-
     翻译： `webui-user.bat`以普通非管理员用户身份从 Windows 资源管理器运行。
-
 
 
 补充：
 
 第四步：依赖会给你两个东西：
 
-[#Download the weights]
+[title(Download the weights)]
 
 -   [sd-v1-4.ckpt](https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt)（4GB）
 -   [sd-v1-4-full-ema.ckpt](https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4-full-ema.ckpt)（7.2GB）

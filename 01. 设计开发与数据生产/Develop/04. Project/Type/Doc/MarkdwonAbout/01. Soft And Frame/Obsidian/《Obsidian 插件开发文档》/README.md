@@ -200,7 +200,7 @@ Svelte 是围绕一个可以预编译您的代码为普通 Javascript 的编辑�
 
 要想使用 Svelte 组件，需要在一个即存的 [HTML element](https://luhaifeng666.github.io/obsidian-plugin-docs-zh/zh2.0/user-interface/html-elements.html). 中加载它。比如，如果在 Obsidian 的自定义 [`ItemView`](https://luhaifeng666.github.io/obsidian-plugin-docs-zh/zh2.0/reference/typescript/classes/ItemView.html) 中进行加载：
 
-[#view.ts]
+[title(view.ts)]
 
 ```js
 import { ItemView, WorkspaceLeaf } from "obsidian";

@@ -193,7 +193,7 @@ Web Client（Browsers）——————HTTP Server
 
 可排序标记等，还可以右键保存所选会话到文本文件 
 
-- #，id和类型图标
+- `#`，id和类型图标
 - Result，结果，即状态码
 - Protocol，协议
 - Host，主机名

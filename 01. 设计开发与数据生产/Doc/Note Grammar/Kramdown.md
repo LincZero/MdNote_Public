@@ -10,7 +10,7 @@
 
 参考：[【知乎】kramdown基本语法](https://zhuanlan.zhihu.com/p/60838339)
 
-### atx 风格标题  {#header}
+### atx 风格标题  `{#header}`
 
 ```markdown
 ~~~
@@ -23,7 +23,7 @@
 ~~~
 ```
 
-### 指定标头ID（`{#head_id}`） 
+### 指定标头ID `{#head_id}`
 
 ```markdown
 ~~~
@@ -35,7 +35,7 @@ HTML 内代码：
 ~~~
 ```
 
-### 引用  \{#Blockquotes}
+### 引用  `{#Blockquotes}`
 
 ```markdown
 ~~~
@@ -50,13 +50,13 @@ HTML 内代码：
 > 以换行
 ```
 
-### 空行 {# blank_line}
+### 空行 `{# blank_line}`
 
 ```markdown
 `<br>` or 两个空格
 ```
 
-### Code  {#code}
+### Code  `{#code}`
 
 ```markdown
 ~~~
@@ -66,7 +66,7 @@ HTML 内代码：
 > 若Code内含有 "~" 符号，则只需要将 三个 **启动符号 "~"** 号多写几个就可以：
 ```
 
-### 清单 {#Definition_Lists}
+### 清单 `{#Definition_Lists}`
 
 ```markdown
 ~~~
@@ -82,7 +82,7 @@ HTML 内代码：
 > 注意缩进
 ```
 
-### 表格  {#Tables}
+### 表格  `{#Tables}`
 
 ```markdown
 ~~~
@@ -92,7 +92,7 @@ HTML 内代码：
 ~~~
 ```
 
-### 分割线  {#Horizontal_Rules}
+### 分割线  `{#Horizontal_Rules}`
 
 ```markdown
 ~~~
@@ -106,7 +106,7 @@ HTML 内代码：
 ~~~
 ```
 
-### HTML块  {#html_blocks}
+### HTML块  `{#html_blocks}`
 
 ```markdown
 > 如果HTML标记具有属性markdown="0"，则标记将被解析为原始HTML块。  
@@ -142,7 +142,7 @@ which is continued here.
 ~~~
 ```
 
-### 链接和图像  {#link_img} （含扩展语法）
+### 链接和图像  `{#link_img}` （含扩展语法）
 
 ```markdown
 ~~~
@@ -163,7 +163,7 @@ which is continued here.
 
 Typora、Obsidian不支持样式，要用img标签
 
-### 重点  {#Emphasis}
+### 重点  `{#Emphasis}`
 
 ```markdown
 ~~~
@@ -176,7 +176,7 @@ __some text__
 # kramdown中单个 * 会被渲染，需要转义 \*
 ```
 
-### 单行代码  {#line_code}（含扩展语法）
+### 单行代码  `{#line_code}`（含扩展语法）
 
 ```python
 ~~~
@@ -192,7 +192,7 @@ This is a Ruby code fragment `x = Class.new`{:.language-ruby}
 ~~~
 ```
 
-### 脚注  {#Footnotes}
+### 脚注  `{#Footnotes}`
 
 ```text
 ~~~
@@ -202,7 +202,7 @@ This is a Ruby code fragment `x = Class.new`{:.language-ruby}
 ~~~
 ```
 
-### 缩略语  {#Abbreviations} （含扩展语法）
+### 缩略语  `{#Abbreviations}` （含扩展语法）
 
 ```text
 ~~~

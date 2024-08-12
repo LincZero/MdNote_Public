@@ -118,7 +118,7 @@ A：对，所以加起来会有10个邀请码.
 
 Q：突然被告知newbies频道不能使用？
 
-A：代表你已脱离新手，可以尝试去其他频道#characters #environments #abstract #general，记得注意每个频道分类不同，如果不清楚分类，最安全就是用general.
+A：代表你已脱离新手，可以尝试去其他频道 `#characters` `#environments` `#abstract` `#general`，记得注意每个频道分类不同，如果不清楚分类，最安全就是用general.
 
 Q：如何上传图片让AI参考？
 

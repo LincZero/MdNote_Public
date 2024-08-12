@@ -13,7 +13,7 @@
 
 ## (01) 视C++为一个语言联邦
 
-## (02) 尽量以const, enum, inline 替换 #define
+## (02) 尽量以const, enum, inline 替换 `#define`
 
 优先选择编译器而不是预处理器
 
@@ -43,8 +43,8 @@ const double AspectRatio = 1.653;
     - 数组：如果我们想要创建一个不是动态分配内存的数组，那么我们就必须给他设定一个size——这个size必须在编译期间就知道，因此静态数组的大小是编译期常量
     - switch的case标签
     - 模板
-    - **constexpr**
-    - **#define** (倒不如说是预处理常量)
+    - `constexpr`
+    - `#define` (倒不如说是预处理常量)
   - 优点
     - 安全、编译优化(快)
 
@@ -125,8 +125,8 @@ inline T callWithMax(const T& a, const T& b) {
 
 考虑到const、枚举、内联的可用性，对预处理器的需求减少了，但没有完全消除。
 
-- #include 仍然必不可少
-- #ifdef/#ifndef 在控制编译方面发挥重要作用
+- `#include` 仍然必不可少
+- `#ifdef/#ifndef` 在控制编译方面发挥重要作用
 - 对于简单常量，首选const对象或枚举，而不是#define
 - 对于类似函数的宏，优先选择内联函数
 
