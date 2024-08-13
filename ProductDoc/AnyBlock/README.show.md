@@ -20,60 +20,32 @@ Related links：(tutorial、use skill、contribution、secondary development)
 
 下面在展示中，会使用标签页将几个版本进行对照。以便来回查看以体会用法和语法：
 
-（DEV TODO: 存在跨行单元格时，CSS无法精确选择“第一列”，需要使用js给第一列进行“标注”。这导致了：第二列可能圆点样式和允许换行都出现异常）
-
 ::: tabs
 
-@tab Plugin effect (插件效果)
+@tab en
 
-[list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
+- Plugin effect
+  - Effect: It is the result of the actual rendering after using the plugin, not the screenshot
+  - It will show: Plugin real effect
+- No plugin effect
+  - Effect: Render the result after you close the plugin
+  - It will show: The plugin syntax is almost non-intrusive, and in a plugin-free environment, md documents remain elegantly readable rather than becoming code boxes
+- Md source code
+  - Effect: Open with Notepad/See the result in Ob's source mode
+  - It will show: Convenient for you to see how this effect is written, showing the elegant and efficient plugin syntax
 
-- Plugin effect<br>(插件效果)
-  - 使用该插件的正常渲染效果
-- No plugin effect<br>(无插件效果)
-  - 用md软件在无该插件的环境下的渲染效果 <br>
-  - 展示了近乎无入侵式的插件语法，这是此插件的==核心==<br>
-    **在无插件环境下，你的md文档依旧可读优雅，而非黑不溜秋的代码框**<br>
-    这一点和callout的设计理念的相似的
-- md source code<br>(md源码)
-  - 用记事本打开源笔记后的效果
-  - 方便你查看效果是怎么写出来的<br>
-    也同样告诉你：该插件并不会导致源码变得丑陋和不可读
-
-@tab No plugin effect (无插件效果)
-
-*注意：这里的头部可以用%%注释不显示，也可以用别名机制使其简短，这里只是为了展示可以串联多个ab转换器进行修改。
-正常来说没有这么长的*
-
-(noPlugin)[list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
+@tab zh
 
 - 插件效果
-  - 使用该插件的正常渲染效果
+  - 效果：是使用插件后真实渲染出来的结果而不是图片截图
+  - 展示了: 插件的真实效果
 - 无插件效果
-  - 用md软件在无该插件的环境下的渲染效果
-  - 展示了近乎无入侵式的插件语法，在无插件环境下，你的md文档依旧可读优雅，而不是一坨代码！<br>
-    这一点和callout的设计理念的相似的
+  - 效果：你关闭了插件后的渲染结果
+  - 展示了: 该插件语法几乎无入侵性，在无插件环境下，md文档依然优雅可读，而非变成代码框
 - md源码
-  - 用记事本打开源笔记后的效果
-  - 方便你查看效果是怎么写出来的<br>
-    也同样告诉你：该插件并不会导致源码变得丑陋和不可读
+  - 效果：用记事本打开/在Ob的源码模式中看到的结果
+  - 展示了: 方便你看这种效果是怎么写出来的，表现了插件语法的优雅高效
 
-@tab md source code (md源码)
-
-~~~md
-[list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
-
-- 插件效果
-  - 使用该插件的正常渲染效果
-- 无插件效果
-  - 用md软件在无该插件的环境下的渲染效果
-  - 展示了近乎无入侵式的插件语法，在无插件环境下，你的md文档依旧可读优雅，而不是一坨代码！<br>
-    这一点和callout的设计理念的相似的
-- md源码
-  - 用记事本打开源笔记后的效果
-  - 方便你查看效果是怎么写出来的<br>
-    也同样告诉你：该插件并不会导致源码变得丑陋和不可读
-~~~
 :::
 
 ### list2table (列表转多叉表格)
@@ -321,6 +293,131 @@ Describe print statements for various common programming languages (描述一下
 
 :::
 
+> #### It makes it look like a list instead of a table (可以让他看起来像列表而不是表格)
+
+
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
+
+- A1
+  - B1
+  - B2
+- A2
+  - B1 
+  - B2
+    - C1
+    - C2
+      - D1
+  - B3
+- A3
+  - B1
+  - B2
+
+@tab No plugin effect (无插件效果)
+
+*注意：这里的头部可以用%%注释不显示，也可以用别名机制使其简短，这里只是为了展示可以串联多个ab转换器进行修改。
+正常来说没有这么长的*
+
+(noPlugin)[list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
+
+- A1
+  - B1
+  - B2
+- A2
+  - B1 
+  - B2
+    - C1
+    - C2
+      - D1
+  - B3
+- A3
+  - B1
+  - B2
+
+@tab md source code (md源码)
+
+~~~md
+[list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
+
+- A1
+  - B1
+  - B2
+- A2
+  - B1 
+  - B2
+    - C1
+    - C2
+      - D1
+  - B3
+- A3
+  - B1
+  - B2
+~~~
+:::
+or
+
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list2c2t|addClass(ab-table-fc)|addClass(ab-table-likelist)]
+
+- A1
+  - B1
+  - B2
+- A2
+  - B1 
+  - B2
+    - C1
+    - C2
+      - D1
+  - B3
+- A3
+  - B1
+  - B2
+
+@tab No plugin effect (无插件效果)
+
+(noPlugin)[list2c2t|addClass(ab-table-fc)|addClass(ab-table-likelist)]
+
+- A1
+  - B1
+  - B2
+- A2
+  - B1 
+  - B2
+    - C1
+    - C2
+      - D1
+  - B3
+- A3
+  - B1
+  - B2
+
+@tab md source code (md源码)
+
+~~~md
+[list2c2t|addClass(ab-table-fc)|addClass(ab-table-likelist)]
+
+- A1
+  - B1
+  - B2
+- A2
+  - B1 
+  - B2
+    - C1
+    - C2
+      - D1
+  - B3
+- A3
+  - B1
+  - B2
+~~~
+
+:::
 ### list2listTable (列表转列表格)
 
 This table, I call a `ListTable`/`TreeTable`/`TreeGrid` (这种表格我命名为 `列表格`/`树形表格`)
@@ -616,7 +713,7 @@ WBS (Work Breakdown Structure, 工作分解结构)
 	- config/
 	- node_modules/
 	- src/
-		- assets/
+		- < assets/
 			- < a
 				- b
 				- < c
@@ -637,7 +734,7 @@ WBS (Work Breakdown Structure, 工作分解结构)
   - config/
   - node_modules/
   - src/
-    - assets/
+    - < assets/
       - < a
         - b
         - < c
@@ -659,7 +756,7 @@ WBS (Work Breakdown Structure, 工作分解结构)
   - config/
   - node_modules/
   - src/
-    - assets/
+    - < assets/
       - < a
         - b
         - < c
@@ -1370,26 +1467,41 @@ demo：描述一下树设计的脑图
 - 二叉树
 ### More (更多)
 
-- en
-	- There are dozens of different processors, not given here, that can be self-explored:
-	- Older documentation for V2 contains more information about the processor: https://linczero.github.io/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
-	- You can install 'Any Block' in Ob and open the plug-in's Settings panel to see all supported processors
+::: tabs
+
+@tab en
+
+- There are dozens of different processors, not given here, that can be self-explored:
+- Older documentation for V2 contains more information about the processor: https://linczero.github.io/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
+- You can install 'Any Block' in Ob and open the plug-in's Settings panel to see all supported processors
 	  (Except for the new processor and mdit instructions that are not added in the new version, the instructions in the old version are actually more complete)
-	- After installation in Obsidian, you can also view all supported processors through the '[info]' processor
-- zh
-	- 有几十个不同的处理器，这里没有给出，可以自探索：
-	- V2的旧文档包含更多处理器的介绍： https://linczero.github.io/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
-	- 可以在Ob中安装 `Any Block` 并打开该插件的设置面板，以查看所有支持的处理器
+- After installation in Obsidian, you can also view all supported processors through the '[info]' processor
+
+@tab zh
+
+- 有几十个不同的处理器，这里没有给出，可以自探索：
+- V2的旧文档包含更多处理器的介绍： https://linczero.github.io/MdNote_Public/ProductDoc/AnyBlock/v2%20old%20docs/
+- 可以在Ob中安装 `Any Block` 并打开该插件的设置面板，以查看所有支持的处理器
 	  （除了没有新版本增加的新处理器和mdit说明外，旧版文档的说明其实会更全）
-	- 在Obsidian中安装以后，也可以通过 `[info]` 处理器，以查看所有支持的处理器
+- 在Obsidian中安装以后，也可以通过 `[info]` 处理器，以查看所有支持的处理器
+
+:::
 
 ## Selector (选择器)
 
+::: tabs
 
-- en
-  - **This part is very important! Recommended to finish!**
-  - url: [Selector](docs/en/03.%20Selector.md)
-- zh
-  - **这部分内容非常重要！推荐看完！**
-  - url: [Selector](docs/zh/03.%20选择器.md)
+@tab en
+
+**This part is very important! Recommended to finish!**
+
+url: [Selector](docs/en/03.%20Selector.md)
+
+@tab zh
+
+**这部分内容非常重要！推荐看完！**
+
+链接: [Selector](docs/zh/03.%20选择器.md)
+
+:::
 
