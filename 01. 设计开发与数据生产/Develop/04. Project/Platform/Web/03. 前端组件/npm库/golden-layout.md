@@ -25,16 +25,16 @@ Golden Layout 是一个 Javascript 布局管理器，它使您能够在网页中
 
 ### 特点
 
--   原生弹出窗口
--   触摸支持
--   支持Angular、Vue等应用框架
--   虚拟组件
--   全面的API
--   加载和保存布局
--   焦点组件
--   完全主题化
--   适用于现代浏览器（Firefox、Chrome）
--   响应式设计
+- 原生弹出窗口
+- 触摸支持
+- 支持Angular、Vue等应用框架
+- 虚拟组件
+- 全面的API
+- 加载和保存布局
+- 焦点组件
+- 完全主题化
+- 适用于现代浏览器（Firefox、Chrome）
+- 响应式设计
 
 ## 安装/使用
 
@@ -57,8 +57,8 @@ npm run build
 
 您可以构建并启动 `apitest` （演示）应用程序以查看运行中的库
 
--   `npm run apitest:build` 来构建它
--   `npm run apitest:serve` 构建并启动开发服务器
+- `npm run apitest:build` 来构建它
+- `npm run apitest:serve` 构建并启动开发服务器
 
 ### 构建单文件包
 
@@ -70,8 +70,8 @@ npm run build
 
 如果您希望使用其他应用程序测试该库，您可以链接到 Golden Layout 存储库，而无需从 NPM 将其安装到应用程序中。这是通过 `npm link` 命令完成的。使用以下步骤：
 
-1.   从黄金布局源存储库顶级文件夹中的 shell 运行 `npm link` 。
-2.   从应用程序顶级文件夹中的 shell 运行 `npm link golden-layout` 。
+1. 从黄金布局源存储库顶级文件夹中的 shell 运行 `npm link` 。
+2. 从应用程序顶级文件夹中的 shell 运行 `npm link golden-layout` 。
 
 然后，您的应用程序将使用 Golden Layout 存储库 `dist` 子文件夹中的发行版。如果您希望对黄金布局库进行更改，则需要运行 `build:api` 来重新生成 `dist` 文件夹。
 
@@ -81,9 +81,9 @@ npm run build
 
 以下信息源可用于学习如何使用黄金布局
 
--   https://golden-layout.com 记录了 Golden Layout 的第 1 版。虽然版本 2 中进行了实质性更改，但仍然可以使用此网站来初步了解 Golden Layout。
--   ReadMe 文件
--   CodePen examples CodePen 示例：https://codepen.io/pbklink/pen/dyWJNNm，一个基本示例
+- https://golden-layout.com 记录了 Golden Layout 的第 1 版。虽然版本 2 中进行了实质性更改，但仍然可以使用此网站来初步了解 Golden Layout。
+- ReadMe 文件
+- CodePen examples CodePen 示例：https://codepen.io/pbklink/pen/dyWJNNm，一个基本示例
 
 ### 结构
 

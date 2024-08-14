@@ -1,3 +1,8 @@
+---
+tags:
+  - 源码
+---
+
 # nTopng实现分析
 
 ## 目录
@@ -42,6 +47,8 @@
 ### 项目结构
 
 吐个槽：这个结构前后端混在一起了，而且/cpp/和/h/文件夹里各有近200个.cpp和.h，真就完全不分层的
+
+[dir]
 
 - /assets/,  【前端】asserts
 - /attic/
@@ -239,6 +246,8 @@ $ redis-cli CONFIG GET dir # 如果在默认工作没找到，就用该命令查
 
 一方面是前面提到的 /third-party/ 里的库，直接在源代码中会有一份
 
+[dir]
+
 - /third-party/
   - j18n.lua-master
   - json-c
@@ -365,6 +374,8 @@ $ redis-cli CONFIG GET dir # 如果在默认工作没找到，就用该命令查
 
 eBPF部分：
 
+[dir]
+
 - /doc/
   - README.eBPF.md
 - /src/
@@ -385,9 +396,11 @@ eBPF部分：
 
 nDPI部分：
 
+[dir]
+
 - .gitignore， 这里忽略了一个nDPI文件夹，不知道干嘛的
 
-- Makefile.in
+- Makefile.in | 
 
   ```makefile
   NDPI_LIB = @NDPI_LIB@

@@ -57,7 +57,7 @@ FolderType=Generic
 
 Eagle 备受 Billfish 用户吐槽的一点就是他的库：
 
-![](_.assets/Pasted%20image%2020240809000723.png)
+![](assets/Pasted%20image%2020240809000723.png)
 
 
 
