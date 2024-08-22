@@ -1,8 +1,4 @@
-# Billfish
-
-# 目录
-
-# 吐槽
+# Billfish吐槽
 
 ## 三种模式
 
