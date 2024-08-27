@@ -1102,30 +1102,36 @@ How to install python on each platform (python在各平台上的安装方法)：
 [list2card]
 
 - card1
-  - card1_item<br>$1+1=2$
+  card1_item<br>$1+1=2$
 - card2
-  - card2_item
-    ```js
-    var a = 1
-    ```
+  card2_item
+  ```js
+  var a = 1
+  ```
 - card3
-  - card3_item
-      **Bold** *italics* ==highlight== ~~delete~~
+  card3_item
+  **Bold** *italics* ==highlight== ~~delete~~
+  - list1
+  - list2
+  - list3
 
 @tab No plugin effect (无插件效果)
 
 (noplugin)[list2card]
 
 - card1
-  - card1_item<br>$1+1=2$
+  card1_item<br>$1+1=2$
 - card2
-  - card2_item
-    ```js
-    var a = 1
-    ```
+  card2_item
+  ```js
+  var a = 1
+  ```
 - card3
-  - card3_item
-      **Bold** *italics* ==highlight== ~~delete~~
+  card3_item
+  **Bold** *italics* ==highlight== ~~delete~~
+  - list1
+  - list2
+  - list3
 
 @tab md source code (md源码)
 
@@ -1133,15 +1139,18 @@ How to install python on each platform (python在各平台上的安装方法)：
 \[list2card]
 
 - card1
-  - card1_item<br>$1+1=2$
+  card1_item<br>$1+1=2$
 - card2
-  - card2_item
-    ```js
-    var a = 1
-    ```
+  card2_item
+  ```js
+  var a = 1
+  ```
 - card3
-  - card3_item
-      **Bold** *italics* ==highlight== ~~delete~~
+  card3_item
+  **Bold** *italics* ==highlight== ~~delete~~
+  - list1
+  - list2
+  - list3
 ````
 
 :::
@@ -1270,6 +1279,116 @@ demo：描述一下树设计的脑图
 	- static/
 	- test/
 ~~~
+:::
+
+#### to nodes (转节点树图，AnyBlock版思维导图)
+
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list2node]
+
+- Links
+  - [Website](https://markmap.js.org/)
+  - [GitHub](https://github.com/gera2ld/markmap)
+- Related Projects
+  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+- Features
+  - Lists
+    - **strong** ~~del~~ *italic* ==highlight==
+    - `inline code`
+    - [x] checkbox
+    - Katex: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+    - Katex_mutilLine:
+      $$
+       x = {-b \pm \sqrt{b^2-4ac} \over 2a}
+       $$
+    - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - Now we can wrap very very very very long text based on `maxWidth` option
+  - Blocks
+  - 
+    ```javascript
+    console.log("hello, JavaScript")
+    ```
+  - |Products|Price|
+    |-|-|
+    |Apple|4|
+    |Banana|2|
+  - ![](https://markmap.js.org/favicon.png)
+
+@tab No plugin effect (无插件效果)
+
+(noPlugin)[list2node]
+
+- Links
+  - [Website](https://markmap.js.org/)
+  - [GitHub](https://github.com/gera2ld/markmap)
+- Related Projects
+  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+- Features
+  - Lists
+    - **strong** ~~del~~ *italic* ==highlight==
+    - `inline code`
+    - [x] checkbox
+    - Katex: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+    - Katex_mutilLine:
+      $$
+       x = {-b \pm \sqrt{b^2-4ac} \over 2a}
+       $$
+    - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - Now we can wrap very very very very long text based on `maxWidth` option
+  - Blocks
+  - 
+    ```javascript
+    console.log("hello, JavaScript")
+    ```
+  - |Products|Price|
+    |-|-|
+    |Apple|4|
+    |Banana|2|
+  - ![](https://markmap.js.org/favicon.png)
+
+@tab md source code (md源码)
+
+````md
+\\[list2node]
+
+- Links
+  - [Website](https://markmap.js.org/)
+  - [GitHub](https://github.com/gera2ld/markmap)
+- Related Projects
+  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+- Features
+  - Lists
+    - **strong** ~~del~~ *italic* ==highlight==
+    - `inline code`
+    - [x] checkbox
+    - Katex: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+    - Katex_mutilLine:
+      $$
+      x = {-b \pm \sqrt{b^2-4ac} \over 2a}
+      $$
+    - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - Now we can wrap very very very very long text based on `maxWidth` option
+  - Blocks
+  - 
+    ```javascript
+    console.log("hello, JavaScript")
+    ```
+  - |Products|Price|
+    |-|-|
+    |Apple|4|
+    |Banana|2|
+  - ![](https://markmap.js.org/favicon.png)
+````
+
 :::
 
 #### to markmap (转markmap思维导图)

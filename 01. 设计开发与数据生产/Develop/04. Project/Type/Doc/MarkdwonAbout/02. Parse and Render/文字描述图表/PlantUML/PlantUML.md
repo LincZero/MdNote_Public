@@ -42,6 +42,80 @@ endif;
 
 这种需要使用 `encode = require('plantuml-encoder').encode("...")` 获取编码后的内容，再进行请求
 
+## 图表优化
+### 常用样式
+
+[连接线风格](http://blog.lujun9972.win/blog/2020/04/22/plantuml-tips%E4%B9%8B%E8%AE%BE%E7%BD%AE%E8%BF%9E%E6%8E%A5%E7%BA%BF%E9%A3%8E%E6%A0%BC/index.html)
+
+- skinparam linetype ortho
+- skinparam linetype polyline
+
+### 案例
+
+一个四节点互连图 (应该用样式修改来替代a填充)
+
+```plantuml
+@startuml
+skinparam linetype ortho
+left to right direction
+
+package "nn" {
+
+a-->x: looooooooooong
+a-->b: looooooooooong
+a-->c: looooooooooong
+
+x------>a: looooooooooong
+x------>b: looooooooooong
+x------>c: looooooooooong
+
+b-->a: looooooooooong
+b-->x: looooooooooong
+b--right-->c: looooooooooong
+
+c-->a: looooooooooong
+c-->x: looooooooooong
+c-->b: looooooooooong
+
+
+class c{
+  a
+  a
+  a
+  a
+  a
+  a
+  a
+}
+
+class b{
+  a
+  a
+  a
+  a
+  a
+  a
+  a
+}
+
+class x{
+  a
+  a
+  a
+  a
+  a
+  a
+  a
+  a
+  a
+  a
+  a
+}
+
+}
+@enduml
+```
+
 ## 程序类型
 
 ### 前端渲染 or 服务器渲染
