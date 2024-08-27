@@ -1307,7 +1307,8 @@ demo：描述一下树设计的脑图
        x = {-b \pm \sqrt{b^2-4ac} \over 2a}
        $$
     - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
-    - Now we can wrap very very very very long text based on `maxWidth` option
+    - > [!note]
+      > Now we can wrap very very very very long text based on `maxWidth` option
   - Blocks
   - 
     ```javascript
@@ -1341,7 +1342,8 @@ demo：描述一下树设计的脑图
        x = {-b \pm \sqrt{b^2-4ac} \over 2a}
        $$
     - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
-    - Now we can wrap very very very very long text based on `maxWidth` option
+    - > [!note]
+      > Now we can wrap very very very very long text based on `maxWidth` option
   - Blocks
   - 
     ```javascript
@@ -1376,8 +1378,8 @@ demo：描述一下树设计的脑图
       x = {-b \pm \sqrt{b^2-4ac} \over 2a}
       $$
     - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
-    - Now we can wrap very very very very long text based on `maxWidth` option
-  - Blocks
+    - > [!note]
+      > Now we can wrap very very very very long text based on `maxWidth` option
   - 
     ```javascript
     console.log("hello, JavaScript")
