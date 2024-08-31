@@ -1038,7 +1038,7 @@ How to install python on each platform (python在各平台上的安装方法)：
 
 @tab Plugin effect (插件效果)
 
-[list2mdtab]
+[list2tab]
 
 - linux
   - 可以通过执行以下命令在终端中使用 apt 包安装程序：
@@ -1056,7 +1056,7 @@ How to install python on each platform (python在各平台上的安装方法)：
 
 @tab No plugin effect (无插件效果)
 
-(noPlugin)[list2mdtab]
+(noPlugin)[list2tab]
 
 - linux
   - 可以通过执行以下命令在终端中使用 apt 包安装程序：
@@ -1075,7 +1075,7 @@ How to install python on each platform (python在各平台上的安装方法)：
 @tab md source code (md源码)
 
 ~~~md
-\[list2mdtab]
+\[list2tab]
 
 - linux
   - 可以通过执行以下命令在终端中使用 apt 包安装程序：
@@ -1099,7 +1099,7 @@ How to install python on each platform (python在各平台上的安装方法)：
 
 @tab Plugin effect (插件效果)
 
-[list2card]
+[list2card|addClass(ab-col3)]
 
 - card1
   card1_item<br>$1+1=2$
@@ -1117,7 +1117,7 @@ How to install python on each platform (python在各平台上的安装方法)：
 
 @tab No plugin effect (无插件效果)
 
-(noplugin)[list2card]
+(noplugin)[list2card|addClass(ab-col3)]
 
 - card1
   card1_item<br>$1+1=2$
@@ -1136,7 +1136,7 @@ How to install python on each platform (python在各平台上的安装方法)：
 @tab md source code (md源码)
 
 ````
-\[list2card]
+\[list2card|addClass(ab-col3)]
 
 - card1
   card1_item<br>$1+1=2$
