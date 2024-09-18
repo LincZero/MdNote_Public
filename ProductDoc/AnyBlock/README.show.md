@@ -1577,6 +1577,10 @@ demo：描述一下树设计的脑图
 
 例如：
 
+::: tabs
+
+@tab Plugin effect (插件效果)
+
 [listroot(树结构)]
 
 - 基本术语
@@ -1586,6 +1590,49 @@ demo：描述一下树设计的脑图
 - 性质
 - 基本运算
 - 二叉树
+
+@tab No plugin effect (无插件效果)
+
+(noPlugin)[listroot(树结构)]
+
+- 基本术语
+  - A
+  - B
+  - C
+- 性质
+- 基本运算
+- 二叉树
+
+@tab md source code (md源码)
+
+```md
+\[listroot(树结构)]
+
+- 基本术语
+  - A
+  - B
+  - C
+- 性质
+- 基本运算
+- 二叉树
+```
+
+:::
+
+> #### json
+
+[X|json2pumlJson]
+
+```json
+{
+  "a": 10,
+  "b": {
+    "b1": 11,
+    "b2": 12
+  }
+}
+```
+
 ### More (更多)
 
 ::: tabs

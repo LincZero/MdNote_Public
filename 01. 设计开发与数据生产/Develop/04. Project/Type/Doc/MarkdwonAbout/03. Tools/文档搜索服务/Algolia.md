@@ -4,13 +4,16 @@
 
 ## DocSearch版流程 (新)
 
-流程二：~~https://www.bilibili.com/video/BV1DY411v7Lt~~，https://theme-hope.vuejs.press/zh/guide/feature/search.html#%E4%BD%BF%E7%94%A8-vuepress-plugin-docsearch
+流程二：
+
+- ~~https://www.bilibili.com/video/BV1DY411v7Lt~~
+- https://theme-hope.vuejs.press/zh/guide/feature/search.html#%E4%BD%BF%E7%94%A8-vuepress-plugin-docsearch
 
 docSearch 分几个子域名：
 
-- https://dashboard.algolia.com/，可以看 ID、Key、爬取结果
-- https://crawler.algolia.com/，这个似乎是有爬虫的。用他自带的爬虫工具可以代替旧版的CI版流程（自己爬取）
-- https://docsearch.algolia.com/，限制：所有者、开源仓库、技术类博客
+- https://dashboard.algolia.com/， 可以看 ID、Key、爬取结果
+- https://crawler.algolia.com/， 这个似乎是有爬虫的。用他自带的爬虫工具可以代替旧版的CI版流程（自己爬取）
+- https://docsearch.algolia.com/， 限制：所有者、开源仓库、技术类博客
 
 ## CI版流程 (旧)
 
