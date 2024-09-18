@@ -158,7 +158,7 @@ MySQL 是这样做的，它改进了 LRU 算法，将 LRU 划分了 2 个区域�
 
 young 区域在 LRU 链表的前半部分，old 区域则是在后半部分，如下图：
 
-![img](assets/young%2Bold.png)
+![img](assets/youngBold.png)
 
 old 区域占整个 LRU 链表长度的比例可以通过 `innodb_old_blocks_pct` 参数来设置，默认是 37，代表整个 LRU 链表中 young 区域与 old 区域比例是 63:37。
 
