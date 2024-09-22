@@ -1293,9 +1293,11 @@ demo：描述一下树设计的脑图
   - [Website](https://markmap.js.org/)
   - [GitHub](https://github.com/gera2ld/markmap)
 - Related Projects
-  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
-  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
-  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+  - test 1-1-3
+    test inline wrap
+    - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+    - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+    - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
 - Features
   - Lists
     - **strong** ~~del~~ *italic* ==highlight==
@@ -1328,9 +1330,11 @@ demo：描述一下树设计的脑图
   - [Website](https://markmap.js.org/)
   - [GitHub](https://github.com/gera2ld/markmap)
 - Related Projects
-  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
-  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
-  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+  - test 1-1-3
+    test inline wrap
+    - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+    - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+    - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
 - Features
   - Lists
     - **strong** ~~del~~ *italic* ==highlight==
@@ -1364,9 +1368,11 @@ demo：描述一下树设计的脑图
   - [Website](https://markmap.js.org/)
   - [GitHub](https://github.com/gera2ld/markmap)
 - Related Projects
-  - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
-  - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
-  - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+  - test 1-1-3
+    test inline wrap
+    - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+    - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+    - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
 - Features
   - Lists
     - **strong** ~~del~~ *italic* ==highlight==
@@ -1390,6 +1396,71 @@ demo：描述一下树设计的脑图
     |Banana|2|
   - ![](https://markmap.js.org/favicon.png)
 ````
+
+:::
+
+min 样式，更紧凑、样式上也更像 markmap
+
+::: tabs
+
+@tab Plugin effect (插件效果)
+
+[list2node|addClass(min)]
+
+- Links
+  - [Website](https://markmap.js.org/)
+  - [GitHub](https://github.com/gera2ld/markmap)
+- Related Projects
+  - test 1-1-3
+    test inline wrap
+    - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+    - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+    - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+- Features
+  - Lists
+    - **strong** ~~del~~ *italic* ==highlight==
+    - `inline code`
+    - [x] checkbox
+
+@tab No plugin effect (无插件效果)
+
+(noPlugin)[list2node|addClass(min)]
+
+- Links
+  - [Website](https://markmap.js.org/)
+  - [GitHub](https://github.com/gera2ld/markmap)
+- Related Projects
+  - test 1-1-3
+    test inline wrap
+    - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+    - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+    - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+- Features
+  - Lists
+    - **strong** ~~del~~ *italic* ==highlight==
+    - `inline code`
+    - [x] checkbox
+
+@tab md source code (md源码)
+
+```md
+\\[list2node|addClass(min)]
+
+- Links
+  - [Website](https://markmap.js.org/)
+  - [GitHub](https://github.com/gera2ld/markmap)
+- Related Projects
+  - test 1-1-3
+    test inline wrap
+    - [coc-markmap](https://github.com/gera2ld/coc-markmap) for Neovim
+    - [markmap-vscode](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) for VSCode
+    - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
+- Features
+  - Lists
+    - **strong** ~~del~~ *italic* ==highlight==
+    - `inline code`
+    - [x] checkbox
+```
 
 :::
 

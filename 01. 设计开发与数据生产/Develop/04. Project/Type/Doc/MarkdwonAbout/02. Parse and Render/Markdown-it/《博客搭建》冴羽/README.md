@@ -12,11 +12,16 @@ create_time: 2024-07-25
     - 最终效果网站：[冴羽的 JavaScript 博客](https://ts.yayujs.com/)
     - 备用链接：例如 [InfoQ - markdown-it 插件如何写（一）](https://xie.infoq.cn/article/16c70bb0f0bfb972d1e5867f6) 或 [markdown-it 插件如何写（一）](https://juejin.cn/post/7055238938092371975) 或 [markdown-it 插件如何写（一）](https://github.com/mqyqingfeng/Blog/issues/253)，这几个的内容是一样的，只是作者在不同的平台发布而已
 
-  - 其中，和markdown-it关联的部分
-    - [markdown-it 原理解析](https://github.com/mqyqingfeng/Blog/issues/252)
-    - [markdown-it 插件如何写（一）](https://xie.infoq.cn/article/16c70bb0f0bfb972d1e5867f6)
-    - [markdown-it 插件如何写（二）](https://xie.infoq.cn/article/7db8be15aa5161a8f36eec348)
-    - [markdown-it 插件如何写（三）](https://xie.infoq.cn/article/e36b2ff51c9520688be2581a7)
+  - 其中，和vuepress开发关联的部分
+    - [13. 从零实现一个 VuePress 插件](https://github.com/mqyqingfeng/Blog/issues/250)
+    
+    - [21. 搭建 VuePress 博客，你可能会用到的一些插件](https://www.yuque.com/yayu/blog/hc9p2i#)
+    
+  - 其中，和markdown-it开发关联的部分
+    - [15.  markdown-it 原理解析](https://github.com/mqyqingfeng/Blog/issues/252)
+    - [16. markdown-it 插件如何写（一）](https://xie.infoq.cn/article/16c70bb0f0bfb972d1e5867f6)
+    - [17. markdown-it 插件如何写（二）](https://xie.infoq.cn/article/7db8be15aa5161a8f36eec348)
+    - [18. markdown-it 插件如何写（三）](https://xie.infoq.cn/article/e36b2ff51c9520688be2581a7)
 
 
 ## 将每篇文章的头尾声明摘出来

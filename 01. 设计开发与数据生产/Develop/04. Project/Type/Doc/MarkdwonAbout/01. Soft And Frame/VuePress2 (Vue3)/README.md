@@ -8,6 +8,8 @@
   -   [VuePress v2 官网](https://v2.vuepress.vuejs.org/zh/)
 
   -   [VuePress v1 官网文档](https://vuepress.vuejs.org/zh/guide/getting-started.html)
+  -   [VuePress 生态系统](https://ecosystem.vuejs.press/zh/)
+      -   包含了许多官方主题和插件，如 back-to-top、catalog、copy-cde 等
   -   VuePress2官网文档
       -   [指南](https://vuepress.github.io/zh/guide/)
       -   [参考](https://vuepress.github.io/zh/reference/cli.html)
