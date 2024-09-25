@@ -1409,6 +1409,8 @@ min 样式，更紧凑、样式上也更像 markmap
 
 - Links
   - [Website](https://markmap.js.org/)
+    - Test
+      - Test2
   - [GitHub](https://github.com/gera2ld/markmap)
 - Related Projects
   - test 1-1-3
@@ -1418,9 +1420,26 @@ min 样式，更紧凑、样式上也更像 markmap
     - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
 - Features
   - Lists
-    - **strong** ~~del~~ *italic* ==highlight==
-    - `inline code`
-    - [x] checkbox
+    - Inline
+      - **strong** ~~del~~ *italic* ==highlight==
+      - `inline code`
+      - [x] checkbox
+    - katex
+      - Katex: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ 
+      - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - loogTest
+      - loogTest
+        - Now we can wrap very very very very long text based on `maxWidth` option
+  - Blocks
+    - 
+      ```javascript
+      console.log("hello, JavaScript")
+      ```
+    - |Products|Price|
+      |-|-|
+      |Apple|4|
+      |Banana|2|
+    - ![](https://markmap.js.org/favicon.png)
 
 @tab No plugin effect (无插件效果)
 
@@ -1428,6 +1447,8 @@ min 样式，更紧凑、样式上也更像 markmap
 
 - Links
   - [Website](https://markmap.js.org/)
+    - Test
+      - Test2
   - [GitHub](https://github.com/gera2ld/markmap)
 - Related Projects
   - test 1-1-3
@@ -1437,17 +1458,37 @@ min 样式，更紧凑、样式上也更像 markmap
     - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
 - Features
   - Lists
-    - **strong** ~~del~~ *italic* ==highlight==
-    - `inline code`
-    - [x] checkbox
+    - Inline
+      - **strong** ~~del~~ *italic* ==highlight==
+      - `inline code`
+      - [x] checkbox
+    - katex
+      - Katex: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ 
+      - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - loogTest
+      - loogTest
+        - Now we can wrap very very very very long text based on `maxWidth` option
+  - Blocks
+    - 
+      ```javascript
+      console.log("hello, JavaScript")
+      ```
+    - |Products|Price|
+      |-|-|
+      |Apple|4|
+      |Banana|2|
+    - ![](https://markmap.js.org/favicon.png)
 
 @tab md source code (md源码)
 
 ```md
 \\[list2node|addClass(min)]
 
+
 - Links
   - [Website](https://markmap.js.org/)
+    - Test
+      - Test2
   - [GitHub](https://github.com/gera2ld/markmap)
 - Related Projects
   - test 1-1-3
@@ -1457,9 +1498,26 @@ min 样式，更紧凑、样式上也更像 markmap
     - [eaf-markmap](https://github.com/emacs-eaf/eaf-markmap) for Emacs
 - Features
   - Lists
-    - **strong** ~~del~~ *italic* ==highlight==
-    - `inline code`
-    - [x] checkbox
+    - Inline
+      - **strong** ~~del~~ *italic* ==highlight==
+      - `inline code`
+      - [x] checkbox
+    - katex
+      - Katex: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$ 
+      - [More Katex Examples](#?d=gist:af76a4c245b302206b16aec503dbe07b:katex.md)
+    - loogTest
+      - loogTest
+        - Now we can wrap very very very very long text based on `maxWidth` option
+  - Blocks
+    - 
+      ```javascript
+      console.log("hello, JavaScript")
+      ```
+    - |Products|Price|
+      |-|-|
+      |Apple|4|
+      |Banana|2|
+    - ![](https://markmap.js.org/favicon.png)
 ```
 
 :::
