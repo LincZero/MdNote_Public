@@ -1,9 +1,5 @@
 # Docker
 
-# 目录
-
-# Docker
-
 参考：https://www.bilibili.com/video/BV1s54y1n7Ev
 
 docker的出现，让应用环境的配置、发布、测试变得轻松
@@ -28,13 +24,13 @@ Docker在概念上相当于虚拟机，但更轻量。提供隔离的环境
 
 三个概念
 
--   Dockerfile
--   Image / 镜像
-    -   理解成虚拟机的快照（Snapshot），包含要部署的应用程序和相关库
-        Docker Hub 上也提供了很多高质量的操作系统镜像
--   Container / 容器
-    -   镜像可以创建多个不同的容器（通过Dockerfile完成），每个容器都是独立运行
-        类比于多个虚拟机使用同一个镜像去创建，类比于多个实例使用一个类来创建
+- Dockerfile
+- Image / 镜像
+  - 理解成虚拟机的快照（Snapshot），包含要部署的应用程序和相关库
+  Docker Hub 上也提供了很多高质量的操作系统镜像
+- Container / 容器
+  - 镜像可以创建多个不同的容器（通过Dockerfile完成），每个容器都是独立运行
+    类比于多个虚拟机使用同一个镜像去创建，类比于多个实例使用一个类来创建
 
 ### 安装
 
@@ -56,16 +52,16 @@ Windows 10 以上也可以使用 WSL2 子系统来运行
 
 不同的Linux操作系统有不同的包管理工具
 
--   Ubuntu：apt
--   Fedora：dnf
+- Ubuntu：apt
+- Fedora：dnf
 
 也有针对于不同语言的包管理工具
 
--   nginx
--   redis
--   node
--   python
--   tomcat
+- nginx
+- redis
+- node
+- python
+- tomcat
 
 #### VSCode插件
 

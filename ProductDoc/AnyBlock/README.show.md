@@ -295,7 +295,6 @@ Describe print statements for various common programming languages (描述一下
 
 > #### It makes it look like a list instead of a table (可以让他看起来像列表而不是表格)
 
-
 ::: tabs
 
 @tab Plugin effect (插件效果)
@@ -318,7 +317,7 @@ Describe print statements for various common programming languages (描述一下
 
 @tab No plugin effect (无插件效果)
 
-*注意：这里的头部可以用%%注释不显示，也可以用别名机制使其简短，这里只是为了展示可以串联多个ab转换器进行修改。
+*注意：这里的头部可以用 `%%` 注释不显示，也可以用别名机制使其简短，这里只是为了展示可以串联多个ab转换器进行修改。
 正常来说没有这么长的*
 
 (noPlugin)[list2table|addClass(ab-table-fc)|addClass(ab-table-likelist)]
@@ -429,6 +428,8 @@ When used to represent a file directory, it is also called a `CatalogTable` (当
 > #### Allow Folding (允许折叠)
 
 md-demo This is the hierarchy of a certain company (这是某个公司的层次结构)
+
+You can click on the row with the arrow and fold it (你可以点击有箭头的行，进行折叠)
 
 （DEV TODO：fix bug：多行时，折叠功能似乎存在问题）
 
@@ -923,13 +924,11 @@ Can be used as a timeline, but developing (可以当时间线使用, 但开发�
 
 @tab Plugin effect (插件效果)
 
-[list2mdtimeline]
+[list2timeline]
 
-- 1840年6月
-  
-  英军发动鸦片战争
+- 1840-06| 英军发动鸦片战争
 
-- 1842年8月
+- 1842-08
   
   清政府与英国签订《南京条约》:
   1. 中国割让香港岛给英国;
@@ -945,25 +944,23 @@ Can be used as a timeline, but developing (可以当时间线使用, 但开发�
   > 4. 反侵略反封建成为中国人民肩负的两大历史任务;
   > 5. 中国逐渐开始了反帝反封建的资产阶级民主革命。
 
-- 1841年5月
+- 1841-05
   
   三元里人民的抗英斗争，是中国近代史上中国人民第一次大规模的反侵略武装斗争。
   
   > ![ ](https://tse1-mm.cn.bing.net/th/id/R-C.4bbce1406f4442c1360edde26baa894d?rik=iHeUeby0jS5lnw&riu=http%3a%2f%2fp8.qhmsg.com%2fdr%2f270_500_%2ft01dbb76ff833d0a159.jpg&ehk=yggnC0t62%2b6DEVjvBgs%2fXJuuexBucd66FTc5gL0Gw%2fA%3d&risl=&pid=ImgRaw&r=0)
   
-- 1851年1月
+- 1851-01
   
   洪秀全金田村发动起义，建号太平天国。1853年3月，占领南京,定为首都,改名天京，正式宜告太平天国农民政权的建立。颁布《天朝天亩制度》、天平军北伐
 
 @tab No plugin effect (无插件效果)
 
-(noPlugin)[list2mdtimeline]
+(noPlugin)[list2timeline]
 
-- 1840年6月
-  
-  英军发动鸦片战争
+- 1840-06:  英军发动鸦片战争
 
-- 1842年8月
+- 1842-08
   
   清政府与英国签订《南京条约》:
   1. 中国割让香港岛给英国;
@@ -979,26 +976,24 @@ Can be used as a timeline, but developing (可以当时间线使用, 但开发�
   > 4. 反侵略反封建成为中国人民肩负的两大历史任务;
   > 5. 中国逐渐开始了反帝反封建的资产阶级民主革命。
 
-- 1841年5月
+- 1841-05
   
   三元里人民的抗英斗争，是中国近代史上中国人民第一次大规模的反侵略武装斗争。
   
   > ![ ](https://tse1-mm.cn.bing.net/th/id/R-C.4bbce1406f4442c1360edde26baa894d?rik=iHeUeby0jS5lnw&riu=http%3a%2f%2fp8.qhmsg.com%2fdr%2f270_500_%2ft01dbb76ff833d0a159.jpg&ehk=yggnC0t62%2b6DEVjvBgs%2fXJuuexBucd66FTc5gL0Gw%2fA%3d&risl=&pid=ImgRaw&r=0)
   
-- 1851年1月
+- 1851-01
   
   洪秀全金田村发动起义，建号太平天国。1853年3月，占领南京,定为首都,改名天京，正式宜告太平天国农民政权的建立。颁布《天朝天亩制度》、天平军北伐
 
 @tab md source code (md源码)
 
 ~~~md
-[list2mdtimeline]
+[list2timeline]
 
-- 1840年6月
-  
-  英军发动鸦片战争
+- 1840-06:  英军发动鸦片战争
 
-- 1842年8月
+- 1842-08
   
   清政府与英国签订《南京条约》:
   1. 中国割让香港岛给英国;
@@ -1014,13 +1009,13 @@ Can be used as a timeline, but developing (可以当时间线使用, 但开发�
   > 4. 反侵略反封建成为中国人民肩负的两大历史任务;
   > 5. 中国逐渐开始了反帝反封建的资产阶级民主革命。
 
-- 1841年5月
+- 1841-05
   
   三元里人民的抗英斗争，是中国近代史上中国人民第一次大规模的反侵略武装斗争。
   
   > ![ ](https://tse1-mm.cn.bing.net/th/id/R-C.4bbce1406f4442c1360edde26baa894d?rik=iHeUeby0jS5lnw&riu=http%3a%2f%2fp8.qhmsg.com%2fdr%2f270_500_%2ft01dbb76ff833d0a159.jpg&ehk=yggnC0t62%2b6DEVjvBgs%2fXJuuexBucd66FTc5gL0Gw%2fA%3d&risl=&pid=ImgRaw&r=0)
   
-- 1851年1月
+- 1851-01
   
   洪秀全金田村发动起义，建号太平天国。1853年3月，占领南京,定为首都,改名天京，正式宜告太平天国农民政权的建立。颁布《天朝天亩制度》、天平军北伐
 ~~~
@@ -1400,6 +1395,11 @@ demo：描述一下树设计的脑图
 :::
 
 min 样式，更紧凑、样式上也更像 markmap
+
+- 差异问题：由于非svg而是div，根据平台的不同可能会有微小差异引起的问题。普通版的有差异问题不大，但min样式的细小差异可能影响较大
+- 差异因素：例如像box-sizing的默认策略，例如高度除以2向哪取整数
+- 差异修复：关于小数的问题：之前试过手动指定取整范围，但也无法保证。可能可以用“小圆点”来使视觉差异减少。另一个方法是用高度差计算，而不应该用 height/2或calc(50%) 这一类来计算，后期有空再改
+- 差异适配：当前主要面对obsidian和vuepress-theme-hope做适配，对ob的适配也是最好的
 
 ::: tabs
 

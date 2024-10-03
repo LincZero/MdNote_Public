@@ -89,24 +89,17 @@ packages:
 ### 互相引用
 
 - /api/
-
 - /packages/
-
   - background/
-
   - content/
-
   - core/： 核心
-
     ```json
     // package.json
     {
         "name": "@wooka/core"
     }
     ```
-
   - popup/： 单页面应用
-
     ```json
     // package.json
     {
@@ -117,11 +110,8 @@ packages:
         }
     }
     ```
-
   - global.d.ts
-
 - /supabase/
-
 - /...
 
 ### 安装依赖
@@ -142,8 +132,6 @@ $ ll node_modules/@wooka/core # 这时会发现实际上这是一个软链接
 - lock 文件：负责记录依赖版本号
 - package.json：负责记录依赖和脚本
 
-
-
 FAQ
 
 - 需要每个项目文件夹配置单独的入口文件么?
@@ -159,12 +147,8 @@ FAQ
 - 怎么处理端口?
   - 以前怎么处理，现在还是。workspace 并不会帮你处理端口。
 
-
-
 Monorepo的好处在于自身
 pnpm 只是帮我们管理
-
-
 
 扩展阅读：工作空间 (Workspace) 的pnpm官方文档
 

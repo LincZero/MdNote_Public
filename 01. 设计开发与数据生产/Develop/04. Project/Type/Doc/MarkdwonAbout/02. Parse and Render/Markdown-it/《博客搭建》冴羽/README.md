@@ -10,7 +10,7 @@ create_time: 2024-07-25
   - 作者主页
     - [GitHub - 作者主页](https://github.com/mqyqingfeng/Blog)，[InfoQ - 作者主页](https://www.infoq.cn/u/yayujs/publish)
     - 最终效果网站：[冴羽的 JavaScript 博客](https://ts.yayujs.com/)
-    - 备用链接：例如 [InfoQ - markdown-it 插件如何写（一）](https://xie.infoq.cn/article/16c70bb0f0bfb972d1e5867f6) 或 [markdown-it 插件如何写（一）](https://juejin.cn/post/7055238938092371975) 或 [markdown-it 插件如何写（一）](https://github.com/mqyqingfeng/Blog/issues/253)，这几个的内容是一样的，只是作者在不同的平台发布而已
+    - 备用链接：例如 [【InfoQ】markdown-it 插件如何写（一）](https://xie.infoq.cn/article/16c70bb0f0bfb972d1e5867f6) 或 [【掘金】markdown-it 插件如何写（一）](https://juejin.cn/post/7055238938092371975) 或 [【Github】markdown-it 插件如何写（一）](https://github.com/mqyqingfeng/Blog/issues/253)，这几个的内容是一样的，只是作者在不同的平台发布而已
 
   - 其中，和vuepress开发关联的部分
     - [13. 从零实现一个 VuePress 插件](https://github.com/mqyqingfeng/Blog/issues/250)

@@ -1,8 +1,20 @@
 # Vagrant
 
-官网：https://www.vagrantup.com/
+参考：
 
-## Vagrant是什么
+- 官网： https://www.vagrantup.com/
+- 教程： https://developer.hashicorp.com/vagrant/tutorials
+- Vagrant中文文档： https://tangbaoping.github.io/vagrant_doc_zh/v2/
+- 《Vagrant官方中文文档》： https://www.modb.pro/db/89231
+- 视频教程： [bilibili - 【Vagrant快速入门】让虚拟机像容器一样方便！](https://www.bilibili.com/video/BV1me411f7sU)
+  - 共9p 28min
+  - 配套课件： https://www.yuque.com/wukong-zorrm/xmk0v0
+
+感觉中文资料不是很多
+
+## 介绍
+
+### Vagrant是什么
 
 Vagrant是一个软件，可以自动化虚拟机的安装和配置流程。目前市面上个人PC的主流操作系统不是Windows就是MacOS。对于这些用户，如果需要用Linux环境进行开发或学习，使用虚拟机无疑是最方便的选择。
 
@@ -16,7 +28,7 @@ Vagrant是一个软件，可以自动化虚拟机的安装和配置流程。目�
 
 这个教程总结了Vagrant的基本使用方法。
 
-## Vagrant的依赖程序
+### Vagrant的依赖程序
 
 既然是配置虚拟机，那么自然需要虚拟机程序和被虚拟的操作系统镜像（Image）。
 
@@ -25,7 +37,7 @@ Vagrant称前者为`provider`，称后者为`box`。
 
 原则上，我们可以自由搭配`provider`和`box`，但由于VirtualBox开源且免费，Vagrant将其作为默认的provider。所以，一般会先安装VirtualBox，再安装Vagrant。
 
-## Vagrant的基本概念
+### Vagrant的基本概念
 
 假设我们使用VirtualBox作为provider。
 
@@ -43,7 +55,9 @@ end
 2.  `.configure("2")`中的`2`是指配置文件的语法规则的版本。虽然是基于ruby，Vagrantfile仍然有一套自己的语法细则。按照时间先后来说，目前（2016年7月）有V1与V2两套配置语法。自然新的语法更先进。所以目前最新版本的Vagrant（1.8.4）默认使用V2规则。也许未来还会有V3、V4……
 3.  `config.vm.box`直译过来即“配置虚拟机盒子”，因此这一步指定将要使用哪个虚拟机镜像（box）。接下来详细解释下Vagrant如何管理boxes。
 
-## vagrant vs docker
+## 对比
+
+### vagrant vs docker
 
 参考：https://kinsta.com/blog/vagrant-vs-docker/
 
@@ -55,7 +69,7 @@ Vagrant 是一个用于在单个工作流程中构建和管理虚拟机 (VM) 环
 
 Docker 提供了将软件和支持配置打包成跨多个平台一致运行的映像的能力。 Docker 让 DevOps 团队确信软件将在本地工作站上运行，就像在托管云平台上运行一样。
 
-### 为什么使用 Docker（相对于 Vagrant）？
+### 为什么使用 Docker（相对于 Vagrant）
 
 DevOps 团队通常使用 Docker 来交付和运行 Web 应用程序，包括与消息队列集成或托管在响应基于云的触发器和事件的功能即服务 (FaaS) 平台上的云原生应用程序
 
@@ -63,7 +77,7 @@ Kubernetes 等平台构建在 Docker 之上，允许大规模编排容器。此�
 
 Docker 还可以分发和执行基于 CLI 的工具，所有流行的云原生工具都提供嵌入其 CLI 的 Docker 映像。
 
-# 其他
+### 对比 (gpt)
 
 GPT4
 
@@ -73,61 +87,40 @@ GPT4
 
 首先我们来比较 VMWare 和 VirtualBox：
 
--   跨平台
-
-    -   VMWare：提供 Workstation（适用于 Windows 和 Linux） 和 Fusion（适用于 Mac） 方案，具有较好的跨平台支持。 
-
-    -   VirtualBox： 支持 Windows、Mac、Linux 以及 Solaris 等操作系统，也具有较好的跨平台支持。 
-
--   开源
-
-    -   VMWare：部分产品需要付费授权，例如 Workstation Pro 和 Fusion Pro。 
-
-    -   VirtualBox：完全开源，可以免费使用。 
-
--   兼容性
-
-    -   VMWare：支持众多操作系统，兼容性较好。 
-
-    -   VirtualBox：同样支持多种操作系统，但可能在特定操作系统上的虚拟化表现略逊于 VMWare。 
-
--   使用人数
-
-    -   VMWare：因其强大的功能和性能，尤其在商业领域得到广泛使用。 
-
-    -   VirtualBox：开源免费，对个人开发者以及教育领域等更具吸引力。 
+- 跨平台
+    - VMWare：提供 Workstation（适用于 Windows 和 Linux） 和 Fusion（适用于 Mac） 方案，具有较好的跨平台支持。 
+    - VirtualBox： 支持 Windows、Mac、Linux 以及 Solaris 等操作系统，也具有较好的跨平台支持。 
+- 开源
+    - VMWare：部分产品需要付费授权，例如 Workstation Pro 和 Fusion Pro。 
+    - VirtualBox：完全开源，可以免费使用。 
+- 兼容性
+    - VMWare：支持众多操作系统，兼容性较好。 
+    - VirtualBox：同样支持多种操作系统，但可能在特定操作系统上的虚拟化表现略逊于 VMWare。 
+- 使用人数
+    - VMWare：因其强大的功能和性能，尤其在商业领域得到广泛使用。 
+    - VirtualBox：开源免费，对个人开发者以及教育领域等更具吸引力。 
 
 接下来比较 Docker 和 Vagrant：
 
--   Docker 
-
-    -   容器化技术：运行在一致的环境中，避免了类似“在我机器上可以运行”的问题。 
-
-    -   轻量级：轻量级的虚拟化技术，资源消耗较低，启动速度快。 
-
-    -   可扩展性：非常适合用于微服务架构； 
-
-    -   社区活跃，主流操作系统上均有支持。 
-
--   Vagrant
-
-    -   基于虚拟机技术，应用运行环境更加隔离，安全性更高。 
-
-    -   使用简单，可跨平台支持，Vagrantfile 配置可实现一致的开发、测试环境。 
-
-    -   可与其他虚拟化平台（如 VirtualBox, VMWare 等）结合使用。 
+- Docker 
+    - 容器化技术：运行在一致的环境中，避免了类似“在我机器上可以运行”的问题。 
+    - 轻量级：轻量级的虚拟化技术，资源消耗较低，启动速度快。 
+    - 可扩展性：非常适合用于微服务架构； 
+    - 社区活跃，主流操作系统上均有支持。 
+- Vagrant
+    - 基于虚拟机技术，应用运行环境更加隔离，安全性更高。 
+    - 使用简单，可跨平台支持，Vagrantfile 配置可实现一致的开发、测试环境。 
+    - 可与其他虚拟化平台（如 VirtualBox, VMWare 等）结合使用。 
 
 选用建议：
 
-1.  如果需要在多种操作系统中运行操作系统级别的虚拟化，根据预算及使用场景，可以选择 VMWare（商业需求较高）或 VirtualBox（开源免费，个人开发者及教育领域）。 
-2.  对于开发环境的一致性要求较高，或者需要构建、部署微服务架构的场景，推荐使用 Docker。 
-3.  如果希望快速构建一个跨平台的虚拟开发环境，选择 Vagrant 是比较方便的。 
+1. 如果需要在多种操作系统中运行操作系统级别的虚拟化，根据预算及使用场景，可以选择 VMWare（商业需求较高）或 VirtualBox（开源免费，个人开发者及教育领域）。 
+2. 对于开发环境的一致性要求较高，或者需要构建、部署微服务架构的场景，推荐使用 Docker。 
+3. 如果希望快速构建一个跨平台的虚拟开发环境，选择 Vagrant 是比较方便的。 
 
+## 使用
 
-
-# 使用
-
-## 常用命令
+### 常用命令
 
 ```bash
 # box相关
@@ -147,7 +140,7 @@ vagrant reload
 vagrant reload --provision
 ```
 
-## Vargrant文件
+### Vargrant文件
 
 大部分选项都是默认注释的，**我这里取消一部分注释只是为了高亮看起来方便，并不意味着你需要去取消这些注释**
 
@@ -232,7 +225,7 @@ end
 
 ```
 
-# 实践
+### 实践
 
 eBPF环境配置那里有些笔记
 
