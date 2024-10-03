@@ -424,70 +424,9 @@ sudo apt install -y nodejs
 
 例如：`apt remove nodejs`
 
-## (临时)
+## 技巧
 
-### VuePress2 使用 AnyBlock
+可以借用 VirtualBox 的一些东西，比较方便。
 
-```shell
-# vuepress2
-# https://vuepress.github.io/zh/guide/getting-started.html
-$ pnpm create vuepress vuepress-starter # 后面引导大部分选择默认值就是了，除了blog/docs一项
-english
-pnpm
-vite
-docs # 非默认
-my-vuepress-site
-0.0.1
-A VuePress project
-MIT
-n # 非默认
-n
-$ cd vuepress-starter
-$ pnpm i
-$ pnpm docs:dev
-# $ pnpm add -D sass (中途报错让我手动安了个sass)
-
-# -------------------
-
-$ echo -e "\n[list2table]\n\n- 1\n- 2\n  - 3\n  - 4\n" >> ./docs/README.md
-$ [操作1] 新增 `./pnpm-workspace.yml` 文件，里面加上：
-packages:
-  - 'packages/*'
-$ [操作2] 在 package.json 中添加新字段：
-"workspaces": ["packages/*"]
-$ [操作3] 将LincZero.github.io项目中 `/src/.vuepress/plugin/ABConvertManager/` 文件夹复制到当前项目的 `/packages/ABConvertManager/` 中
-$ [操作4] 修改 ./docs/.vuepress/config.js
-第一行加上：import ab_mdit from "../../packages/ABConvertManager/src/index_mdit"
-然后在 export default defineUserConfig {...} 里面加上：
-markdown: {
-  extendMarkdown: md => {
-    md.use(ab_mdit)
-  }
-}
-$ pnpm add any-block-converter-markdown-it
-$ pnpm i # 需要重新安装一遍，会递归安装依赖
-$ pnpm docs:dev
-```
-
-
-
-```
-┌  Welcome to VitePress!
-│
-◇  Where should VitePress initialize the config?
-│  ./docs
-│
-◇  Site title:
-│  My Awesome Project
-│
-◇  Site description:
-│  A VitePress Site
-│
-◆  Theme:
-ABCDEFG
-│  ● Default Theme (Out of the box, good-looking docs)
-│  ○ Default Theme + Customization
-│  ○ Custom Theme
-ABCDEFG
-└
-```
+- 例如 “明细”，查看一些虚拟硬件的配置
+- 例如 “活动”，可以监控CPU、内存、硬盘、网络的使用情况

@@ -55,6 +55,15 @@
 
 这里主要列举开源的，以便可以去参考源码和学习
 
+### 默认插件
+
+- VitePress 默认插件
+  - https://vitepress.dev/zh/guide/markdown#header-anchors
+  - ……
+- VuePress 默认插件
+- VuePress-Theme-Hope 默认插件
+  - https://mdit-plugins.github.io/zh/
+
 ### 一个推荐页
 
 https://mdit-plugins.github.io/zh/
