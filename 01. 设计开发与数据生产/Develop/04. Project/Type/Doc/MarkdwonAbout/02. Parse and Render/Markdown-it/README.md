@@ -4,16 +4,15 @@
 
 ### 开发无关，仅使用
 
--   通用资料
-    -   [Github开源地址](https://github.com/markdown-it/markdown-it)
-    -   [Github文档](https://github.com/markdown-it/markdown-it/tree/master/docs)
-    -   [【Github.io】Markdown-it API 文档](https://markdown-it.github.io/markdown-it/)
-    -   中文文档
-        - 主页文档：https://markdown-it.docschina.org/
-        - 在主页上方还有其他页：[构造](https://markdown-it.docschina.org/architecture.html)、[开发者建议](https://markdown-it.docschina.org/development.html)、[安全](https://markdown-it.docschina.org/security.html)、[DocsChina主页](https://docschina.org/)、[【Github】markdown-it](https://github.com/markdown-it/markdown-it)
-    
--   使用资料
-    -   中文文档：https://markdown-it.docschina.org/
+- 通用资料
+  - [Github开源地址](https://github.com/markdown-it/markdown-it)
+  - [Github文档](https://github.com/markdown-it/markdown-it/tree/master/docs)
+  - [【Github.io】Markdown-it API 文档](https://markdown-it.github.io/markdown-it/)
+  - 中文文档
+      - 主页文档：https://markdown-it.docschina.org/
+      - 在主页上方还有其他页：[构造](https://markdown-it.docschina.org/architecture.html)、[开发者建议](https://markdown-it.docschina.org/development.html)、[安全](https://markdown-it.docschina.org/security.html)、[DocsChina主页](https://docschina.org/)、[【Github】markdown-it](https://github.com/markdown-it/markdown-it) 
+- 使用资料
+  - 中文文档：https://markdown-it.docschina.org/
 
 ### 插件开发者资料
 
@@ -55,22 +54,48 @@
 
 这里主要列举开源的，以便可以去参考源码和学习
 
-### 默认插件
+### 一些框架的默认插件
 
+[card|addClass(ab-col2)]
 - VitePress 默认插件
-  - https://vitepress.dev/zh/guide/markdown#header-anchors
-  - ……
+  [VitePress 默认插件](https://vitepress.dev/zh/guide/markdown#header-anchors)
 - VuePress 默认插件
+  [VuePress 默认插件](https://marketplace.vuejs.press/zh/plugins/markdown.html)
+- Vue 相关mdit插件
+  [markdown-it 的 vue 库](https://github.com/ravenq/markdown-it-vue)
+  - 插件列表
+    - markdown-it
+    - markdown-it-emoji
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-footnote
+    - markdown-it-deflist
+    - markdown-it-abbr
+    - markdown-it-ins
+    - markdown-it-mark
+    - markdown-it-katex
+    - markdown-it-task-lists
+    - markdown-it-highlight
+    - markdown-it-latex
+    - markdown-it-container
+    - markdown-it-github-toc
+    - markdown-it-source-map
+    - markdown-it-link-attributes
+  - 内部插件列表
+    - markdown-it-image
+    - markdown-it-font-awsome
+    - markdown-it-link-attributes
+    - markdown-it-highlight
+    - markdown-it-plugin-echarts
+    - markdown-it-plugin-mermaid
+    - markdown-it-plugin-flowchart
 - VuePress-Theme-Hope 默认插件
-  - https://mdit-plugins.github.io/zh/
+  [VuePress-Theme-Hope 默认插件](https://theme-hope.vuejs.press/zh/guide/markdown/)
+  [mdit-plugin官网](https://mdit-plugins.github.io/zh/)
+  
+  ![image-20240805125638171](README.assets/image-20240805125638171.png)
 
-### 一个推荐页
-
-https://mdit-plugins.github.io/zh/
-
-![image-20240805125638171](README.assets/image-20240805125638171.png)
-
-### Github高Star
+### Github高Star插件
 
 - Github比较高Star的几个：（有专门的主题，可以在 https://github.com/topics/markdown-it-plugin 里看）
   - https://github.com/desenmeng/markdown-it-plugin，“a markdown-it plugin demo”，足够简单，只有一个js文件
@@ -87,36 +112,6 @@ https://mdit-plugins.github.io/zh/
     - [markdown-it-multimd-table](https://www.npmjs.com/package/markdown-it-multimd-table)， 扩展表格
     - [markdown-it-link-to-card](https://github.com/luckrya/markdown-it-link-to-card)，将链接转换为卡片
     - [markdown-it-obsidian-callouts](https://github.com/ebullient/markdown-it-obsidian-callouts)，Obsidian的callout语法
-
-### markdown-it 的 vue 库
-
-- markdown-it 的 vue 库，https://github.com/ravenq/markdown-it-vue
-  - markdown-it
-  - markdown-it-emoji
-  - markdown-it-sub
-  - markdown-it-sup
-  - markdown-it-footnote
-  - markdown-it-deflist
-  - markdown-it-abbr
-  - markdown-it-ins
-  - markdown-it-mark
-  - markdown-it-katex
-  - markdown-it-task-lists
-  - markdown-it-highlight
-  - markdown-it-latex
-  - markdown-it-container
-  - markdown-it-github-toc
-  - markdown-it-source-map
-  - markdown-it-link-attributes
-
-- 内部插件列表
-  - markdown-it-image
-  - markdown-it-font-awsome
-  - markdown-it-link-attributes
-  - markdown-it-highlight
-  - markdown-it-plugin-echarts
-  - markdown-it-plugin-mermaid
-  - markdown-it-plugin-flowchart
 
 ### 其他
 
@@ -144,7 +139,7 @@ Obsidian插件：[aidenlx/table-extended](https://github.com/aidenlx/table-exten
 
 ### 不符合需求
 
-### keep-it-markdown
+#### keep-it-markdown
 
 [djsudduth/keep-it-markdown](https://github.com/djsudduth/keep-it-markdown)
 

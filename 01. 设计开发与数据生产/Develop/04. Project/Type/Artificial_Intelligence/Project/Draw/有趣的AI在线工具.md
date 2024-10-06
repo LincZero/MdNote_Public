@@ -1,9 +1,5 @@
 # 有趣的AI在线工具
 
-# 目录
-
-# 有趣的AI在线工具
-
 ## 绘画工具
 
 ### 绘画类常用的算法
@@ -78,7 +74,7 @@ Crypko，还能生成下半身
 
 ## AI应答
 
-# 使用
+## 关键词使用
 
 ```
 {} 会使 { prompt } 影响因子x1.05
@@ -192,7 +188,7 @@ Crypko，还能生成下半身
 
 
 
-## 抄点关键词
+### 抄点关键词
 
 1
 
@@ -212,7 +208,7 @@ olo, {{masterpiece}}, 1girl, {{{loli}}}, small breasts, flat chest, blonde hair,
 
 
 
-## 术式
+### 术式
 
 ```
 【必须术式】nsfw，1girl，
@@ -371,7 +367,7 @@ tentacles_under_clothes 衣服下的触手
 
 
 
-## 系列关键词
+### 系列关键词
 
 ```
 lgirl， milf， motherly，sketch art，sketch paper， front back side，pencils
@@ -399,7 +395,7 @@ schematic
 
 三视图 示意图
 
-## 正交化参数
+### 正交化参数
 
 1.影响处理速度的参数
 
@@ -422,7 +418,7 @@ schematic
 - CFG越低，图片越接近原图的构局，cfg越高，构图越自由
 - 去噪强度（Denoising strength）越低，原图融合度越高，低于0.5时明显能看到原图的涂抹，高于0.75已经与原图关系不大，因此在0.5-0.7范围内较为适合
 
-## NovelAI解压即用包
+### NovelAI解压即用包
 
 踩坑，有个报错：
 
@@ -430,7 +426,7 @@ schematic
 >
 > 您系统上的NVIDIA驱动程序太旧(找到版本10020)。请从URL: http://www.nvidia.com/Download/index.aspx下载并安装一个新版本的GPU驱动程序来更新您的GPU驱动程序。或者，请访问:https://pytorch.org安装一个与您的CUDA驱动程序版本一起编译的PyTorch版本。
 
-## 技巧
+### 技巧
 
 [【AI绘画】AI不认识人物怎么办！强大的Textual Inversion【NovelAI】](https://www.bilibili.com/video/BV1ae4y1S7v9?share_source=copy_web&vd_source=66b973de72068849b22595697284a09d)
 

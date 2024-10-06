@@ -1,9 +1,5 @@
 # Midjurney
 
-# 目录
-
-# Midjourney
-
 ## 介绍
 
 ### QA

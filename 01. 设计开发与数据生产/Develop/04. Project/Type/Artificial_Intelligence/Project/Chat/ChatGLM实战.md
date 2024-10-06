@@ -9,3 +9,4 @@
 
 
 主要参考：除了ChatGLM-6b 的 github 和 hugeface，一个是秋叶大佬的B站视频，另一个是在秋叶的QQ频道GLM分区中的一个大佬的帖子
+

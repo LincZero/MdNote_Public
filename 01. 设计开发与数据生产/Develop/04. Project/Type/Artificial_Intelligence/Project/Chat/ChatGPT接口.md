@@ -1,9 +1,5 @@
 # ChatGPT接口
 
-# 目录
-
-# ChatGPT接口
-
 网站：https://platform.openai.com/docs/guides/chat
 
 注意区分几个子域名：

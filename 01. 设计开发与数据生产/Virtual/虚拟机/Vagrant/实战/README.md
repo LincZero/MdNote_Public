@@ -1,4 +1,4 @@
-# README
+# Vagrant实战
 
 ## 实战环境 (windows11)
 
@@ -258,17 +258,6 @@ vagrant@ubuntu-jammy:~$
 
 可以看到，除准备环境外，创建虚拟机一共只需要三步！非常方便快捷！
 
-### 网络检查
-
-先检查一下网络：
-
-```bash
-$ ping www.baidu.com
-PING www.a.shifen.com (183.240.98.161) 56(84) bytes of data.
-64 bytes from 183.240.98.161 (183.240.98.161): icmp_seq=1 ttl=53 time=15.0 ms
-64 bytes from 183.240.98.161 (183.240.98.161): icmp_seq=2 ttl=53 time=15.2 ms
-```
-
 ### 预安装一些环境
 
 没问题的话，这里可以换成一些我常用的配置：
@@ -312,7 +301,7 @@ Vagrant.configure("2") do |config|
     sudo apt install -y npm
     sudo npm install -g pnpm
 
-    # 环境安装 - 版本打印
+    # 环境检查 - 版本打印
     cat /etc/issue     # Ubuntu 22.04.5 LTS
     apt --version      # apt 2.4.13 (amd64)
     git --version      # git version 2.34.1
@@ -320,6 +309,8 @@ Vagrant.configure("2") do |config|
     node --version     # v20.17.0 (注意如果不使用PPA方案，只有12.22.9，完全不够用)
     npm --version      # 10.8.2
     pnpm --version     # 9.12.0
+    # 环境检查 - 网络打印
+    ping -c 4 www.baidu.com
   SHELL
 end
 ```
@@ -338,6 +329,8 @@ vagrant up      # 重新装
 ```
 
 验证：我在脚本最后打印了一些环境版本。需要注意：python3的版本不要过旧、node版本最好>=18 (默认的v12完全不够用)
+
+上面有一些东西是可以手动执行的：网络检查、版本检查的部分
 
 ### 手动处理环境
 
@@ -385,11 +378,37 @@ ssh vagrant@192.168.56.20 -i H:/Git/Private/VMProjects/VirtualBoxProject/.vagran
 
 #### Python
 
-[list]
+参考：[如何在 Ubuntu 24.04 LTS 中安装 Python 3.12 或指定版本](https://www.sysgeek.cn/install-python-ubuntu/#0-%E7%AC%AC-1-%E6%AD%A5%EF%BC%9A%E9%80%9A%E8%BF%87-ppa-%E5%AE%89%E8%A3%85-python-312)
 
 - apt方案： 一般够用(并不)，但版本不高(22.04.5 LTS 默认 3.10.12)
+- PPA存储库
 - Anaconda、虚拟环境： 需要频繁切换Python版本
-- 压缩包： 略
+- 压缩包： `wget -qO- https://www.python.org/downloads/source/3.12.0/Python-3.12.0.tgz | sudo tar -xz -C /usr/src/python`
+
+PPA方案：
+
+```bash
+# 导入PPA
+sudo add-apt-repository ppa:deadsnakes/ppa # 稳定版本
+# sudo add-apt-repository ppa:deadsnakes/nightly -y # 最新开发版本
+
+# 更新APT缓存
+sudo apt update
+
+# 安装指定版本
+sudo apt install python3.12
+```
+
+conda方案：
+
+参考：anaconda官方：https://docs.anaconda.com/miniconda/index.html#latest-miniconda-installer-links
+
+```bash
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm ~/miniconda3/miniconda.sh
+```
 
 #### Node
 
@@ -420,9 +439,141 @@ add-apt-repository -y ppa:nodejs/ppa # 添加 Node.js 的 PPA
 sudo apt install -y nodejs
 ```
 
+使用PPA方案时，我们可以看一下实际的脚本：
+
+```bash
+#!/bin/bash
+
+# Logger Function
+log() {
+  local message="$1"
+  local type="$2"
+  local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+  local color
+  local endcolor="\033[0m"
+
+  case "$type" in
+    "info") color="\033[38;5;79m" ;;
+    "success") color="\033[1;32m" ;;
+    "error") color="\033[1;31m" ;;
+    *) color="\033[1;34m" ;;
+  esac
+
+  echo -e "${color}${timestamp} - ${message}${endcolor}"
+}
+
+# Error handler function  
+handle_error() {
+  local exit_code=$1
+  local error_message="$2"
+  log "Error: $error_message (Exit Code: $exit_code)" "error"
+  exit $exit_code
+}
+
+# Function to check for command availability
+command_exists() {
+  command -v "$1" &> /dev/null
+}
+
+check_os() {
+    if ! [ -f "/etc/debian_version" ]; then
+        echo "Error: This script is only supported on Debian-based systems."
+        exit 1
+    fi
+}
+
+# Function to Install the script pre-requisites
+install_pre_reqs() {
+    log "Installing pre-requisites" "info"
+
+    # Run 'apt-get update'
+    if ! apt-get update -y; then
+        handle_error "$?" "Failed to run 'apt-get update'"
+    fi
+
+    # Run 'apt-get install'
+    if ! apt-get install -y apt-transport-https ca-certificates curl gnupg; then
+        handle_error "$?" "Failed to install packages"
+    fi
+
+    if ! mkdir -p /usr/share/keyrings; then
+      handle_error "$?" "Makes sure the path /usr/share/keyrings exist or run ' mkdir -p /usr/share/keyrings' with sudo"
+    fi
+
+    rm -f /usr/share/keyrings/nodesource.gpg || true
+    rm -f /etc/apt/sources.list.d/nodesource.list || true
+
+    # Run 'curl' and 'gpg' to download and import the NodeSource signing key
+    if ! curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /usr/share/keyrings/nodesource.gpg; then
+      handle_error "$?" "Failed to download and import the NodeSource signing key"
+    fi
+
+    # Explicitly set the permissions to ensure the file is readable by all
+    if ! chmod 644 /usr/share/keyrings/nodesource.gpg; then
+        handle_error "$?" "Failed to set correct permissions on /usr/share/keyrings/nodesource.gpg"
+    fi
+}
+
+# Function to configure the Repo
+configure_repo() {
+    local node_version=$1
+
+    arch=$(dpkg --print-architecture)
+    if [ "$arch" != "amd64" ] && [ "$arch" != "arm64" ] && [ "$arch" != "armhf" ]; then
+      handle_error "1" "Unsupported architecture: $arch. Only amd64, arm64, and armhf are supported."
+    fi
+
+    echo "deb [arch=$arch signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$node_version nodistro main" | tee /etc/apt/sources.list.d/nodesource.list > /dev/null
+
+    # N|solid Config
+    echo "Package: nsolid" | tee /etc/apt/preferences.d/nsolid > /dev/null
+    echo "Pin: origin deb.nodesource.com" | tee -a /etc/apt/preferences.d/nsolid > /dev/null
+    echo "Pin-Priority: 600" | tee -a /etc/apt/preferences.d/nsolid > /dev/null
+
+    # Nodejs Config
+    echo "Package: nodejs" | tee /etc/apt/preferences.d/nodejs > /dev/null
+    echo "Pin: origin deb.nodesource.com" | tee -a /etc/apt/preferences.d/nodejs > /dev/null
+    echo "Pin-Priority: 600" | tee -a /etc/apt/preferences.d/nodejs > /dev/null
+
+    # Run 'apt-get update'
+    if ! apt-get update -y; then
+        handle_error "$?" "Failed to run 'apt-get update'"
+    else
+        log "Repository configured successfully."
+        log "To install Node.js, run: apt-get install nodejs -y" "info"
+        log "You can use N|solid Runtime as a node.js alternative" "info"
+        log "To install N|solid Runtime, run: apt-get install nsolid -y \n" "success"
+    fi
+}
+
+# Define Node.js version
+NODE_VERSION="20.x"
+
+# Check OS
+check_os
+
+# Main execution
+install_pre_reqs || handle_error $? "Failed installing pre-requisites"
+configure_repo "$NODE_VERSION" || handle_error $? "Failed configuring repository"
+```
+
 #### 卸载
 
 例如：`apt remove nodejs`
+
+#### 其他
+
+如何查找 PPA 源？（GPT）
+
+- Launchpad 搜索：
+  直接搜索： 在 Launchpad 上的搜索框中输入你需要的软件名称或关键词，例如 "python 3.10" 或 "node.js 18"。
+  浏览 PPA 目录： 浏览 Launchpad 上的 PPA 目录，例如 deadsnakes PPA（https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa），该 PPA 提供了多个版本的 Python。
+- Google 搜索：
+  精确搜索： 使用关键词 "ubuntu ppa python 3.10" 或 "ubuntu ppa node.js 18" 进行搜索。
+  社区论坛： 在 Stack Overflow、Ask Ubuntu 等社区论坛上搜索，通常会有很多用户分享他们使用的 PPA。
+- 软件官方网站：
+  官方文档： 一些软件的官方文档中会提供安装说明，包括如何添加 PPA 源。
+  社区论坛： 软件的官方社区论坛也是一个很好的资源。
 
 ## 技巧
 
