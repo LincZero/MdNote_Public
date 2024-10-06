@@ -277,7 +277,7 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/jammy/20240912/jammy-server-cloudimg-amd64-vagrant.box"
 
   # 设置内存和CPU数量等
-  config.vm.network "private_network", ip: "192.168.56.20"
+  config.vm.network "private_network", ip: "192.168.56.2"
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "2048"
     vb.cpus = 2
@@ -285,14 +285,27 @@ Vagrant.configure("2") do |config|
 
   # 在虚拟机启动时运行的 shell 命令
   config.vm.provision "shell", inline: <<-SHELL
-    # 环境安装 - apt-get
+    # 环境安装 - 基本
     apt-get update -y # 更新包列表
     apt-get install -y software-properties-common # 安装基础工具
+    apt-get install -y git
     
-    # 环境安装 - python, pip, git
-    apt-get install -y python3 python3-pip git
+    # 环境安装 - python
+    # miniconda部分参考：https://docs.anaconda.com/miniconda/index.html#latest-miniconda-installer-links
+    # 目前我这个版本的conda会自动安装python3.12
+    mkdir -p ~/miniconda3
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+    bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+    rm ~/miniconda3/miniconda.sh
+    # PPA方案: https://www.sysgeek.cn/install-python-ubuntu/#0-%E7%AC%AC-1-%E6%AD%A5%EF%BC%9A%E9%80%9A%E8%BF%87-ppa-%E5%AE%89%E8%A3%85-python-312
+    # sudo add-apt-repository ppa:deadsnakes/ppa # 导入PPA - 仅稳定版本
+    # sudo apt update # 更新APT缓存
+    # sudo apt install -y python3.12 python3-pip
+    # 环境安装 - python常用包
+    pip3 install jupyter # 这个的时间也挺长的
+    # pip3 install torch
 
-    # 环境安装 - nodejs、npm、pnpm
+    # 环境安装 - 前端
     # PPA方案
     # 为什么要执行这里的PPA：ubuntu到22也无法直接通过apt安装高版本，最多就到node12，而前端环境一般最少要node18，新一点甚至要node20。将PPA添加到配置中，就可以安装更高的版本
     # 链接失效则到该链接更新: https://deb.nodesource.com/、https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
@@ -300,15 +313,21 @@ Vagrant.configure("2") do |config|
     sudo apt install -y nodejs
     sudo apt install -y npm
     sudo npm install -g pnpm
-
+    
     # 环境检查 - 版本打印
+    echo "-------------- env version check --------------"
     cat /etc/issue     # Ubuntu 22.04.5 LTS
     apt --version      # apt 2.4.13 (amd64)
     git --version      # git version 2.34.1
-    python3 --version  # Python 3.10.12
-    node --version     # v20.17.0 (注意如果不使用PPA方案，只有12.22.9，完全不够用)
+    conda --version    # (这个好像不行)
+    ~/miniconda3/bin/conda --version # conda 24.7.1
+    python3 --version  # (默认的，好像是内置的) Python 3.10.12
+    python3.12 --version # Python 3.12.7
+    pip --version      # pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+    jupyter --version  # 这里一串 (IPython 8.28.0 jupyter_core 5.7.2 notebook 7.2.2)
+    node --version     # v20.17.0 (注意默认只有12.22.9，完全不够用，要用PPA等方案)
     npm --version      # 10.8.2
-    pnpm --version     # 9.12.0
+    pnpm --version     # 9.12.0 # 这里似乎有问题
     # 环境检查 - 网络打印
     ping -c 4 www.baidu.com
   SHELL
