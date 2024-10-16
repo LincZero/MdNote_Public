@@ -29,29 +29,3 @@
 软件面板左侧选中主机 > 右侧操作面板 > 新建 > 虚拟机 >
 
 根据引导一步一步填写资料：虚拟机名称、位置、引导方式、虚拟内存 是否动态内存、虚拟硬盘、ISO文件
-
-## 我的Vagrant
-
-最新版的还得去翻Vagrant笔记，然后把里面的 `config.vm.provider` 修改一下
-
-```python
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
-Vagrant.configure("2") do |config|
-  # 镜像设置。这里使用了镜像。若链接失效则到该链接更新:
-  # https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/jammy/
-  config.vm.box = "ubuntu/jammy64"
-  config.vm.box_url = "https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/jammy/20240912/jammy-server-cloudimg-amd64-vagrant.box"
-
-  # 设置内存和CPU数量等
-  config.vm.network "private_network", ip: "192.168.56.2"
-  config.vm.provider "..." do |vb|
-    ...
-  end
-
-  。。。
-  。。。
-end
-```
-

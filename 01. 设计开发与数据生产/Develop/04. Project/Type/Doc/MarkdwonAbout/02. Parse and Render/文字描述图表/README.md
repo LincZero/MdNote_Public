@@ -1,5 +1,28 @@
 # 文字描述图表
 
+## 工具调研
+
+文字描述图表
+
+- 常见的 Graphviz、Mermaid、PlantUML、Markmap、数学引擎，这些详见该文件夹内的笔记
+
+非文字描述的，这里也顺带记一下：
+
+- [gojs](https://gojs.net/latest/index.html)
+  - 代表关系类
+    - Org charts
+    - Genograms
+    - Family trees
+  - Security Diagrams
+  - State charts
+  - Industrial Diagrams
+  - Flowcharts
+  - Process Visualizations
+  - Network Design and Monitoring
+  - Dynamic Grouping
+- [visjs](https://visjs.org/)
+- [gramps](https://gramps-project.org/blog/contact/)
+
 ## 共同点抽象总结
 
 1. svg
@@ -23,7 +46,6 @@
    只是他们额外使用了 “模板”，扩展了很多图，如流程图、甘特图、序列图、等。
 
    在这一步中，用户不再需要考虑 “节点 - 节点之间的连接关系”，反正就是对着预设好的模板填
-
 
 
 你会发现，其实mermaid和plantuml的 “非模板图”，和底层的东西并差不了太多

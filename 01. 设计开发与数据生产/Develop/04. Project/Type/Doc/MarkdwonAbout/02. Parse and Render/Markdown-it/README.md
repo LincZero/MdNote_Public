@@ -92,9 +92,7 @@
 - VuePress-Theme-Hope 默认插件
   [VuePress-Theme-Hope 默认插件](https://theme-hope.vuejs.press/zh/guide/markdown/)
   [mdit-plugin官网](https://mdit-plugins.github.io/zh/)
-
-其中 mdit-plugin 官网：
-![image-20240805125638171](./README.assets/image-20240805125638171.png)
+  ![image-20240805125638171](./README.assets/image-20240805125638171.png)
 
 ### Github高Star插件
 

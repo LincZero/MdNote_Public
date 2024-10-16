@@ -260,7 +260,7 @@ vagrant@ubuntu-jammy:~$
 
 ### 预安装一些环境
 
-没问题的话，这里可以换成一些我常用的配置：
+没问题的话，这里可以换成一些我常用的配置：（*部分可选根据你自己的需求取舍*）
 
 (可以先简单运行起来，再换这里的配置，不用一步到位，没什么区别 (主要是速度比较快)。分步操作在出现bug时也更容易调试)
 
@@ -316,10 +316,10 @@ Vagrant.configure("2") do |config|
     
     # 环境检查 - 版本打印
     echo "-------------- env version check --------------"
-    cat /etc/issue     # Ubuntu 22.04.5 LTS
     apt --version      # apt 2.4.13 (amd64)
     git --version      # git version 2.34.1
     conda --version    # (这个好像不行)
+    conda env list
     ~/miniconda3/bin/conda --version # conda 24.7.1
     python3 --version  # (默认的，好像是内置的) Python 3.10.12
     python3.12 --version # Python 3.12.7
@@ -328,7 +328,14 @@ Vagrant.configure("2") do |config|
     node --version     # v20.17.0 (注意默认只有12.22.9，完全不够用，要用PPA等方案)
     npm --version      # 10.8.2
     pnpm --version     # 9.12.0 # 这里似乎有问题
-    # 环境检查 - 网络打印
+    # 环境检查 - 设备、网络打印
+    cat /etc/issue     # Ubuntu 22.04.5 LTS
+    uname -a
+    lspci | grep -i 'vga\|3d\|graphics' # 显卡
+    # ifconfig         # 网络检查，需先 sudo apt install net-tools
+    # top/htop         # 内存检查
+    # nvidia-smi/gputop# 显存检查，部分需先 sudo apt install gputop、pip install gpustat
+    #   sysmon # pip install sysmon
     ping -c 4 www.baidu.com
   SHELL
 end
