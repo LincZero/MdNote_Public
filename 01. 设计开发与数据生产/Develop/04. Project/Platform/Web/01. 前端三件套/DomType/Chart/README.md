@@ -1,6 +1,5 @@
 # README_Chart
 
-
 ## 比较 (Svg、Canvas2D、Div)
 
 ### 简单比较1

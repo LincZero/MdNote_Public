@@ -583,6 +583,40 @@ install_pre_reqs || handle_error $? "Failed installing pre-requisites"
 configure_repo "$NODE_VERSION" || handle_error $? "Failed configuring repository"
 ```
 
+#### npm与pnpm
+
+方法一：npm命令
+
+可以用前面说到的修改node版本的方法，那有没有不更新node直接更新npm或pnpm版本的操作呢？
+
+```bash
+npm -v
+npm install -g npm # 更新到最新版本
+
+# 清除 NPM 缓存
+
+npm -g install npm@6.8.0 # 更新到指定版本
+# npm i npm@6 -g         # 或者
+```
+
+方法二：重装node
+
+上面的方法可能会导致node和npm版本不一致的问题，而重装node就不会有这种问题，两个一起更新
+
+方法三：nvm方法
+
+这是 NVM 的[安装指南](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+```bash
+nvm install node
+```
+
+方法四：仅更新pnpm
+
+```bash
+npm install -g pnpm@latest
+```
+
 #### 卸载
 
 例如：`apt remove nodejs`
