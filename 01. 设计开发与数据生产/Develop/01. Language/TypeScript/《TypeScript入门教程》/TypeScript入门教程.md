@@ -1,6 +1,6 @@
 ---
 create_time: 2020-08-21
-modify_time: 2023-01-12
+last_time: 2023-01-12
 ---
 
 # TypeScript入门教程
