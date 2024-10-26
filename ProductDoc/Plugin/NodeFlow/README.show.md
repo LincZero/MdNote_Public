@@ -507,8 +507,8 @@
     - 降噪, v
   - 翻译
 - edges
-  - node1, Latent, 翻译, left
-  - 翻译, right, node2, 模型
+  - node1,Latent, 翻译,l
+  - 翻译,r, node2,模型
 ```
 
 @tab md source code (md源码)
@@ -544,8 +544,8 @@
     - 降噪, v
   - 翻译
 - edges
-  - node1, Latent, 翻译, left
-  - 翻译, right, node2, 模型
+  - node1,Latent, 翻译,l
+  - 翻译,r, node2,模型
 ```
 ````
 
@@ -569,3 +569,19 @@
 }
 ```
 
+## Github Action Workflow
+
+(use list grammer)
+
+This is an example workflow for my personal website (This is an example workflow for my personal website)
+
+```nodeflow-list
+- nodes
+  - build
+  - report-build-status
+  - deploy
+    - https://linczero.github.io, v
+- edges
+  - build,r, report-build-status,l
+  - build,r, deploy,l
+```

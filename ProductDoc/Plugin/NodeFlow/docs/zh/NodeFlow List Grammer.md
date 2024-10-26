@@ -26,9 +26,9 @@
       - i2, input
     - node4
 - edges
-  - node1, o1, node2, i
-  - node2, o, node3, i
-  - node2, o, node4, bottom
+  - node1,o1, node2,i
+  - node2,o, node3,i
+  - node2,o, node4,b
 ```
 
 ```nodeflow-list
@@ -47,9 +47,9 @@
       - i2, input
     - node4
 - edges
-  - node1, o1, node2, i
-  - node2, o, node3, i
-  - node2, o, node4, bottom
+  - node1,o1, node2,i
+  - node2,o, node3,i
+  - node2,o, node4,b
 ```
 
 ### 通用规则
@@ -80,9 +80,9 @@
       - c11
   - d
 - edges
-  - a1, right, b, left
-  - a1, right, c11, left
-  - a1, right, d, left
+  - a1,r, b,l
+  - a1,r, c11,l
+  - a1,r, d,l
 ```
 
 ## 实际用例参考
@@ -117,8 +117,8 @@
     - 降噪, v
   - 翻译
 - edges
-  - node1, Latent, 翻译, left
-  - 翻译, right, node2, 模型
+  - node1,Latent, 翻译,l
+  - 翻译,r, node2,模型
 ```
 
 
