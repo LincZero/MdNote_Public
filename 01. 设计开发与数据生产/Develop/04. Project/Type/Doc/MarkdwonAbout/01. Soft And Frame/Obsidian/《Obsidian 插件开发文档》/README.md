@@ -1929,11 +1929,9 @@ export default class ExamplePlugin extends Plugin {
 leaves.forEach((leaf) => leaf.setGroup("group1");
 ```
 
-
-
 ## 开发支持其他格式文件的插件
 
-
+见 [./开发支持其他格式文件的插件](开发支持其他格式文件的插件.md)
 
 ## 官方示例
 

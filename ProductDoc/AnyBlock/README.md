@@ -11,10 +11,10 @@ This is the open source project https://github.com/LincZero/obsidian-any-block o
 
 ## More Links (相关链接)
 
-Related links：(tutorial、use skill、contribution、secondary development)
+Related links：(**tutorial**、use skill、contribution、secondary development)
 
-- [Online Wiki - github.io](https://linczero.github.io/MdNote_Public/%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3/AnyBlock/)
-- [Online Wiki - cloudflare](https://linczero-github-io.pages.dev/MdNote_Public/%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3/AnyBlock/)
+- [Online Wiki - github.io](https://linczero.github.io/MdNote_Public/ProductDoc/AnyBlock/)
+- [Online Wiki - cloudflare](https://linczero-github-io.pages.dev/MdNote_Public/ProductDoc/AnyBlock/)
 
 ## Navigation (导航)
 
