@@ -5,22 +5,19 @@
 参考：
 
 - [VuePress v2 官网](https://v2.vuepress.vuejs.org/zh/)
-  -   插件
-      -   [插件使用](https://v2.vuepress.vuejs.org/zh/guide/plugin.html)
-
-      -   [插件开发](https://v2.vuepress.vuejs.org/zh/advanced/plugin.html)
-
-      -   [插件API](https://v2.vuepress.vuejs.org/zh/reference/plugin-api.html)
-
-  -   主题
-      -   [主题使用](https://v2.vuepress.vuejs.org/zh/guide/theme.html)
-      -   [主题开发](https://v2.vuepress.vuejs.org/zh/advanced/theme.html)
-      -   [主题API](https://v2.vuepress.vuejs.org/zh/reference/theme-api.html)
-  -   [API](https://v2.vuepress.vuejs.org/zh/reference/plugin-api.html)
-      -   [插件API](https://v2.vuepress.vuejs.org/zh/reference/plugin-api.html)
-      -   [主题API](https://v2.vuepress.vuejs.org/zh/reference/theme-api.html)
-      -   [客户端API](https://v2.vuepress.vuejs.org/zh/reference/client-api.html)
-      -   [NodeAPI](https://v2.vuepress.vuejs.org/zh/reference/node-api.html)
+  - 插件
+    - [插件使用](https://v2.vuepress.vuejs.org/zh/guide/plugin.html)
+    - [插件开发](https://v2.vuepress.vuejs.org/zh/advanced/plugin.html)
+    - [插件API](https://v2.vuepress.vuejs.org/zh/reference/plugin-api.html)
+  - 主题
+    - [主题使用](https://v2.vuepress.vuejs.org/zh/guide/theme.html)
+    - [主题开发](https://v2.vuepress.vuejs.org/zh/advanced/theme.html)
+    - [主题API](https://v2.vuepress.vuejs.org/zh/reference/theme-api.html)
+  - [API](https://v2.vuepress.vuejs.org/zh/reference/plugin-api.html)
+    - [插件API](https://v2.vuepress.vuejs.org/zh/reference/plugin-api.html)
+    - [主题API](https://v2.vuepress.vuejs.org/zh/reference/theme-api.html)
+    - [客户端API](https://v2.vuepress.vuejs.org/zh/reference/client-api.html)
+    - [NodeAPI](https://v2.vuepress.vuejs.org/zh/reference/node-api.html)
 
 ## 使用
 
@@ -62,52 +59,30 @@ plugins: {
 （查看 [深入 > 架构 > 核心流程与 Hooks](https://vuepress.github.io/zh/advanced/architecture.html#核心流程与-hooks) 来更好地理解该流程）
 
 - 基础配置项，会在使用插件时立即被处理：
-
   - [name](https://vuepress.github.io/zh/reference/plugin-api.html#name)， 插件的名称
-
   - [multiple](https://vuepress.github.io/zh/reference/plugin-api.html#multiple)， 插件是否能够被多次使用
-
 - 下列 Hooks 会在初始化 App 时处理：
-
   - [extendsMarkdownOptions](https://vuepress.github.io/zh/reference/plugin-api.html#extendsmarkdownoptions)
-
   - [extendsMarkdown](https://vuepress.github.io/zh/reference/plugin-api.html#extendsmarkdown)
-
   - [extendsPageOptions](https://vuepress.github.io/zh/reference/plugin-api.html#extendspageoptions)
-
   - [extendsPage](https://vuepress.github.io/zh/reference/plugin-api.html#extendspage)
-
   - [onInitialized](https://vuepress.github.io/zh/reference/plugin-api.html#oninitialized)
-
 - 下列 Hooks 会在准备文件时处理：
-
   - [clientConfigFile](https://vuepress.github.io/zh/reference/plugin-api.html#clientconfigfile)， 配置文件路径。接收文件绝对路径，或者一个返回路径的函数
-
   - [onPrepared](https://vuepress.github.io/zh/reference/plugin-api.html#onprepared)
-
 - 下列 Hooks 会在 dev / build 时处理：
-
   - [extendsBundlerOptions](https://vuepress.github.io/zh/reference/plugin-api.html#extendsbundleroptions)
-
   - [alias](https://vuepress.github.io/zh/reference/plugin-api.html#alias)， 定义路径别名
-
   - [define](https://vuepress.github.io/zh/reference/plugin-api.html#define)， 定义全局常量
-
   - [onWatched](https://vuepress.github.io/zh/reference/plugin-api.html#onwatched)
-
   - [onGenerated](https://vuepress.github.io/zh/reference/plugin-api.html#ongenerated)
-
 
 > #### 按其他分类
 
 - 基础配置项
-
   - [name](https://vuepress.github.io/zh/reference/plugin-api.html#name)
-
   - [multiple](https://vuepress.github.io/zh/reference/plugin-api.html#multiple)
-
 - 开发 Hooks
-
   - alias
   - clientConfigFile
   - define
@@ -116,9 +91,7 @@ plugins: {
   - extendsMarkdown
   - extendsPageOptions
   - extendsPage
-
 - 生命周期 Hooks
-
   - onInitialized
   - onPrepared
   - onWatched

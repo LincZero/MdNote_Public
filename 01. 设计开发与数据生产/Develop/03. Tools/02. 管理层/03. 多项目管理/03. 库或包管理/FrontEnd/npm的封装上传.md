@@ -187,24 +187,6 @@ src/
 
 https://www.npmjs.com/package/@ruan-cat/utils
 
-## 其他构建方法
-
-ts有很多编译工具，如 tsc、tsest、tsup、rollup、vite、webpack 等，我该如何选择？
-
-### TypeScript 构建工具对比
-
-| 构建工具    | 主要特点                                        | 适用场景                     | 配置文件              |
-| ------- | ------------------------------------------- | ------------------------ | ----------------- |
-| vite    | 基于原生 ESM 的开发服务器，热模块替换极快<br>底层使用 rollup 进行打包 | Vue、React 等前端框架项目，快速开发体验 | vite.config.js    |
-| rollup  | 模块打包器，擅长库的打包                                | 打包库，生成高质量的模块             | rollup.config.js  |
-| tsup    | 支持 TypeScript<br>底层使用 esbuild 进行打包          | 快速打包，生成现代化 JavaScript    | tsup.config.ts    |
-| webpack | 以前的VueCLI底层使用Webpack                        |                          | webpack.config.js |
-| tsc     | TypeScript 官方编译器，功能基础，速度较快                  | 小型项目，快速编译                | tsconfig.json     |
-| ts-jest | Jest 的 TypeScript 版本，用于测试                   | TypeScript 项目的单元测试       |                   |
-| vitest  |                                             |                          |                   |
-
-- rollup中文文档：https://www.rollupjs.com/
-
 ## 【扩展】建设自己的npm私库
 
 恰如可以自己创建自己的git私库 (如gitlab)，npm也可以创建自己的npm私库。

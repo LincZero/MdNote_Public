@@ -3,31 +3,27 @@
 ## 资料
 
 - 官网 (支持中文)
-
-  -   [VitePress官网](https://vitepress.dev/)
-  -   [VuePress v2 官网](https://v2.vuepress.vuejs.org/zh/)
-
-  -   [VuePress v1 官网文档](https://vuepress.vuejs.org/zh/guide/getting-started.html)
-  -   [VuePress 生态系统](https://ecosystem.vuejs.press/zh/)
-      -   包含了许多官方主题和插件，如 back-to-top、catalog、copy-cde 等
-  -   VuePress2官网文档
-      -   [指南](https://vuepress.github.io/zh/guide/)
-      -   [参考](https://vuepress.github.io/zh/reference/cli.html)
-      -   [插件参考](https://vuepress.github.io/zh/reference/plugin/back-to-top.html)
-      -   [深入 - 架构、插件和主题的开发](https://vuepress.github.io/zh/advanced/architecture.html)
-
+  - [VitePress官网](https://vitepress.dev/)
+  - [VuePress v2 官网](https://v2.vuepress.vuejs.org/zh/)
+  - [VuePress v1 官网文档](https://vuepress.vuejs.org/zh/guide/getting-started.html)
+  - [VuePress 生态系统](https://ecosystem.vuejs.press/zh/)
+    - 包含了许多官方主题和插件，如 back-to-top、catalog、copy-cde 等
+  - VuePress2官网文档
+    - [指南](https://vuepress.github.io/zh/guide/)
+    - [参考](https://vuepress.github.io/zh/reference/cli.html)
+    - [插件参考](https://vuepress.github.io/zh/reference/plugin/back-to-top.html)
+    - [深入 - 架构、插件和主题的开发](https://vuepress.github.io/zh/advanced/architecture.html)
 - 插件开发 - Markdown-it插件
-
   - 详见Markdwon-it相关笔记
-
 - 插件开发 - VuePress插件
-
   - ……
-
 - 其他
-
   - [一篇带你用 VuePress + Github Pages 搭建博客](https://juejin.cn/post/7041134607869149215)
-
+  - 博客搭建专题
+    - vdoing群里冰糖雪梨写的教程：https://notes.youngkbt.cn/about/website/introduce
+    - 冴羽写的教程：https://github.com/mqyqingfeng/Blog
+      (冴羽的教程有部分我存了写了笔记，见 [../../02.%20Parse%20and%20Render/Markdown-it/《博客搭建》冴羽](../../02.%20Parse%20and%20Render/Markdown-it/《博客搭建》冴羽]))
+    - vdoing群里PeterJXL写的博客教程：https://www.peterjxl.com/Blog/Introduce/
 
 ## 比较专题
 

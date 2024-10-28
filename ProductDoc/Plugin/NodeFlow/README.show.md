@@ -72,13 +72,13 @@
           "name": "positive",
           "type": "CONDITIONING",
           "link": 4,
-          "label": "正面条件"
+          "label": "条件-正面"
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
           "link": 6,
-          "label": "负面条件"
+          "label": "条件-负面"
         },
         {
           "name": "latent_image",
@@ -482,22 +482,26 @@
   - node1: KSample
     - Latent, o
     - model, i
-    - positive, v
-    - negative, v
-    - Latent_image, v
+    - positive, i
+    - negative, i
+    - Latent, i
     - seed, v
-    - control_after_generate, v
-    - steps , v
-    - CFG, v
-    - sampler_name, v
-    - scheduler, v
-    - denoise, v
+    - control_after_generate, randomize:v
+    - steps , 20:v
+    - CFG, 8.0:v
+    - sampler_name, euler:v
+    - scheduler, normal:v
+    - denoise, 1.00:v
+    - io defaultTest, test:i
+    - io defaultTest, test:o
+    - t1:noValueTest, v
+    - t2: , noKeyTest:v
   - node2: KSample
     - 潜空间, 0
     - 模型, i
-    - 正面条件, v
-    - 负面条件, v
-    - 潜空间, v
+    - 正面条件, i
+    - 负面条件, i
+    - 潜空间, i
     - 种子, v
     - 运行后操作, v
     - 步数, v
@@ -519,22 +523,26 @@
   - node1: KSample
     - Latent, o
     - model, i
-    - positive, v
-    - negative, v
-    - Latent_image, v
+    - positive, i
+    - negative, i
+    - Latent, i
     - seed, v
-    - control_after_generate, v
-    - steps , v
-    - CFG, v
-    - sampler_name, v
-    - scheduler, v
-    - denoise, v
+    - control_after_generate, randomize:v
+    - steps , 20:v
+    - CFG, 8.0:v
+    - sampler_name, euler:v
+    - scheduler, normal:v
+    - denoise, 1.00:v
+    - io defaultTest, test:i
+    - io defaultTest, test:o
+    - t1:noValueTest, v
+    - t2: , noKeyTest:v
   - node2: KSample
     - 潜空间, 0
     - 模型, i
-    - 正面条件, v
-    - 负面条件, v
-    - 潜空间, v
+    - 正面条件, i
+    - 负面条件, i
+    - 潜空间, i
     - 种子, v
     - 运行后操作, v
     - 步数, v
@@ -573,7 +581,7 @@
 
 (use list grammer)
 
-This is an example workflow for my personal website (This is an example workflow for my personal website)
+This is an example workflow for my personal website (这是我个人网站的一个示例工作流程)
 
 ```nodeflow-list
 - nodes
@@ -585,3 +593,4 @@ This is an example workflow for my personal website (This is an example workflow
   - build,r, report-build-status,l
   - build,r, deploy,l
 ```
+
