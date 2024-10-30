@@ -1,3 +1,7 @@
+---
+create_time: 2024-10-08
+detail: 2024-10-28 我开发了NodeFlow插件，对部分内容进行重置
+---
 # README_ComfyUI教程
 
 ## 教程资料

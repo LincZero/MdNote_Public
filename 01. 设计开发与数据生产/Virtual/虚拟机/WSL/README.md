@@ -1,9 +1,9 @@
-# WSL
+# README_WSL
 
 参考
 
--   https://learn.microsoft.com/zh-cn/windows/wsl/install（官网文档，建议看这篇）
--   https://blog.csdn.net/FSKEps/article/details/118493578#22__WSL2_59
+- https://learn.microsoft.com/zh-cn/windows/wsl/install（官网文档，建议看这篇）
+- https://blog.csdn.net/FSKEps/article/details/118493578#22__WSL2_59
 
 Win10 系统安装 Linux 子系统教程(WSL2 + [Ubuntu](https://so.csdn.net/so/search?q=Ubuntu&spm=1001.2101.3001.7020) 20.04 + Gnome 桌面 ）
 
@@ -12,11 +12,11 @@ Win10 系统安装 Linux 子系统教程(WSL2 + [Ubuntu](https://so.csdn.net/so/
 什么是 WSL ？
 要想使用 Linux 系统，以前通常有两种方式：
 
--   （1）使用虚拟机
-    -   缺点：开销较大
--   （2）直接使用 Linux 系统
-    -   优点：可以带来最流畅的体验
-    -   缺点：与 Windows 系统之间进行切换时比较麻烦，一次只能使用一个系统
+- （1）使用虚拟机
+  - 缺点：开销较大
+- （2）直接使用 Linux 系统
+  - 优点：可以带来最流畅的体验
+  - 缺点：与 Windows 系统之间进行切换时比较麻烦，一次只能使用一个系统
 
 为此，微软开发了适用于 Linux 的 Windows 子系统，称为 WSL，可让开发人员按原样运行 GNU/Linux 环境 - 包括大多数命令行工具、实用工具和应用程序 - 且不会产生传统虚拟机或双启动设置开销。
 
@@ -24,17 +24,17 @@ Win10 系统安装 Linux 子系统教程(WSL2 + [Ubuntu](https://so.csdn.net/so/
 
 ## 比较WSL1与WSL2
 
-[2table|#T 总结：除了跨操作系统文件的性能外，WSL2均优秀于WSL1]
+[table|# 总结：除了跨操作系统文件的性能外，WSL2均优秀于WSL1]
 
--   功能| WSL1| WSL2
--   Windows和LInux之间的集成 | ✅ | ✅
--   启用时间短 | ✅ | ✅
--   与传统虚拟机相比，占用的资源量少 | ✅ | ✅
--   可以与当前版本的VMware和VirtualBox一起运行 | ✅ | ✅
--   托管VM | ❌ | ✅
--   完整的Linux内核 | ❌ | ✅
--   完全的系统调用兼容性 | ❌ | ✅
--   跨OS文件系统的性能 | ✅ | ❌
+- 功能| WSL1| WSL2
+- Windows和LInux之间的集成 | ✅ | ✅
+- 启用时间短 | ✅ | ✅
+- 与传统虚拟机相比，占用的资源量少 | ✅ | ✅
+- 可以与当前版本的VMware和VirtualBox一起运行 | ✅ | ✅
+- 托管VM | ❌ | ✅
+- 完整的Linux内核 | ❌ | ✅
+- 完全的系统调用兼容性 | ❌ | ✅
+- 跨OS文件系统的性能 | ✅ | ❌
 
 ## 安装WSL
 
