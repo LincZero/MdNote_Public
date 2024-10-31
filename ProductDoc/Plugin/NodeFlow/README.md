@@ -13,10 +13,10 @@ Related links：(**tutorial**、use skill、contribution、secondary development
 
 - Github.io
   - [Online Wiki](https://linczero.github.io/MdNote_Public/ProductDoc/Plugin/NodeFlow/)
-  - [Online UseCase](https://linczero.github.io/MdNote_Public/01.%20%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%94%9F%E4%BA%A7/Develop/04.%20Project/Type/Artificial_Intelligence/Project/Draw/ComfyUI/ProjectNote/Study/01.%20%E9%BB%98%E8%AE%A4%E6%96%87%E7%94%9F%E5%9B%BE.json/)
+  - [Online UseCase](https://linczero.github.io/MdNote_Public/01.%20DesignAndDevelop/Develop/04.%20Project/Type/Artificial_Intelligence/Project/Draw/ComfyUI/ProjectNote/Study/01.%20%E9%BB%98%E8%AE%A4%E6%96%87%E7%94%9F%E5%9B%BE.json/)
 - cloudflare
   - [Online Wiki](https://linczero-github-io.pages.dev/MdNote_Public/Plugin/NodeFlow/)
-  - [Online UseCase](https://linczero-github-io.pages.dev/MdNote_Public/01.%20%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%94%9F%E4%BA%A7/Develop/04.%20Project/Type/Artificial_Intelligence/Project/Draw/ComfyUI/ProjectNote/Study/01.%20%E9%BB%98%E8%AE%A4%E6%96%87%E7%94%9F%E5%9B%BE.json/)
+  - [Online UseCase](https://linczero-github-io.pages.dev/MdNote_Public/01.%20DesignAndDevelop/Develop/04.%20Project/Type/Artificial_Intelligence/Project/Draw/ComfyUI/ProjectNote/Study/01.%20%E9%BB%98%E8%AE%A4%E6%96%87%E7%94%9F%E5%9B%BE.json/)
 
 
 
