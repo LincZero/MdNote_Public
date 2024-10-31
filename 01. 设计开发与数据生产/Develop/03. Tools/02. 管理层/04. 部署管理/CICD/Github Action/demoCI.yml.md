@@ -1,14 +1,18 @@
-目录：
-
-- Linux-gcc-4.8
-- Linux-gcc (5-13)
-- MacOS
-- Win-MSVC
-- Win-MinGW
-- Win-ClangCl
-- Android
+---
+type: yml
+---
+# demoCI.yml
 
 ```yaml
+# 目录：
+# - Linux-gcc-4.8
+# - Linux-gcc (5-13)
+# - MacOS
+# - Win-MSVC
+# - Win-MinGW
+# - Win-ClangCl
+# - Android
+
 name: CI
 
 on:
