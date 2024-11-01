@@ -27,5 +27,13 @@ repo： github.com/ltdrdata/ComfyUI-Manager
     可以搜索、安装。本质还是在命令行执行clone的过程
     安装完需要重启，提供了快速重启的按钮
   - Install Missing Custom Nodes (安装缺失的节点)
+  - 安装模型
+  - 通过 Git URL 安装
+  - 更新全部
+  - 更新 ComfyUI
+  - 检查更新
 - 右侧部分
+  - 社区手册
+  - Workflow Gallery
+  - 第三方节点信息
 

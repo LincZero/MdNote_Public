@@ -38,6 +38,7 @@ create_time: 2024-10-08
 
 #### 模型、工作流等
 
+- 官方示例：https://comfyanonymous.github.io/ComfyUI_examples/ (虽然github url不是comfyui前缀，但似乎说是官方开发者的)
 - Comfy UI Manager (插件)
 - 国内：[eSheep](https://www.eshepp.com/app)、[AIGodLike](https://wwww.aigodlike.com)
 - 国外：[Comfy Workflows](https://comfyworkflows.com)、[Openart.AI](https://openart.ai/workflows/home)、[ComfyICU](https://comfy.icu/)、[C站工作流分区](https://civitai.com/models)

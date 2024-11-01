@@ -38,7 +38,7 @@ detail: 2024-10-28 我开发了NodeFlow插件，对部分内容进行重置
   - [04. 节点连线整理技巧+复杂工作流解构](https://www.bilibili.com/video/BV19f421q7EU)
     [配套笔记](https://gf66fxi6ji.feishu.cn/wiki/HJojwCK8aiEQw4kwnWEcEwxmnBd?from=from_copylink)
   ---
-  (混合使用)
+  (当前选择)
 
 杂项
 
