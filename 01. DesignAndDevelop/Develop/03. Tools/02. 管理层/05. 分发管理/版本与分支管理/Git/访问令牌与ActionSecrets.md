@@ -211,11 +211,24 @@ jobs:
           git submodule foreach git pull origin main
 ```
 
+## 组织令牌问题
 
+Github的token太奇怪了，不在仓库中……文档也没说，找了半天
 
+1. 首先需要在组织中开启允许个人创建令牌的开关（但他不叫这个）
+   https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+2. 然后接下来的流程同个人创建tokens，在个人设置>开发者选项里设置
+3. 此时需要注意！你可以在这个页面里先切换资源拥有者，切换成组织（如果这里没看到组织，就是你在组织那没设置好）
+4. 切回去组织里，Personal access tokens > Active tokens，看一下token生效了没
 
+## user:token还是只token？
 
+在有的资料中，我看到格式是 `https://<user>:<secrets>@github.com/...` ，但有的资料却有没最前面那个 `user`。
 
+反正我试下来就是：
+
+- github的话。不加直接user也行加也行，加的话他是用户名（如果是组织token也是填你的个人用户名）。不是组织名，也不是token名
+- gitlab的话。不加似乎不行（不知道是不是与设置有关），提示上是 `dependToken:` `oauth2:`，我忘了具体是什么来着，和github的似乎不一样。不是填用户名，好像是填token名，或者固定字符 `oauth2`？
 
 
 
