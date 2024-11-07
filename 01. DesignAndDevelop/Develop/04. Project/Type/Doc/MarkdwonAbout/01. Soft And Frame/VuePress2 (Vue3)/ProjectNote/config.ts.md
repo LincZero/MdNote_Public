@@ -81,6 +81,7 @@ export default defineUserConfig({
 });
 ```
 
+直接支持json
 
 ```ts
 async onInitialized(app) {
@@ -123,3 +124,33 @@ async onInitialized(app) {
   }
 },
 ```
+
+直接支持pdf
+
+```ts
+async onInitialized(app) {
+  for (let i = 0; i<app.pages.length; i++) {
+      const page = app.pages[i]
+      if (page.path.endsWith(".json")) {
+        // console.log("旧页面信息---\n", page)
+        // console.log("新页面信息---\n", newPage)
+        page.path = page.path+"/"
+        page.frontmatter.layout = 'Layout'
+        page.content = "```nodeflow-comfyui\n" + page.content + "\n```"
+        if(page.sfcBlocks.template?.contentStripped) page.sfcBlocks.template.contentStripped = // HTML内容以这个为准
+          app.markdown.render(page.content) // 重新渲染该页
+      }
+      else if (page.path.endsWith(".pdf")) {
+        const newPage = await createPage(app, {
+          path: page.path+"/",
+          frontmatter: {
+            layout: 'Layout',
+          },
+          content: `# PDF测试`,
+        })
+        app.pages[i] = newPage // 即删掉旧的pdf页，更换成一个引用pdf内容的md页
+      }
+    }
+},
+```
+
