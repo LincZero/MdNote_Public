@@ -146,9 +146,31 @@ Buy me a coffe（别人的片段，不是我的，请勿付款）
 
 除了 README.md，还有一些其他的配置项
 
+### Github标签 (常用于在github外显示github信息)
 
+```js
+// 赞助
+[![Sponsor me](https://img.shields.io/badge/%E2%9D%A4%20Like%20this%20plugin%3F-Sponsor%20me!-ff69b4)](https://github.com/sponsors/scambier)  
 
+// 下载量
+![Obsidian plugin](https://img.shields.io/endpoint?url=https%3A%2F%2Fscambier.xyz%2Fobsidian-endpoints%2Fomnisearch.json)
+// 这里如果没转义，对应：https://scambier.xyz/obsidian-endpoints/omnisearch.json
+// 改成自己的：
+// ![Obsidian plugin](https://img.shields.io/endpoint?url=https%3A%2F%2Fscambier.xyz%2Fobsidian-endpoints%2Fany-block.json)
 
+// 最近下载量
+![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/scambier/obsidian-omnisearch/latest/main.js)  
+
+// 版本
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/scambier/obsidian-omnisearch)
+
+// beta版本
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/scambier/obsidian-omnisearch?include_prereleases&label=BRAT%20beta)
+```
+
+案例：
+AnyBlock：![Obsidian plugin](https://img.shields.io/endpoint?url=https%3A%2F%2Fscambier.xyz%2Fobsidian-endpoints%2Fany-block.json) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/LincZero/obsidian-any-block/latest/main.js) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/LincZero/obsidian-any-block)
+NodeFlow：AnyBlock：![Obsidian plugin](https://img.shields.io/endpoint?url=https%3A%2F%2Fscambier.xyz%2Fobsidian-endpoints%2FNodeFlow.json) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/LincZero/obsidian-node-flow/latest/main.js) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/LincZero/obsidian-node-flow)
 
 
 

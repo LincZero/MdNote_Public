@@ -11,7 +11,7 @@ create_time: 2024-10-08
   - [Github仓库](https://github.com/comfyanonymous/ComfyUI)
     - [安装部分](https://github.com/comfyanonymous/ComfyUI#installing)
   - [官网、安装方式](https://www.comfy.org/)
-- [Comfyui-wiki](https://comfyui-wiki.com/zh-CN/)
+- [Comfyui-wiki](https://comfyui-wiki.com/zh-CN/)，**推荐**，可以建议把里面的工作流
 
 ### 安装部署类
 
@@ -38,7 +38,9 @@ create_time: 2024-10-08
 
 #### 模型、工作流等
 
-- 官方示例：https://comfyanonymous.github.io/ComfyUI_examples/ (虽然github url不是comfyui前缀，但似乎说是官方开发者的)
+- 官方示例：
+  - [Comfyui-wiki](https://comfyui-wiki.com/zh-CN/)，**推荐**
+  - https://comfyanonymous.github.io/ComfyUI_examples/ **推荐** (虽然github url不是comfyui前缀，但似乎说是官方开发者的)
 - Comfy UI Manager (插件)
 - 国内：[eSheep](https://www.eshepp.com/app)、[AIGodLike](https://wwww.aigodlike.com)
 - 国外：[Comfy Workflows](https://comfyworkflows.com)、[Openart.AI](https://openart.ai/workflows/home)、[ComfyICU](https://comfy.icu/)、[C站工作流分区](https://civitai.com/models)
@@ -132,3 +134,4 @@ ComfyUI 而非 SD-WebUI，SD看另一个笔记
 1. 双击画布搜索优化
 2. 设置面板优化
   - ComfyUI > Menu > 使用新版菜单 > Disable改为Top，感觉界面更现代化也更好用了！
+

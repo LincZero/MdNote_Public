@@ -11,7 +11,7 @@ type: comfyui
 注意，该项目文件夹主要是Comfyui导出的.json文件
 
 - 如在 Obsidian 环境，识别和打开json文件需要借助插件 NodeFlow
-- 如在 VuePress 环境，**识别和打开json文件的插件正在开发中**，暂不支持
+- 如在 VuePress 环境，识别和打开json文件需要借助插件 NodeFlow + Config.ts 中的一些配置
 
 ## 学习与笔记方式
 
@@ -20,8 +20,9 @@ type: comfyui
 ### 纯管理json文件
 
 然后使用新版UI的内部工作流保存工具（无需导出），命好名。通过这种方式的保存，是进入到 “工作流管理器中”，对应路径：`软件安装路径/ComfyUI/user/default/workflows`
-（也许可以设置该文件路径的位置，直接保存到ob中，但我没研究）
 %%`H:\Soft\SoftDev\Plane\ComfyUI_windows_portable\ComfyUI\user\default\workflows`%%
+
+（也许可以设置该文件路径的位置，直接保存到ob中，但我没研究。不过这一步由于浏览器的限制，ComfyUI可能需要一些额外的操作。据说ComfyUI要推出App版的界面，那个可以自由选择要保存的路径，能使这一步简单许多）
 
 该文件夹支持将工作流放到新建文件夹中，方便管理
 
