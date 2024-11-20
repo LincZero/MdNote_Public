@@ -473,6 +473,8 @@
 
 ## list grammar
 
+（更多案例和语法规则详见 [[./docs/zh/NodeFlow List Grammer]] ）
+
 ::: tabs
 
 @tab Plugin effect (插件效果)

@@ -1,15 +1,13 @@
 # NodeFlow 列表语法
 
-## 介绍，一种基于Markdown列表的便于输入的节点描述语法
+## 一种基于Markdown列表的便于输入的节点描述语法
 
 新增一种能手写的格式，说真的有时设计语法比开发成就感还强……大家讨论讨论语法，看有没有什么可以优化的地方
 
 1. 该语法可以和AnyBlock插件配合，从列表进行声明
 2. 参考了：JSON、JSONL、YAML、Mermaid/Mehrmaid 流程图语法
 
-## 示例
-
-### 语法示例
+### 示例
 
 ::: tabs
 
@@ -17,7 +15,7 @@
 
 ```nodeflow-list
 - nodes
-  - NodeTitle
+  - Load Checkpoint
     - only name, i
     - i2, i, *i2
     - i3, i, mul line
@@ -47,7 +45,7 @@
 ````md
 ```nodeflow-list
 - nodes
-  - NodeTitle
+  - Load Checkpoint
     - only name, i
     - i2, i, *i2
     - i3, i, mul line
@@ -74,117 +72,6 @@
 ````
 
 :::
-
-### 实际用例
-
-::: tabs
-
-@tab Plugin effect (插件效果)
-
-```nodeflow-list
-- nodes
-  - node1:KSample
-    - Latent, o
-    - model, i
-    - positive, i
-    - negative, i
-    - Latent, i
-    - seed,
-    - control_after_generate,, randomize
-    - steps,, 20
-    - CFG,, 8.0
-    - sampler_name,, euler
-    - scheduler,, normal
-    - denoise,, 1.00
-    - io defaultTest, i , test
-    - io defaultTest, o, test
-    - t1:noValueTest,
-    - t2:,, noKeyTest
-      mul lines test
-  - node2:KSample
-    - 潜空间, o
-    - 模型, i
-    - 正面条件, i
-    - 负面条件, i
-    - 潜空间, i
-    - 种子,
-    - 运行后操作,
-    - 步数,
-    - CFG,
-    - 采样器/采样方法,
-    - 调度器,
-    - 降噪,
-  - translate
-- edges
-  - node1,Latent, translate,l
-  - translate,r, node2, 潜空间
-```
-
-@tab md source code (md源码)
-
-````md
-```nodeflow-list
-- nodes
-  - node1:KSample
-    - Latent, o
-    - model, i
-    - positive, i
-    - negative, i
-    - Latent, i
-    - seed,
-    - control_after_generate,, randomize
-    - steps,, 20
-    - CFG,, 8.0
-    - sampler_name,, euler
-    - scheduler,, normal
-    - denoise,, 1.00
-    - io defaultTest, i , test
-    - io defaultTest, o, test
-    - t1:noValueTest,
-    - t2:,, noKeyTest
-      mul lines test
-  - node2:KSample
-    - 潜空间, o
-    - 模型, i
-    - 正面条件, i
-    - 负面条件, i
-    - 潜空间, i
-    - 种子,
-    - 运行后操作,
-    - 步数,
-    - CFG,
-    - 采样器/采样方法,
-    - 调度器,
-    - 降噪,
-  - translate
-- edges
-  - node1,Latent, translate,l
-  - translate,r, node2, 潜空间
-```
-````
-
-:::
-
-### 超简化
-
-```nodeflow-list
-
-- nodes
-  - GroupA
-    - a1
-    - a2
-  - b
-  - GroupC
-    - GroupC1
-      - c11
-  - d
-- edges
-  - a1,r, b,l
-  - a1,r, c11,l
-  - a1,r, d,l
-```
-
-## 语法规则
 
 ### 通用规则
 
@@ -203,35 +90,113 @@
     - 当然，有一个写法变形可以去掉最外层，用如果该项有四个参数就是edges组，否则则为nodes组，但我觉得虽然能写少了，但可能更容易造成混乱？待定
 2. 当不声明节点socket时，会默认声明四个隐藏节点：left、right、top、bottom
 
-### 语法设计亮点
+## 超简化
 
-- 隐藏key值设计
-  - 传统k-v语法，必须声明key-value对，而省略key可以大幅简化语法。例如nodeflow listGrammer的key、name、type、value键都是隐藏的。
-    这一设计参考了：变量命名中的可选变量、for语句中的三个位置、函数的形参设计
-- 缩进表示包含关系
-  - 这一设计参考了：python流程控制语句、yaml语法
-- 一项一行
-  - 这一设计参考了：JSONL
-- 列表式声明
-  - 对一项一行设计的补充，允许了一项包含多行文本的情况
-    这一设计参考了：Markdown语法、Obsidian AnyBlock的list选择器用法
+```nodeflow-list
 
-### 命名规则
+- nodes
+  - GroupA
+    - a1
+    - a2
+  - b
+  - GroupC
+    - GroupC1
+      - c11
+  - d
+- edges
+  - a1,r, b,l
+  - a1,r, c11,l
+  - a1,r, d,l
+```
 
-- value可以是任意内容
-- id、name、socket传参类型、socket参值类型：不可以包含逗号
+## 实际用例参考
 
-## 类型表
+::: tabs
 
-- item类型
-  - 主动声明：node、socket、edge
-  - 自动声明：node可以有group类型
-- socket类型
-  - 传参类型 (TransType)：i、o、fi、fo、v（默认为v，通过什么方式获取参数，获取参数的时机是什么，引用还是拷贝）
-  - 参值类型 (ValueType)：int、float、boolean、color、enum等（任意声明，默认使用id/name作为类型）
-- node类型
+@tab Plugin effect (插件效果)
 
-### 运行socket
+```nodeflow-list
+- nodes
+  - node1:KSample
+    - Latent, o
+    - model, i
+    - positive, i
+    - negative, i
+    - Latent, i
+    - seed,
+    - control_after_generate,, randomize
+    - steps,, 20
+    - CFG,, 8.0
+    - sampler_name,, euler
+    - scheduler,, normal
+    - denoise,, 1.00
+    - io defaultTest, i , test
+    - io defaultTest, o, test
+    - t1:noValueTest,
+    - t2:,, noKeyTest
+      mul lines test
+  - node2:KSample
+    - 潜空间, o
+    - 模型, i
+    - 正面条件, i
+    - 负面条件, i
+    - 潜空间, i
+    - 种子,
+    - 运行后操作,
+    - 步数,
+    - CFG,
+    - 采样器/采样方法,
+    - 调度器,
+    - 降噪,
+  - translate
+- edges
+  - node1,Latent, translate,l
+  - translate,r, node2, 潜空间
+```
 
+@tab md source code (md源码)
+
+````md
+```nodeflow-list
+- nodes
+  - node1:KSample
+    - Latent, o
+    - model, i
+    - positive, i
+    - negative, i
+    - Latent, i
+    - seed,
+    - control_after_generate,, randomize
+    - steps,, 20
+    - CFG,, 8.0
+    - sampler_name,, euler
+    - scheduler,, normal
+    - denoise,, 1.00
+    - io defaultTest, i , test
+    - io defaultTest, o, test
+    - t1:noValueTest,
+    - t2:,, noKeyTest
+      mul lines test
+  - node2:KSample
+    - 潜空间, o
+    - 模型, i
+    - 正面条件, i
+    - 负面条件, i
+    - 潜空间, i
+    - 种子,
+    - 运行后操作,
+    - 步数,
+    - CFG,
+    - 采样器/采样方法,
+    - 调度器,
+    - 降噪,
+  - translate
+- edges
+  - node1,Latent, translate,l
+  - translate,r, node2, 潜空间
+```
+````
+
+:::
 
 
