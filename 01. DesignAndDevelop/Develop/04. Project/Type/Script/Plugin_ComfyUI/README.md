@@ -2,7 +2,8 @@
 
 首先，我们需要了解ComfyUI的自定义节点的开发，以及可以作为典型demo的开源插件
 
-参考：
+## 参考资料
+
 - 官方教程/文档
   - [github - 官方开发案例](https://github.com/comfyanonymous/ComfyUI/blob/master/script_examples/basic_api_example.py)
   - [官方文档](https://docs.comfy.org/get_started/introduction)
@@ -15,3 +16,22 @@
   - [创建 ComfyUI 自定义节点的基本指南](https://blog.csdn.net/jjs15259655776/article/details/140318584)
 - 优秀学习用开源demo：
   - ……
+
+## 杂项 - 对比其他插件开发
+
+其实大部分js插件只有客户端插件，像这里分客户端插件和服务端插件这种行为，很少。
+和VuePress插件很像，VuePress插件也有这样的区分。
+
+例如：
+
+- VuePress的服务端插件 (nodejs)
+  - Markdown-it类别插件；细分为parse阶段和render阶段的插件
+  - defineClientConfig类别；细分为name、setup、slots等
+- VuePress的客户端插件 (client)
+  - defineUserConfig的钩子；细分为onInitialized、onGenerated、onPrepared、onWatched等
+
+不过VuePress插件那边是两端都是用ts/js写的，而comfyui则是客户端用js、服务端用的python
+
+
+
+
