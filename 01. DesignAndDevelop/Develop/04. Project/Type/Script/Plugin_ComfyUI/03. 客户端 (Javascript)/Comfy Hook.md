@@ -1,0 +1,132 @@
+# Comfy Hook (Comfy钩子)
+
+## Extension hooks
+
+在 Comfy 执行期间的不同时刻，应用程序会使用挂钩名称调用 `#invokeExtensionsAsync` 或 `#invokeExtensions`。这些在所有注册的扩展上调用适当命名的方法（如果存在），例如上面示例中的 `setup `。
+
+Comfy 为自定义扩展代码提供了各种挂钩，用于修改客户端行为
+
+这些挂钩在创建和修改 Comfy 客户端元素期间被调用。  
+工作流执行期间的事件由 apiUpdateHandlers 处理
+
+下面描述了一些最重要的钩子。由于 Comfy 正在积极开发中，因此会不时添加额外的钩子，因此在 app.js 中搜索 #invokeExtensions 以查找所有可用的钩子。
+
+另请参见调用钩子的顺序。
+
+### 常用钩子
+
+从 beforeRegisterNodeDef 开始，大多数扩展都使用它，并且通常是唯一需要的。
+
+#### beforeRegisterNodeDef()，注册节点前
+
+为每种节点类型（AddNode 菜单中可用的节点列表）调用一次，用于修改节点的行为。
+
+```Javascript
+async beforeRegisterNodeDef(nodeType, nodeData, app) 
+```
+
+在 nodeType 参数中传递的对象本质上充当将创建的该类型的所有节点的模板，因此对 nodeType.prototype 所做的修改将应用于该类型的所有节点。 nodeData 是对 Python 代码中定义的节点的各个方面的封装，例如其类别、输入和输出。 app 是对主要 Comfy 应用程序对象的引用（无论如何您已经导入了！）
+
+在每个注册的扩展上，针对每个节点类型（而不仅仅是该扩展添加的节点类型）调用此方法。
+
+通常的做法是检查nodeType.ComfyClass，它保存了与该节点对应的Python类名，看看是否需要修改该节点。通常，这意味着修改您添加的自定义节点，尽管您有时可能需要修改其他节点的行为（或者其他自定义节点可能会修改您的！），在这种情况下，应注意确保互操作性。
+
+由于其他扩展也可能会修改节点，因此应编写尽可能少做假设的代码。并且玩得很好 - 尽可能隔离您的更改。
+
+beforeRegisterNodeDef 中一个非常常见的习惯用法是“劫持”现有方法：
+
+```Javascript
+async beforeRegisterNodeDef(nodeType, nodeData, app) {
+	if (nodeType.ComfyClass=="MyNodeClass") { 
+		const onConnectionsChange = nodeType.prototype.onConnectionsChange;
+		nodeType.prototype.onConnectionsChange = function (side,slot,connect,link_info,output) {     
+			const r = onConnectionsChange?.apply(this, arguments);   
+			console.log("Someone changed my connection!");
+			return r;
+		}
+	}
+}
+```
+
+在这个习惯用法中，现有的原型方法被存储，然后被替换。替换调用原始方法（?.apply 确保如果没有方法仍然安全），然后执行其他操作。根据您的代码逻辑，您可能需要将 apply 放置在替换代码中的其他位置，甚至使其成为有条件的调用。
+
+当以这种方式劫持方法时，您将需要查看核心代码（断点是您的朋友）来检查并符合方法签名。
+
+#### nodeCreated()，节点创建
+
+```Javascript
+async nodeCreated(node)
+```
+
+当创建节点的特定实例时调用（就在充当构造函数的 nodeType 上的 ComfyNode() 函数末尾）。在此挂钩中，您可以对节点的各个实例进行修改。
+
+如上所述，适用于所有实例的更改最好添加到 beforeRegisterNodeDef 中的原型中。
+
+#### init()，初始化
+
+```Javascript
+async init()
+```
+
+当加载（或重新加载）Comfy 网页时调用。该调用是在创建图形对象之后、注册或创建任何节点之前进行的。它可用于通过劫持应用程序或图形（LiteGraph 对象）的方法来修改核心 Comfy 行为。这将在舒适对象中进一步讨论。
+
+权力越大，责任越大。劫持核心行为使您的节点更有可能与其他自定义节点或未来的 Comfy 更新不兼容
+
+#### setup()，设置
+
+```Javascript
+async setup()
+```
+
+在启动过程结束时调用。一个添加事件监听器（Comfy 事件或 DOM 事件）或添加到全局菜单的好地方，这两个事件都会在其他地方讨论。
+
+要在工作流程加载后执行某些操作，请使用 afterConfigureGraph，而不是 setup
+
+### 调用序列
+
+这些序列是通过将日志记录代码插入 Comfy app.js 文件中获得的。您可能会发现类似的代码有助于理解执行流程。
+
+```Javascript
+/* approx line 220 at time of writing: */
+	#invokeExtensions(method, ...args) {
+		console.log(`invokeExtensions      ${method}`) // this line added
+		// ...
+	}
+/* approx line 250 at time of writing: */
+	async #invokeExtensionsAsync(method, ...args) {
+		console.log(`invokeExtensionsAsync ${method}`) // this line added
+		// ...
+	}
+```
+
+#### 网页加载
+
+```
+invokeExtensionsAsync init
+invokeExtensionsAsync addCustomNodeDefs
+invokeExtensionsAsync getCustomWidgets
+invokeExtensionsAsync beforeRegisterNodeDef    [repeated multiple times]
+invokeExtensionsAsync registerCustomNodes
+invokeExtensionsAsync beforeConfigureGraph
+invokeExtensionsAsync nodeCreated
+invokeExtensions      loadedGraphNode
+invokeExtensionsAsync afterConfigureGraph
+invokeExtensionsAsync setup
+```
+
+#### 加载工作流程
+
+```
+invokeExtensionsAsync beforeConfigureGraph
+invokeExtensionsAsync beforeRegisterNodeDef   [zero, one, or multiple times]
+invokeExtensionsAsync nodeCreated             [repeated multiple times]
+invokeExtensions      loadedGraphNode         [repeated multiple times]
+invokeExtensionsAsync afterConfigureGraph
+```
+
+#### 添加新节点
+
+```
+invokeExtensionsAsync nodeCreated
+```
+
