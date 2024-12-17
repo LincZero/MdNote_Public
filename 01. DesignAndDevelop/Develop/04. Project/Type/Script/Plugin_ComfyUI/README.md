@@ -7,7 +7,7 @@
 - 官方教程/文档
   - [github - 官方开发案例](https://github.com/comfyanonymous/ComfyUI/blob/master/script_examples/basic_api_example.py)
   - [官方文档](https://docs.comfy.org/get_started/introduction)
-    - [官方文档 - 自定义节点](https://docs.comfy.org/essentials/custom_node_overview) (**推荐**)
+    - [官方文档 - 自定义节点](https://docs.comfy.org/essentials/custom_node_overview) (**推荐**，但感觉官方写得不是很好)
 - 教程调研：
   - [在5分钟内创建自定义节点！（ComfyUI自定义节点入门指南）](https://quail.ink/op7418/p/create-custom-node-in-5-minutes-comfyui-custom-node-getting-started-guide)
   - [一份ComfyUI 自定义节点指南](https://developer.volcengine.com/articles/7399549896778317833)

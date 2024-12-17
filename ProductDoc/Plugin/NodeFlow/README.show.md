@@ -471,9 +471,9 @@
 }
 ```
 
-## list grammar
+## list
 
-（更多案例和语法规则详见 [[./docs/zh/NodeFlow List Grammer]] ）
+（list grammar 更多案例和语法规则详见 [[./docs/zh/NodeFlow List Grammer]] ）
 
 ::: tabs
 
@@ -597,4 +597,8 @@ This is an example workflow for my personal website (这是我个人网站的一
   - build,r, report-build-status,l
   - build,r, deploy,l
 ```
+
+## listitem
+
+see [./README.Demo](./README.Demo)
 

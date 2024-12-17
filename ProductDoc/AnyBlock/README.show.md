@@ -1021,6 +1021,7 @@ Can be used as a timeline, but developing (可以当时间线使用, 但开发�
 ~~~
 
 :::
+
 #### Tabs (标签页)
 
 Can be used as a TAB page, but developing 
@@ -1088,6 +1089,7 @@ How to install python on each platform (python在各平台上的安装方法)：
 ~~~
 
 :::
+
 #### Card (卡片)
 
 ::: tabs
@@ -1524,7 +1526,7 @@ min 样式，更紧凑、样式上也更像 markmap
 
 #### to markmap (转markmap思维导图)
 
-推荐需要内嵌md时使用
+推荐需要内嵌md时，或需要拖拽折叠等操作时使用
 
 ::: tabs
 
